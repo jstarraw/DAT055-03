@@ -7,7 +7,7 @@ package javaapp.Runner.Gameengine;
 	public class KeyAdmin implements KeyListener {
 		
 		private boolean[] keys;
-		public boolean up, down, left, right,interact;
+		private boolean up, down, left, right,interact;
 		
 		public KeyAdmin(){
 			keys = new boolean[256];
@@ -19,6 +19,41 @@ package javaapp.Runner.Gameengine;
 			left = keys[KeyEvent.VK_A];
 			right = keys[KeyEvent.VK_D];
 			interact = keys[KeyEvent.VK_E];
+		}
+
+		/**
+		 * @return the up
+		 */
+		public boolean isUp() {
+			return up;
+		}
+
+		/**
+		 * @return the down
+		 */
+		public boolean isDown() {
+			return down;
+		}
+
+		/**
+		 * @return the left
+		 */
+		public boolean isLeft() {
+			return left;
+		}
+
+		/**
+		 * @return the right
+		 */
+		public boolean isRight() {
+			return right;
+		}
+
+		/**
+		 * @return the interact
+		 */
+		public boolean isInteract() {
+			return interact;
 		}
 
 		@Override

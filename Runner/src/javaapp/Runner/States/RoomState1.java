@@ -30,7 +30,7 @@ public class RoomState1 extends States{
 	
 	public void tick() {
 		objectmovements.tick();
-		if(game.getKeyManager().interact)	
+		if(game.getKeyManager().isInteract())	
 			pushButton();
 		
 		if(flagga2 && flagga5 && flagga6 && flagga7)
@@ -38,7 +38,7 @@ public class RoomState1 extends States{
 			doorposY--;
 			if(Player.getYPos()< 130 && Player.getXPos()>300 && Player.getXPos() < 400)
 			{
-				if(game.getKeyManager().interact)	
+				if(game.getKeyManager().isInteract())	
 					setNextRoom();
 
 				

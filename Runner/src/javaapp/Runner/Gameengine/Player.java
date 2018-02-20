@@ -34,28 +34,28 @@ public class Player extends Entity {
 	}
 
 
+
 	@Override
 	public void tick() {
-		if(game.getKeyManager().up) {
+		if(game.getKeyManager().isUp()) {
 			a = 0;
 			if(y>115)
 			y -= 4;}
-		if(game.getKeyManager().down) {
+		if(game.getKeyManager().isDown()) {
 			a= 1; 
 			if(y<635)
 			y += 7;}
-		if(game.getKeyManager().left) {
+		if(game.getKeyManager().isLeft()) {
 			a= 2;
 			if(x>10)
 			x -= 3;}
-		if(game.getKeyManager().right) {
+		if(game.getKeyManager().isRight()) {
 			a=3;
 			if(x<770)
 			x += 3;}
 		
 		
 	}
-
 	@Override
 	public void render(Graphics g) {
 		if(a == 0) {
