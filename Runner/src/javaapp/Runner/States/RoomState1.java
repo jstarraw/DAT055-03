@@ -16,7 +16,7 @@ public class RoomState1 extends States{
 			flagga5 = false,flagga6 = false,flagga7 = false,flagga8;
 	private static int timer = 200,timer2= 0;
 	private static int doorposY = 53;
-	public static int i;
+	private static int i;
 	
 	public RoomState1(Gameengine game) {
 		super(game);

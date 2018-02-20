@@ -7,7 +7,7 @@ import java.awt.Graphics;
 public class Player extends Entity {
 
 	private Gameengine game;
-	public int a;
+	private int a;
 	private Room room;
 	
 	public Player(Gameengine game, float x, float y) {
