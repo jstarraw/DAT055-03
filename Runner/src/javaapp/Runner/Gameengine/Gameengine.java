@@ -21,7 +21,7 @@ public class Gameengine implements Runnable {
 	
 	private BufferStrategy bs;
 	private Graphics g;
-	private ObjectMovements objectmovements;
+//	private ObjectMovements objectmovements;
 	
 	//States
 	private States gameState;
