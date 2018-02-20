@@ -4,7 +4,6 @@ import java.awt.Graphics;
 
 import javaapp.Runner.Gameengine.Assets;
 import javaapp.Runner.Gameengine.Gameengine;
-import javaapp.Runner.Gameengine.ObjectMovements;
 import javaapp.Runner.Gameengine.Player;
 
 
@@ -12,7 +11,6 @@ import javaapp.Runner.Gameengine.Player;
 public class RoomState1 extends States{
 	
 	private States roomstate2;
-	private ObjectMovements objectmovements;
 	private static boolean flagga1 = false, flagga2= false, flagga3=false, flagga4 = false,
 			flagga5 = false,flagga6 = false,flagga7 = false,flagga8;
 	private static int timer = 200,timer2= 0;
@@ -22,19 +20,18 @@ public class RoomState1 extends States{
 	public RoomState1(Gameengine game) {
 		super(game);
 		roomstate2 = new RoomState2(game);
-		objectmovements = new ObjectMovements();
 
 		// TODO Auto-generated constructor stub
 	}
 
 	
 	public void tick() {
-		objectmovements.tick();
 		if(game.getKeyManager().interact)	
 			pushButton();
 		
 		if(flagga2 && flagga5 && flagga6 && flagga7)
 		{
+			if(!flagga1 && !flagga3 && !flagga4 && !flagga8)
 			doorposY--;
 			if(Player.getYPos()< 130 && Player.getXPos()>300 && Player.getXPos() < 400)
 			{
@@ -50,7 +47,6 @@ public class RoomState1 extends States{
 	public void render(Graphics g) {
 		g.drawImage(Assets.room2, (int) 0, (int) 0, null);
 		g.drawImage(Assets.Door, (int) 350, (int) doorposY, null);
-
 		g.drawImage(Assets.TopBanner, (int) 337, (int) 0, null);
 
 		renderButton(g);
