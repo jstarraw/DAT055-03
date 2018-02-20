@@ -6,6 +6,7 @@ import java.awt.Graphics;
 import java.awt.image.BufferStrategy;
 
 import javaapp.Runner.States.Gamestate;
+import javaapp.Runner.States.RoomState4;
 import javaapp.Runner.States.States;
 
 
@@ -25,6 +26,7 @@ public class Gameengine implements Runnable {
 	
 	//States
 	private States gameState;
+	private States jennyroom;
 	
 	//Input
 	private KeyAdmin keyAdmin;
@@ -42,8 +44,9 @@ public class Gameengine implements Runnable {
 		Assets.init();
 		
 		gameState = new Gamestate(this);
+		jennyroom = new RoomState4(this);
 	
-		States.setState(gameState);
+		States.setState(jennyroom);
 	}
 	
 	private void tick(){

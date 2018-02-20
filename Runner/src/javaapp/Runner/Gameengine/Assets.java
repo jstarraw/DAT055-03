@@ -8,7 +8,7 @@ public class Assets {
 	private static final int width = 50;
 	private static final int height = 68;
 	
-	public static BufferedImage player, player2, player3, player4, room1,banner1,room2,room3,
+	public static BufferedImage player, player2, player3, player4, room1,banner1,room2,room3, room4,
 		NoFire, Fire, TopBanner,Door, ball1;
 	public static BufferedImage[] FireArray; 
 
@@ -16,7 +16,9 @@ public class Assets {
 		SpriteSheet sheet = new SpriteSheet(ImageLoader.loadImage("/sheet.png"));
 		SpriteSheet room = new SpriteSheet(ImageLoader.loadImage("/b.png"));
 		SpriteSheet room_second = new SpriteSheet(ImageLoader.loadImage("/Room_Ric.png"));
-		SpriteSheet room_third = new SpriteSheet(ImageLoader.loadImage("/roomdani.png"));		SpriteSheet fire = new SpriteSheet(ImageLoader.loadImage("/FireSheet.png"));
+		SpriteSheet room_third = new SpriteSheet(ImageLoader.loadImage("/roomdani.png"));		
+		SpriteSheet room_fourth = new SpriteSheet(ImageLoader.loadImage("/Room_Foo.png"));
+		SpriteSheet fire = new SpriteSheet(ImageLoader.loadImage("/FireSheet.png"));
 		TopBanner = ImageLoader.loadImage("/topbanner24.png");
 		Door = ImageLoader.loadImage("/door.png");
 		player = sheet.crop(0, 0, 52, height);
@@ -26,6 +28,7 @@ public class Assets {
 		room1 = room.crop(0,0,822,668);
 		room2 = room_second.crop(0,0,822,668);
 		room3 = room_third.crop(0,0,822,668);
+		room4 = room_fourth.crop(0, 0, 822, 668);
 		NoFire = ImageLoader.loadImage("/NoFire.png");
 		banner1 = ImageLoader.loadImage("/banner.png");
 		ball1 = ImageLoader.loadImage("/ball.png");
