@@ -1,10 +1,11 @@
-package javaapp.Runner.States;
+package javaapp.Runner.States.Room3;
 
 import java.awt.Graphics;
 
 import javaapp.Runner.Gameengine.Assets;
 import javaapp.Runner.Gameengine.Gameengine;
 import javaapp.Runner.Gameengine.Player;
+import javaapp.Runner.States.States;
 
 
 
