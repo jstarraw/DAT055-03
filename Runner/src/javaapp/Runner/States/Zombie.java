@@ -6,6 +6,7 @@ import javaapp.Runner.Gameengine.Assets;
 import javaapp.Runner.Gameengine.Gameengine;
 
 //Jenny Karlsson
+
 public class Zombie {
 	private float posY;
 	private float posX; 
@@ -21,7 +22,7 @@ public class Zombie {
 	
 	public void tick() {
 		Collision();
-
+	
 		
 	}	
 	
@@ -32,9 +33,8 @@ public class Zombie {
 	public void render(Graphics g) {
 		
 	g.drawImage(Assets.zombie,(int) posX,(int) 180, null);
-	}
-
 	
+	}
 
 	public float getPosY() {
 		return posY;

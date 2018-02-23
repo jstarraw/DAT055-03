@@ -24,7 +24,7 @@ public class RoomState4 extends States {
 		player = new Player(game, 500, 500);
 		banana = new Banana();
 		trap = new Trap();
-		zombie = new Zombie();
+		zombie = new Zombie(game, 480, 180, 3);
 		
 	}
 	
@@ -35,7 +35,8 @@ public class RoomState4 extends States {
 		zombie.tick();
 		
 		if(!Banana.flagga1 && !Banana.flagga2 && !Banana.flagga3 && !Banana.flagga5
-				&& !Banana.flagga6){
+				&& !Banana.flagga6 && !Banana.flagga7 && !Banana.flagga8 && !Banana.flagga9
+				&& !Banana.flagga10){
 			doorposY--;
 			if(Player.getYPos()< 130 && Player.getXPos()>300 && Player.getXPos() < 400)
 			{
