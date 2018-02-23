@@ -46,7 +46,7 @@ public class Gameengine implements Runnable {
 		gameState = new Gamestate(this);
 		jennyroom = new RoomState4(this);
 	
-		States.setState(jennyroom);
+		States.setState(gameState);
 	}
 	
 	private void tick(){
