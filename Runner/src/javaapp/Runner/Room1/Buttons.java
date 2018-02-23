@@ -1,71 +1,55 @@
+package javaapp.Runner.Room1;
 
-package javaapp.Runner.States;
 
 import java.awt.Graphics;
 
 import javaapp.Runner.Gameengine.Assets;
-import javaapp.Runner.Gameengine.Gameengine;
 import javaapp.Runner.Gameengine.Player;
-import javaapp.Runner.Gameengine.Arrow;
 
 
-
-
-public class RoomState1 extends States{
+public class Buttons {
 	
-	private States roomstate2;
-	private Arrow arrow;
+	
 	private static boolean flagga1 = false, flagga2= false, flagga3=false, flagga4 = false,
 			flagga5 = false,flagga6 = false,flagga7 = false,flagga8;
 	private static int timer = 200,timer2= 0;
-	private static int doorposY = 53;
 	private static int i;
+
 	
-	public RoomState1(Gameengine game) {
-		super(game);
-		roomstate2 = new RoomState2(game);
-		arrow = new Arrow();
-
-		// TODO Auto-generated constructor stub
-	}
-
 	
 	public void tick() {
-		arrow.tick();
-		if(game.getKeyManager().isInteract())	
-			pushButton();
+		
+		pushButton();
+		
+		
+		
+		
+	}
+	
+	
+	public void render(Graphics g) {
+		
+		renderButton(g);
+		
+		
+		
+		
+	}
+	
+	
+	public boolean checkFlags() {
 		
 		if(flagga2 && flagga5 && flagga6 && flagga7)
 		{
 			if(!flagga1 && !flagga3 && !flagga4 && !flagga8)
-			doorposY--;
-			if(Player.getYPos()< 130 && Player.getXPos()>300 && Player.getXPos() < 400)
-			{
-				if(game.getKeyManager().isInteract())	
-					setNextRoom();
-				
-			}
+				return true;
 		}
-	}
-
-	@Override
-	public void render(Graphics g) {
-		g.drawImage(Assets.room2, (int) 0, (int) 0, null);
-		g.drawImage(Assets.Door, (int) 350, (int) doorposY, null);
-		g.drawImage(Assets.TopBanner, (int) 337, (int) 0, null);
-		renderButton(g);
-		arrow.render(g);
-	
-
+		else
+			return false;
+		
+		return false;
 	}
 	
-	public void setNextRoom() {
-		
-			setRoomState(roomstate2);
-			Player.setYPos(650);
-			Player.setXPos(300);
-		
-	}
 	public void pushButton() {
 		if(Player.getYPos() < 130 ) 
 		{
@@ -74,6 +58,8 @@ public class RoomState1 extends States{
 		}
 		
 	}
+	
+	
 	
 	public void atButton(float x) {
 		if(timer>15)
@@ -114,7 +100,9 @@ public class RoomState1 extends States{
 		}
 		
 	}
-
+	
+	
+	
 	public void renderButton(Graphics g)
 	{
 		if(flagga1)
@@ -174,6 +162,5 @@ public class RoomState1 extends States{
 
 		
 	}
-		
-	
-	}
+
+}
