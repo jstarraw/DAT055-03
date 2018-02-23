@@ -11,17 +11,16 @@ import javaapp.Runner.Gameengine.Player;
 public class RoomState2 extends States{
 	
 	private States room3;
-	private Player player;
+	//private Player player;
 	public RoomState2(Gameengine game) {
 		super(game);
 		room3 = new RoomState3(game);
-		player = new Player(game,500,500);
+		//player = new Player(game,500,500);
 		// TODO Auto-generated constructor stub
 	}
 
 	
 	public void tick() {
-		player.tick();
 		
 //		if (Player.getYPos() < 120)
 //		{
@@ -37,7 +36,7 @@ public class RoomState2 extends States{
 	public void render(Graphics g) {
 		g.drawImage(Assets.room3, (int) 0, (int) 0, null);
 		g.drawImage(Assets.ball1, (int) 200, (int) 200, null);
-		player.render(g);
+	//	player.render(g);
 	}
 
 

@@ -9,7 +9,7 @@ public class Assets {
 	private static final int height = 68;
 	
 	public static BufferedImage player, player2, player3, player4, room1,banner1,room2,room3,
-		NoFire, Fire, TopBanner,Door, ball1;
+		NoFire, Fire, TopBanner,Door, ball1,arrow,brokenarrow;
 	public static BufferedImage[] FireArray; 
 
 	public static void init(){
@@ -21,14 +21,17 @@ public class Assets {
 		Door = ImageLoader.loadImage("/door.png");
 		player = sheet.crop(0, 0, 52, height);
 		player2 = sheet.crop(52, 0, 52, height);
-		player3 = sheet.crop(2*51, 0, width, height);
-		player4 = sheet.crop(3*width, 0, width, height);
+		player3 = sheet.crop(2*53, 0, width, height);
+		player4 = sheet.crop(152, 0, 47, height);
 		room1 = room.crop(0,0,822,668);
 		room2 = room_second.crop(0,0,822,668);
 		room3 = room_third.crop(0,0,822,668);
 		NoFire = ImageLoader.loadImage("/NoFire.png");
 		banner1 = ImageLoader.loadImage("/banner.png");
 		ball1 = ImageLoader.loadImage("/ball.png");
+		arrow = ImageLoader.loadImage("/arrrow50.png");
+		brokenarrow = ImageLoader.loadImage("/arrrow50broken.png");
+
 		
 		FireArray = new BufferedImage[5];
 		FireArray[0] = fire.crop(0,0,19,82);
