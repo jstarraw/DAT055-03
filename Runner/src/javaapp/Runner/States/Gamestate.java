@@ -13,7 +13,7 @@ private States roomstate1;
 	public Gamestate(Gameengine game){
 		super(game);
 		player = new Player(game, 150, 600);
-		roomstate1 = new RoomState1(game);
+		roomstate1 = new RoomState2(game);
 		
 		setRoomState(roomstate1);
 	}

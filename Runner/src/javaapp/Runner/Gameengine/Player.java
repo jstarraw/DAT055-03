@@ -40,19 +40,19 @@ public class Player extends Entity {
 		if(game.getKeyManager().isUp()) {
 			a = 0;
 			if(y>115)
-			y -= 4;}
+			y -= 2;}
 		if(game.getKeyManager().isDown()) {
 			a= 1; 
 			if(y<635)
-			y += 7;}
+			y += 2;}
 		if(game.getKeyManager().isLeft()) {
 			a= 2;
 			if(x>10)
-			x -= 3;}
+			x -= 2;}
 		if(game.getKeyManager().isRight()) {
 			a=3;
 			if(x<770)
-			x += 3;}
+			x += 2;}
 		
 		
 	}
@@ -74,4 +74,5 @@ public class Player extends Entity {
 
 
 	}
+	
 }

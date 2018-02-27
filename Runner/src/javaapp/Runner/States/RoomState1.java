@@ -58,8 +58,8 @@ public class RoomState1 extends States{
 	public void setNextRoom() {
 		
 			setRoomState(roomstate2);
-			Player.setYPos(650);
-			Player.setXPos(300);
+			Player.setYPos(10);
+			Player.setXPos(100);
 		
 	}
 	public void pushButton() {
