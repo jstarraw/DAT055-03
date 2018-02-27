@@ -11,7 +11,9 @@ public class Assets {
 	private static final int widthJenny = 32, heightJenny = 32;
 	
 	public static BufferedImage player, player2, player3, player4, room1,banner1,room2,room3, room4,
-		NoFire, Fire, TopBanner,Door, ball1, banana, trap, zombie;
+								NoFire, Fire, TopBanner,Door, ball1, banana, icecream, icecream2, 
+								chocolate, candyKane, trap;
+	
 	public static BufferedImage[] FireArray; 
 
 	public static void init(){
@@ -22,7 +24,7 @@ public class Assets {
 		SpriteSheet room = new SpriteSheet(ImageLoader.loadImage("/b.png"));
 		SpriteSheet room_second = new SpriteSheet(ImageLoader.loadImage("/Room_Ric.png"));
 		SpriteSheet room_third = new SpriteSheet(ImageLoader.loadImage("/roomdani.png"));		
-		SpriteSheet room_fourth = new SpriteSheet(ImageLoader.loadImage("/Room_Foo.png"));
+		SpriteSheet room_fourth = new SpriteSheet(ImageLoader.loadImage("/Room_Foo2.png"));
 		SpriteSheet fire = new SpriteSheet(ImageLoader.loadImage("/FireSheet.png"));
 		
 		TopBanner = ImageLoader.loadImage("/topbanner24.png");
@@ -36,8 +38,10 @@ public class Assets {
 		//Jennys items
 		banana = jennysheet.crop(widthJenny * 3, 0, widthJenny, heightJenny); 
 		trap = jennysheet.crop(widthJenny * 2, 0, widthJenny, heightJenny);		
-		zombie = jennysheet.crop(widthJenny , 0, widthJenny, heightJenny);	
-		
+		icecream = jennysheet.crop(widthJenny, heightJenny, widthJenny, heightJenny);
+		icecream2 = jennysheet.crop(widthJenny * 2, heightJenny , widthJenny, heightJenny);
+		chocolate = jennysheet.crop(0, heightJenny, widthJenny, heightJenny);
+		candyKane = jennysheet.crop(0, 0, widthJenny, heightJenny);
 	
 		room1 = room.crop(0,0,822,668);
 		room2 = room_second.crop(0,0,822,668);
@@ -54,8 +58,6 @@ public class Assets {
 		FireArray[3] = fire.crop(57,0,19,82);
 		FireArray[4] = fire.crop(76,0,19,82);
 		
-		
-
 		
 		//comment
 		
