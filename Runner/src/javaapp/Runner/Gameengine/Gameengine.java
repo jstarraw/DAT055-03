@@ -3,7 +3,6 @@ package javaapp.Runner.Gameengine;
 import java.awt.Graphics;
 import java.awt.image.BufferStrategy;
 
-import javaapp.Runner.States.Gamestate;
 import javaapp.Runner.States.MenuState;
 import javaapp.Runner.States.States;
 

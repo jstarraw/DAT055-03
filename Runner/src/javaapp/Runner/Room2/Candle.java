@@ -11,13 +11,12 @@ public class Candle {
 	private int x;
 	int y;
 	private boolean lit = true;
-	public Gameengine game;
 
-	public Candle(Gameengine game, int x, int y) {
+
+	public Candle(int x, int y) {
 		this.x = x;
 		this.y = y;
-		this.game = game;
-
+		
 	}
 
 	public void tick() {

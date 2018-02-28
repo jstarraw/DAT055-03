@@ -10,7 +10,6 @@ import javaapp.Runner.Gameengine.Gameengine;
 import javaapp.Runner.Gameengine.Player;
 import javaapp.Runner.Room2.RoomState2;
 import javaapp.Runner.States.States;
-import javaapp.Runner.States.*;
 
 public class RoomState1 extends States {
 

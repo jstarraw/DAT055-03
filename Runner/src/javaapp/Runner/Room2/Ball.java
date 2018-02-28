@@ -3,8 +3,6 @@ package javaapp.Runner.Room2;
 import java.awt.Graphics;
 
 import javaapp.Runner.Gameengine.Assets;
-import javaapp.Runner.Gameengine.Entity;
-import javaapp.Runner.Gameengine.Gameengine;
 import javaapp.Runner.Gameengine.Player;
 
 public class Ball {
@@ -12,12 +10,10 @@ public class Ball {
 	float y;
 	private boolean flagg;
 	private float direction = 1, speed;
-	public Gameengine game;
 
-	public Ball(Gameengine game, float x, float y, float speed) {
+	public Ball(float x, float y, float speed) {
 		this.x = x;
 		this.y = y;
-		this.game = game;
 		this.speed = speed;
 
 	}

@@ -5,7 +5,6 @@ import java.awt.Graphics;
 import javaapp.Runner.Gameengine.Assets;
 import javaapp.Runner.Gameengine.Gameengine;
 import javaapp.Runner.Gameengine.Player;
-import javaapp.Runner.Room2.RoomState2;
 import javaapp.Runner.Room4.RoomState4;
 import javaapp.Runner.States.States;
 
@@ -19,9 +18,9 @@ public class RoomState3 extends States {
 	public RoomState3(Gameengine game) {
 		super(game);
 		light = new StreetLight();
-		door1 = new Doors_Room3(game, 332, 45);
-		door2 = new Doors_Room3(game, 395, 45);
-		number = new TimeTaker(game, 100, 100);
+		door1 = new Doors_Room3(332, 45);
+		door2 = new Doors_Room3(395, 45);
+		number = new TimeTaker( 100, 100);
 		room4 = new RoomState4(game);
 
 		// TODO Auto-generated constructor stub

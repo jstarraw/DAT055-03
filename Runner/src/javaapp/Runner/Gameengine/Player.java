@@ -6,7 +6,6 @@ public class Player extends Entity {
 
 	private Gameengine game;
 	private int a;
-	private Room room;
 
 	public Player(Gameengine game, float x, float y) {
 		super(x, y);
