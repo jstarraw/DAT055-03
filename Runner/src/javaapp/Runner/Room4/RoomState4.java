@@ -5,6 +5,7 @@ import javaapp.Runner.Gameengine.Assets;
 import javaapp.Runner.Gameengine.Gameengine;
 import javaapp.Runner.Gameengine.Player;
 import javaapp.Runner.Room1.RoomState1;
+import javaapp.Runner.Room5.RoomState5;
 import javaapp.Runner.States.States;
 
 /**
@@ -23,7 +24,7 @@ public class RoomState4 extends States {
 	public RoomState4(Gameengine game) {
 		super(game);
 		// roomstate1 = new RoomState1(game);
-		// roomstate5 = new RoomState5(game);
+		roomstate5 = new RoomState5(game);
 		// player = new Player(game, 500, 500);
 		banana = new Banana();
 		trap = new Trap();
@@ -62,7 +63,7 @@ public class RoomState4 extends States {
 
 	public void setNextRoom() {
 
-		setRoomState(roomstate1);
+		setRoomState(roomstate5);
 		Player.setYPos(650);
 		Player.setXPos(300);
 

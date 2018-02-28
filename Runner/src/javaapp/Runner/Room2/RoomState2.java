@@ -30,9 +30,9 @@ public class RoomState2 extends States {
 		super(game);
 		room3 = new RoomState3(game);
 
-		boll = new Ball(game, 150, 570, 5);
-		boll2 = new Ball(game, 320, 570, 5);
-		boll3 = new Ball(game, 540, 100, 7);
+		boll = new Ball(game, 150, 570, 15);
+		boll2 = new Ball(game, 320, 570, 15);
+		boll3 = new Ball(game, 540, 100, 21);
 
 		for (int a = 1; a < 9; a += 2) {
 			for (int y = 1; y < 4; y++) {
@@ -68,34 +68,9 @@ public class RoomState2 extends States {
 				doorflag++;
 			candle.tick();
 
+			if (doorflag == 12)
+				flagga1 = true;
 		}
-		if (doorflag == 11)
-			flagga1 = true;
-
-		if (boll.isFlagg() || boll2.isFlagg() || boll3.isFlagg()) {
-
-			candle.getFlag();
-
-			candle.tick();
-			candle.setLit(true);
-			timer++;
-
-			candle.tick();
-			boll.resetBombFlagg();
-			// candle.setLit(true);
-
-			System.out.println(candle.getFlag());
-
-		}
-
-		// System.out.println(Player.getXPos()+ "player");
-		// System.out.println(Player.getYPos()+ "player");
-		// System.out.println(boll.getX()+"boll" );
-		/*
-				
-					
-			
-		*/
 
 	}
 

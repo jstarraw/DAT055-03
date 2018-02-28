@@ -56,11 +56,6 @@ public class Ball {
 		return flagg;
 	}
 
-	public void resetBombFlagg() {
-
-		flagg = false;
-
-	}
 
 	public void render(Graphics g) {
 
