@@ -19,16 +19,17 @@ public class RoomState1 extends States {
 	private List<Arrow> ArrowList = new ArrayList<Arrow>();
 
 	private static int doorposY = 53;
-
+	/*
+	 * Constructor for Roomstate. 
+	 * 
+	 */
 	public RoomState1(Gameengine game) {
 		super(game);
 		roomstate2 = new RoomState2(game);
 		buttons = new Buttons();
-		int yTemp = 800;
 		for (int x = 70; x < 800; x += 70) {
 			Arrow arrow = new Arrow();
 			ArrowList.add(arrow);
-			yTemp += 500;
 		}
 		// TODO Auto-generated constructor stub
 	}
