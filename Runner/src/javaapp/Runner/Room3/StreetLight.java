@@ -16,11 +16,11 @@ public class StreetLight {
 	private boolean way1to5 = false;
 	private boolean way2to3 = false;
 	private boolean way2to4 = false;
-	private boolean flagga5 = false;
+	private boolean way3to7 = false;
 	private boolean way6to7 = false;
-	private boolean way4to6 = false;
+	private boolean way4to6 = true;
 	private boolean way5to6 = false;
-	private boolean flagga9 = false;
+	
 
 
 	
@@ -63,37 +63,37 @@ public class StreetLight {
 		if (platform3) {
 
 			way2to3 = !way2to3;
-			flagga5 = !flagga5;
-			flagga9 = !flagga9;
+			way3to7 = !way3to7;
+			
 			timer = 0;
 		}
 
-		if (platform4) {
+		if (platform4) { //7
 
-			flagga5 = !flagga5;
+			way3to7 = !way3to7;
 			way6to7 = !way6to7;
 
 			timer = 0;
 		}
 
-		if (platform5) {
+		if (platform5) {  // 4
 
-			way2to4 = !way2to4;
+			way2to4 = !way2to4; 
 
 			way4to6 = !way4to6;
-			flagga9 = !flagga9;
+			
 
 			timer = 0;
 		}
 
-		if (platform6) {
+		if (platform6) { // 5
 
 			way1to5 = !way1to5;
 			way5to6 = !way5to6;
 			timer = 0;
 		}
 
-		if (platform7) {
+		if (platform7) { // 6
 
 			way6to7 = !way6to7;
 			way4to6 = !way4to6;
@@ -152,7 +152,7 @@ public class StreetLight {
 
 		}
 		// // höger
-		if (flagga5) {
+		if (way3to7) {
 			g.drawImage(Assets.streetlight, (int) 750, (int) 350 - 10, null);
 			g.drawImage(Assets.streetlight, (int) 750, (int) 400 - 10, null);
 			g.drawImage(Assets.streetlight, (int) 750, (int) 450 - 10, null);
@@ -180,6 +180,6 @@ public class StreetLight {
 	}
 	
 	public boolean allFlags() {
-		return  way1to2&&way1to5 && way2to3 && way2to4&& flagga5&& way6to7;//flgga7;
+		return  way1to2&&way1to5 && way2to3 && way2to4&& way3to7&& way6to7;//flgga7;
 	}
 }

@@ -15,7 +15,7 @@ private float x , y;
 private boolean flagga0, flagga1,flagga2,flagga3,flagga4,flagga5,flagga6,flagga7,flagga8,flagga9,
 flagga10,flagga11,flagga12,flagga13,flagga14,flagga15;
 private int posX =150;
-private int timer;
+private static int timer;
 	
 /**
  * 
@@ -30,8 +30,8 @@ public TimeTaker( float x ,float y){
 		}
 		
 	/**
-	 * since the tick metod in gameengine is ticking 60 time per secound , the render metod will r
-	 * render a   imaga every 60 secoundS.
+	 * since the tick method in gameengine is ticking 60 time per secound , the render metod will r
+	 * render a   image every 60 secoundS.
 	 */
 
 public void tick(){
@@ -90,17 +90,13 @@ public void tick(){
 	if(timer > a*15 && timer < a*16) flagga15 = true;
 	else flagga15 = false;
 		
-//	if(timer  > 1039 ) timer = 0;
-//	
-//	System.out.println("x =" +Player.getXPos()+"\n" + "y ="+Player.getYPos()+"\n");
-//			
 			
 			}	
 			
 	
 	/**
-	 * 	if the flaggs are true the flowing will draws 
-	 * @param g put the garfik object to draw
+	 * 	if the flags are true the flowing will draws 
+	 * @param g put the garphic object to draw
 	 * 
 	 */
 	
@@ -141,7 +137,12 @@ if(flagga15)	{
  }
 			
 		}
+public static int gettimer() {
+	return timer;
+	
+}
+				
+			}
 			
 			
-			
-	}
+	
