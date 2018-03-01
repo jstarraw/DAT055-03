@@ -48,14 +48,28 @@ public class RoomState2 extends States {
 	public void tick() {
 
 		setNextRoom();
+		candleTick();
 
+
+	}
+	
+	
+	/** 
+	 * 
+	 * Ticks the candles
+	 * The method look for the 12 candles and goes through them
+	 * if all lights of the candles successfully are turned off, the door opens
+	 */
+	
+	public void candleTick() {
+		
 		doorflag = 0;
 	
 		
 		bomb1.tick();
 		bomb2.tick();
 		bomb3.tick();
-
+		
 		for (Candle candle : candleList) {
 			candle.tick();
 			if (candle.getFlag())
