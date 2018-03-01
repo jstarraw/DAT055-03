@@ -6,6 +6,10 @@ public class Assets {
 
 	private static final int width = 50;
 	private static final int height = 68;
+	
+	private static final int Nurwidth = 32;
+	private static final int Nurheight = 32;
+	
 
 	private static final int widthJenny = 32, heightJenny = 32;
 
@@ -89,24 +93,24 @@ public class Assets {
 
 		// comment
 
-		/*
-		 * siffra1 = siffror.crop(0, 0, 2 * width, 2 * height); siffra2 = siffror.crop(2
-		 * * width, 0, 2 * width, 2 * height); siffra3 = siffror.crop(4 * width, 0, 2 *
-		 * width, 2 * height); siffra4 = siffror.crop(6 * width, 0, 2 * width, 2 *
-		 * height); siffra5 = siffror.crop(0, 2 * height, 2 * width - 18, 2 * height);
-		 * siffra6 = siffror.crop(2 * width - 18, 2 * height - 36, 2 * width - 18, 2 *
-		 * height - 36); siffra7 = siffror.crop(4 * width - 18, 2 * height - 36, 2 *
-		 * width - 18, 2 * height - 36); siffra8 = siffror.crop(6 * width - 18, 2 *
-		 * height - 36, 2 * width - 18, 2 * height - 36); siffra9 = siffror.crop(0, 4 *
-		 * height - 36, 2 * width - 18, 2 * height - 36); siffra0 = siffror.crop(0, 6 *
-		 * height - 36, 2 * width - 18, 2 * height - 36);
-		 * 
-		 * door1 = Doors.crop(4 * width, 0, width * 2, height * 4); door2 = Doors.crop(6
-		 * * width, 0, width * 2, height * 4);
-		 * 
-		 */
+		
+		siffra1 = siffror.crop(0, 0, 2 * Nurwidth, 2 * Nurheight); 
+		siffra2 = siffror.crop(2* Nurwidth, 0, 2 * Nurwidth, 2 * Nurheight); 
+		siffra3 = siffror.crop(4 * Nurwidth, 0, 2 *Nurwidth, 2 * Nurheight); 
+		siffra4 = siffror.crop(6 * Nurwidth, 0, 2 * Nurwidth, 2 * Nurheight); 
+		siffra5 = siffror.crop(0, 2 * Nurheight, 2 * Nurwidth - 18, 2 * Nurheight);
+		siffra6 = siffror.crop(2 * Nurwidth - 18, 2 * Nurheight - 36, 2 * Nurwidth - 18, 2 *Nurheight - 36); 
+		siffra7 = siffror.crop(4 * Nurwidth - 18, 2 * Nurheight - 36, 2 *  Nurwidth - 18, 2 * Nurheight - 36); 
+		siffra8 = siffror.crop(6 * Nurwidth - 18, 2 *Nurheight - 36, 2 * Nurwidth - 18, 2 * Nurheight - 36); 
+		siffra9 = siffror.crop(0, 4 * Nurheight - 36, 2 * Nurwidth - 18, 2 * Nurheight - 36); 
+		siffra0 = siffror.crop(0, 6 * Nurheight - 36, 2 * Nurwidth - 18, 2 * Nurheight - 36);
+		  
+		door1 = Doors.crop(4 * Nurwidth, 0, Nurwidth * 2, Nurheight * 4); 
+		door2 = Doors.crop( 6*Nurwidth, 0, Nurwidth * 2, Nurheight * 4);
+		  
+		 
 
-		streetlight = Doors.crop(width, height, width, height);
+		streetlight = Doors.crop(Nurwidth, Nurheight, Nurwidth, Nurheight);
 	}
 
 }
