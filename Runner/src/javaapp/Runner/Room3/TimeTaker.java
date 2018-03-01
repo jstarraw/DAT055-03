@@ -1,31 +1,37 @@
 package javaapp.Runner.Room3;
 
 import java.awt.Graphics;
-
 import javaapp.Runner.Gameengine.Assets;
-
-import javaapp.Runner.Gameengine.Gameengine;
 import javaapp.Runner.Gameengine.Player;
-
+/**
+ * 
+ * @author nurabd
+ *
+ */
 public class TimeTaker {
 	
-public Gameengine game;
+
 private float x , y;
 private boolean flagga0, flagga1,flagga2,flagga3,flagga4,flagga5,flagga6,flagga7,flagga8,flagga9,
 flagga10,flagga11,flagga12,flagga13,flagga14,flagga15;
 private int posX =200;
-
 private int timer;
 	
-
-public TimeTaker(Gameengine game, float x ,float y){
+/**
+ * 
+ * @param x says where the x value will be drawn
+ * @param y says where the Y value will be drawn
+ */
+public TimeTaker( float x ,float y){
 			this.x=x;
 			this.y=y;
-			this.game =game;
+			
 			
 		}
 		
-		
+	/**
+	 * if the 	
+	 */
 
 public void tick(){
 	

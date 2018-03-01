@@ -1,28 +1,32 @@
 package javaapp.Runner.Room3;
-
 import java.awt.Graphics;
-
 import javaapp.Runner.Gameengine.Assets;
 import javaapp.Runner.Gameengine.Player;
-
+/**
+ * 
+ * @author nurabd
+ * @version 
+ *
+ */
 public class StreetLight {
 
-	public static int timer = 100;
 
-	public boolean way1to2 = false;
-	public boolean way1to5 = false;
-	public boolean way2to3 = false;
-	public boolean way2to4 = false;
-	public boolean flagga5 = false;
-	public boolean way6to7 = false;
-	public boolean way4to6 = false;
-	public boolean way5to6 = false;
-	public boolean flagga9 = false;
+	private static int timer = 100;
+	private boolean way1to2 = false;
+	private boolean way1to5 = false;
+	private boolean way2to3 = false;
+	private boolean way2to4 = false;
+	private boolean flagga5 = false;
+	private boolean way6to7 = false;
+	private boolean way4to6 = false;
+	private boolean way5to6 = false;
+	private boolean flagga9 = false;
 
-	public StreetLight() {
 
-	}
-
+	
+	/**
+	 *  will draw if the player is settled in a platform  which is connected to two or more ways.
+	 */
 	public void tick() {
 		timer++;
 
@@ -98,7 +102,10 @@ public class StreetLight {
 		}
 
 	}
-
+/**
+ * 
+ * @param g is a graphic object which will draw the wanted object that will be drawn.
+ */
 	public void render(Graphics g) {
 
 		// upp horiszontellt ----- vänster
