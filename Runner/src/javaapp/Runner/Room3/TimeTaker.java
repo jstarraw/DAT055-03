@@ -14,7 +14,7 @@ public class TimeTaker {
 private float x , y;
 private boolean flagga0, flagga1,flagga2,flagga3,flagga4,flagga5,flagga6,flagga7,flagga8,flagga9,
 flagga10,flagga11,flagga12,flagga13,flagga14,flagga15;
-private int posX =200;
+private int posX =150;
 private int timer;
 	
 /**
@@ -30,7 +30,8 @@ public TimeTaker( float x ,float y){
 		}
 		
 	/**
-	 * if the 	
+	 * since the tick metod in gameengine is ticking 60 time per secound , the render metod will r
+	 * render a   imaga every 60 secoundS.
 	 */
 
 public void tick(){
@@ -38,7 +39,7 @@ public void tick(){
 	timer ++;
 	
 	
-	int a = 65 ;
+	int a = 60 ;
 	if(timer > 0 && timer < a ) flagga0 = true;
 	else flagga0 = false;
 	
@@ -89,20 +90,24 @@ public void tick(){
 	if(timer > a*15 && timer < a*16) flagga15 = true;
 	else flagga15 = false;
 		
-	if(timer  > 1039 ) timer = 0;
-	
-	System.out.println("x =" +Player.getXPos()+"\n" + "y ="+Player.getYPos()+"\n");
-			
+//	if(timer  > 1039 ) timer = 0;
+//	
+//	System.out.println("x =" +Player.getXPos()+"\n" + "y ="+Player.getYPos()+"\n");
+//			
 			
 			}	
 			
 	
-		
+	/**
+	 * 	if the flaggs are true the flowing will draws 
+	 * @param g put the garfik object to draw
+	 * 
+	 */
 	
 		
 
 public void  render(Graphics g){
-			
+ if(timer > 0 && timer <900) {
 if(flagga0)	g.drawImage(Assets.siffra0, (int)posX , (int) 75, null);			
 if(flagga1)	g.drawImage(Assets.siffra1, (int) posX, (int) 75, null);
 if(	flagga2)g.drawImage(Assets.siffra2, (int) posX, (int) 75, null);
@@ -133,32 +138,9 @@ if(flagga15)	{
 					g.drawImage(Assets.siffra5, (int) posX+50, (int) 75, null);}
 
 
+ }
 			
-			
 		}
-	
-	public int getTimer() {
-		
-		return timer;
-			
-	}
-	public void setTimer(int timer) {
-		this.timer = timer;
-	}
-
-		public float getX() {
-			return x;
-		}
-		
-		public void setX(float x) {
-			this.x = x;
-		}
-		
-		public float getY() {
-			return y;
-		}
-		
-	
 			
 			
 			
