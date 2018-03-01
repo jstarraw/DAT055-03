@@ -12,17 +12,11 @@ public class Gameengine implements Runnable {
 	private int width;
 	private int height;
 	private String title;
-
 	private boolean running = false;
 	private Thread thread;
-
 	private BufferStrategy bs;
 	private Graphics g;
-
-	// States
 	private States menuState;
-
-	// Input
 	private KeyAdmin keyAdmin;
 
 	public Gameengine(String title, int width, int height) {
