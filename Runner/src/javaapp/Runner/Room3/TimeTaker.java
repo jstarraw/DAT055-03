@@ -9,11 +9,10 @@ import javaapp.Runner.Gameengine.Player;
  *
  */
 public class TimeTaker {
-	
-
 private float x , y;
+
 private boolean flagga0, flagga1,flagga2,flagga3,flagga4,flagga5,flagga6,flagga7,flagga8,flagga9,
-flagga10,flagga11,flagga12,flagga13,flagga14,flagga15;
+					flagga10,flagga11,flagga12,flagga13,flagga14,flagga15;
 private int posX =150;
 private int timer;
 	
@@ -89,7 +88,8 @@ public void tick(){
 	
 	if(timer > a*15 && timer < a*16) flagga15 = true;
 	else flagga15 = false;
-		
+	
+		if(timer > 1000) timer = 0;
 			
 			}	
 
