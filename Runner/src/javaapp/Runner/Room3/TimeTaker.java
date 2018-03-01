@@ -15,7 +15,7 @@ private float x , y;
 private boolean flagga0, flagga1,flagga2,flagga3,flagga4,flagga5,flagga6,flagga7,flagga8,flagga9,
 flagga10,flagga11,flagga12,flagga13,flagga14,flagga15;
 private int posX =150;
-private static int timer;
+private int timer;
 	
 /**
  * 
@@ -92,8 +92,11 @@ public void tick(){
 		
 			
 			}	
-			
+
 	
+
+
+
 	/**
 	 * 	if the flags are true the flowing will draws 
 	 * @param g put the garphic object to draw
@@ -103,7 +106,7 @@ public void tick(){
 		
 
 public void  render(Graphics g){
- if(timer > 0 && timer <900) {
+ 
 if(flagga0)	g.drawImage(Assets.siffra0, (int)posX , (int) 75, null);			
 if(flagga1)	g.drawImage(Assets.siffra1, (int) posX, (int) 75, null);
 if(	flagga2)g.drawImage(Assets.siffra2, (int) posX, (int) 75, null);
@@ -134,13 +137,10 @@ if(flagga15)	{
 					g.drawImage(Assets.siffra5, (int) posX+50, (int) 75, null);}
 
 
- }
+ 
 			
 		}
-public static int gettimer() {
-	return timer;
-	
-}
+
 				
 			}
 			
