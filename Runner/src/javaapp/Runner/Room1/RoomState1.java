@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javaapp.Runner.Gameengine.Assets;
+import javaapp.Runner.Gameengine.Display;
 import javaapp.Runner.Gameengine.Gameengine;
 import javaapp.Runner.Gameengine.Player;
 import javaapp.Runner.Room2.RoomState2;
@@ -61,7 +62,6 @@ public class RoomState1 extends States {
 		g.drawImage(Assets.Door, (int) 350, (int) doorposY, null);
 		g.drawImage(Assets.TopBanner, (int) 337, (int) 0, null);
 		buttons.render(g);
-
 		for (Arrow arr : ArrowList) {
 			arr.render(g);
 		}
