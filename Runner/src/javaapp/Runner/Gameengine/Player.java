@@ -2,11 +2,28 @@ package javaapp.Runner.Gameengine;
 
 import java.awt.Graphics;
 
+/**
+ * @Author Rickard Gyllensten, Jenny Karlsson, Roman Melnik, Daniel Cebe,
+ *         Nurhusein Abdulkader
+ * @version 2018-03-01
+ * 
+ */
+
 public class Player {
 
 	private Gameengine game;
 	private int a;
-	static float x, y;
+	private static float x, y;
+	
+	/**
+	 * 
+	 * Constructor for the Player class
+	 * takes three parameters, the gameengine object, any float x, any float y.
+	 * 
+	 * @param game
+	 * @param x
+	 * @param y
+	 */
 
 	public Player(Gameengine game, float x, float y) {
 		this.x = x;
@@ -15,22 +32,53 @@ public class Player {
 		this.game = game;
 	}
 
+	
+	/**
+	 * returns the players y-position
+	 * 
+	 * @return y
+	 */
 	public static float getYPos() {
 		return y;
 	}
+	
+	/**
+	 * Returns the players x-position
+	 * 
+	 * @return x
+	 */
 
 	public static float getXPos() {
 		return x;
 	}
+	
+	
+	/** 
+	 * Takes a parameter and sets the player's y-position
+	 * @param temp
+	 */
 
 	public static void setYPos(float temp) {
 		y = temp;
 	}
+	
+	
+	/**
+	 * 
+	 * Takes a parameter and sets the player's X-position
+	 * @param temp
+	 */
 
 	public static void setXPos(float temp) {
 		x = temp;
 	}
 
+	
+	/**
+	 * 
+	 * Updates the pressed buttons 
+	 */
+	
 	public void tick() {
 		if (game.getKeyManager().isUp()) {
 			a = 0;
@@ -54,6 +102,15 @@ public class Player {
 		}
 
 	}
+	
+	
+	/**
+	 * 
+	 * Draws the player in four different angles
+	 * Draws the banner so that the area is limited for the player
+	 * 
+	 * @param g
+	 */
 
 	public void render(Graphics g) {
 		if (a == 0) {
