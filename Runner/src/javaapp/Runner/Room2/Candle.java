@@ -19,19 +19,23 @@ public class Candle {
 	private boolean lit = true;
 	
 	
-/**
-* @Author Daniel Cebe
-* @version 2018-03-01
-* 
-*/
 
+	/**
+	 * 
+	 * The constructor of the class candle
+	 * @param x, y 
+	 */
+	
 	public Candle(int x, int y) {
 		this.x = x;
 		this.y = y;
 
 	}
 	
-
+	/**
+	 * Updates the parameters for the candles
+	 * 
+	 */
 
 	public void tick() {
 
@@ -59,8 +63,10 @@ public class Candle {
 	}
 	
 	/**
-	 * @param lit
+	 * 
 	 * Sets the lit-flag to true for the candles
+	 * @param lit
+	 * 
 	 * 
 	 */
 
@@ -69,7 +75,13 @@ public class Candle {
 	}
 
 	
-	
+	/**
+	 * 
+	 *Get the flag for the candles
+	 *@Return the inverse lit-flag which is true and becomes false.   
+	 * 
+	 *
+	 */
 	
 	public boolean getFlag() {
 
@@ -78,12 +90,13 @@ public class Candle {
 
 	
 	
-/**
-* @param g
-* render picture of the light candles if the flag is true
-* otherwise it renders the picture of the candle with closed light.  
-* 
-*/	
+	/**
+ 	* 
+ 	* otherwise it renders the picture of the candle with closed light. 
+ 	* Draws picture of the light candles if the flag is true
+ 	* @param g 
+ 	*
+ 	*/	
 	public void render(Graphics g) {
 
 		if (lit)
