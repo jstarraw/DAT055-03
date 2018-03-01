@@ -12,9 +12,10 @@ public class Assets {
 
 	private static final int widthJenny = 32, heightJenny = 32;
 
-	public static BufferedImage doorbanner, bomb1, stearin, stearin1, player, player2, player3, player4, room1, banner1,
-			room2, room3, room4, room5, NoFire, Fire, TopBanner, Door, ball1, arrow, brokenarrow, menu, room6, bubble,
-			win, gameover,
+	public static BufferedImage doorbanner, bomb1, stearin, stearin1, player, player2, player3,
+			player4, room1, banner1,room2, room3, room4, room5, NoFire, Fire,
+			TopBanner, Door, ball1, arrow, brokenarrow, menu, room6, bubble,
+			win, gameover, room7,
 			// doors for room3
 			door1, door2,
 			// "timer" room 3
@@ -48,7 +49,7 @@ public class Assets {
 		room4 = ImageLoader.loadImage("/Room3_back.png");
 		room5 = ImageLoader.loadImage("/Room_Foo2.png");
 		room6 = ImageLoader.loadImage("/room5.png");
-
+		room7 = ImageLoader.loadImage("/Victory.png");
 		// will work as time taker in room 3
 		SpriteSheet siffror = new SpriteSheet(ImageLoader.loadImage("/Room3_Timer.png"));
 		SpriteSheet Doors = new SpriteSheet(ImageLoader.loadImage("/Room3_Doors.png"));

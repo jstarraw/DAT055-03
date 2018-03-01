@@ -6,6 +6,7 @@ import javaapp.Runner.Gameengine.Assets;
 import javaapp.Runner.Gameengine.Gameengine;
 import javaapp.Runner.Gameengine.Player;
 import javaapp.Runner.States.States;
+import javaapp.Runner.States.Victory;
 
 /**
  * 
@@ -17,6 +18,9 @@ import javaapp.Runner.States.States;
 public class RoomState5 extends States {
 
 	private static boolean flag1, flag2, flag3;
+<<<<<<< HEAD
+	private States victory;
+=======
 	
 	/**
 	 * 
@@ -25,8 +29,11 @@ public class RoomState5 extends States {
 	 * 
 	 */
 
+>>>>>>> 25cc7ac9cf11eddb25b5d357bcbac1f24dafef49
 	public RoomState5(Gameengine game) {
 		super(game);
+		victory = new Victory(game);
+		
 	}
 
 	
@@ -43,6 +50,10 @@ public class RoomState5 extends States {
 		if (Player.getXPos() > 170 && Player.getXPos() < 276 && Player.getYPos() > 40 && Player.getYPos() < 140
 				&& game.getKeyManager().isInteract()) {
 			flag2 = true;
+			setRoomState(victory);
+			Player.setYPos(7650);
+			Player.setXPos(7300);
+
 		}
 
 		if (Player.getXPos() > 440 && Player.getXPos() < 545 && Player.getYPos() > 40 && Player.getYPos() < 140
