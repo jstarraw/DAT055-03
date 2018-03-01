@@ -18,9 +18,7 @@ import javaapp.Runner.States.Victory;
 public class RoomState5 extends States {
 
 	private static boolean flag1, flag2, flag3;
-<<<<<<< HEAD
 	private States victory;
-=======
 	
 	/**
 	 * 
@@ -29,7 +27,6 @@ public class RoomState5 extends States {
 	 * 
 	 */
 
->>>>>>> 25cc7ac9cf11eddb25b5d357bcbac1f24dafef49
 	public RoomState5(Gameengine game) {
 		super(game);
 		victory = new Victory(game);
