@@ -23,6 +23,14 @@ public class Candle {
 		collisionDetect();
 
 	}
+	
+	
+	/**
+	 * Detects if the player have a collision with the candle 
+	 * When a collision occurs, close the candle light
+	 * 
+	 *
+	 */
 
 	public void collisionDetect() {
 

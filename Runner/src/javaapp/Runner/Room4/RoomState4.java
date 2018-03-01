@@ -5,6 +5,7 @@ import java.awt.Graphics;
 import javaapp.Runner.Gameengine.Assets;
 import javaapp.Runner.Gameengine.Gameengine;
 import javaapp.Runner.Gameengine.Player;
+import javaapp.Runner.Room5.RoomState5;
 import javaapp.Runner.States.States;
 
 /**
@@ -24,6 +25,7 @@ public class RoomState4 extends States {
 		super(game);
 		banana = new Banana();
 		trap = new Trap();
+		roomstate5 = new RoomState5(game);
 
 	}
 

@@ -11,6 +11,7 @@ import javaapp.Runner.Gameengine.Player;
  */
 
 public class Ball {
+
 	private float x;
 	float y;
 	private boolean flagg;
@@ -24,16 +25,23 @@ public class Ball {
 	}
 
 	/**
-	 * Metoden tickar
+	 * Uppdaterar parametrarna för bomben
 	 * 
 	 */
 	public void tick() {
 		collisionDetect();
-		atBallsDirection();
+		BallsDirection();
 
 	}
 
-	public void atBallsDirection() {
+	/**
+	 * Metod som håller koll på vilken hastighet bomben ska ha
+	 * Bomben rör sig neråt då har vi positiv hastighet
+	 * Bomben rör sig uppåt då har vi negativ hastighet
+	 * 
+	 */
+	
+	public void BallsDirection() {
 
 		if (y > 600)
 			direction = -speed;
@@ -45,8 +53,8 @@ public class Ball {
 	}
 
 	/**
-	 * Detects if the player have a collision with the ball When a collision occurs
-	 * with the ball, player starts from a given x and y pos
+	 * Detects if the player have a collision with the bomb When a collision occurs
+	 * with the bomb, player starts from a given x and y pos
 	 *
 	 */
 
