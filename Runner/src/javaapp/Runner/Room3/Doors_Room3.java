@@ -7,7 +7,7 @@ import javaapp.Runner.Gameengine.Player;
 /**
  * 
  * @author nurabd
- *
+ * @version 2018-03-01
  */
 
 public class Doors_Room3 {
@@ -47,7 +47,7 @@ public class Doors_Room3 {
 	 * @param g
 	 *            send a graphic to be able to draw the figure in the canvas the
 	 *            image is bringd from the asset class, x is the position that the
-	 *            door eill be drawn in
+	 *            door will be drawn in
 	 */
 
 	public void renderDoorleft(Graphics g) {
@@ -60,7 +60,7 @@ public class Doors_Room3 {
 	 * @param g
 	 *            send a graphic to be able to draw the figure in the canvas the
 	 *            image is bringd from the asset class, x is the position that the
-	 *            door eill be drawn in
+	 *            door will be drawn in
 	 */
 	public void renderDoorRight(Graphics g) {
 		g.drawImage(Assets.door2, (int) x, (int) 45, null);
