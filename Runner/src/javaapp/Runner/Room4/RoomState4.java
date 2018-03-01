@@ -1,10 +1,10 @@
 package javaapp.Runner.Room4;
 
 import java.awt.Graphics;
+
 import javaapp.Runner.Gameengine.Assets;
 import javaapp.Runner.Gameengine.Gameengine;
 import javaapp.Runner.Gameengine.Player;
-import javaapp.Runner.Room1.RoomState1;
 import javaapp.Runner.States.States;
 
 /**
@@ -15,7 +15,7 @@ import javaapp.Runner.States.States;
 
 public class RoomState4 extends States {
 
-	private States roomstate5, roomstate1;
+	private States roomstate5;
 	private static int doorposY = 53;
 	private Banana banana;
 	private Trap trap;
@@ -67,7 +67,7 @@ public class RoomState4 extends States {
  */
 	public void setNextRoom() {
 
-		setRoomState(roomstate1);
+		setRoomState(roomstate5);
 		Player.setYPos(650);
 		Player.setXPos(300);
 
