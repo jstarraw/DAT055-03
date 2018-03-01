@@ -16,7 +16,7 @@ import javaapp.Runner.States.States;
 
 public class RoomState4 extends States {
 
-	private States roomstate5, roomstate1;
+	private States roomstate5;
 	private static int doorposY = 53;
 	private Banana banana;
 	private Trap trap;
