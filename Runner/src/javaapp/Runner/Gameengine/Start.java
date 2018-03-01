@@ -8,7 +8,5 @@ public class Start {
 		
 		Gameengine game = new Gameengine("Runner", 822, 668);
 		game.start();
-
 	}
-
 }

@@ -33,7 +33,9 @@ public class RoomState1 extends States {
 		}
 		// TODO Auto-generated constructor stub
 	}
-
+	/**
+	 *  Updates parameters for everything in the room, arrow, buttons,
+	 */
 	public void tick() {
 		for (Arrow arrow : ArrowList) {
 			arrow.tick();
@@ -50,7 +52,9 @@ public class RoomState1 extends States {
 			}
 		}
 	}
-
+	/**
+	 * renders everything in the room.
+	 */
 	@Override
 	public void render(Graphics g) {
 		g.drawImage(Assets.room2, (int) 0, (int) 0, null);
@@ -63,7 +67,9 @@ public class RoomState1 extends States {
 		}
 
 	}
-
+	/**
+	 * Changes the roomstate to the next room
+	 */
 	public void setNextRoom() {
 
 		setRoomState(roomstate2);
