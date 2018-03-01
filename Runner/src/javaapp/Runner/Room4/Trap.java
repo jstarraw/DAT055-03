@@ -39,17 +39,38 @@ public class Trap {
 			restartPlayer();
 		if (Player.getXPos() > 640 && Player.getXPos() < 690 && Player.getYPos() > 150 && Player.getYPos() < 180)
 			restartPlayer();
-		if (Player.getXPos() > 600 && Player.getXPos() < 640 && Player.getYPos() > 350 && Player.getYPos() < 390)
+		if (Player.getXPos() > 380 && Player.getXPos() < 420 && Player.getYPos() > 350 && Player.getYPos() < 390)
 			restartPlayer();
-		if (Player.getXPos() > 90 && Player.getXPos() < 105 && Player.getYPos() > 450 && Player.getYPos() < 490)
+		if (Player.getXPos() > 80 && Player.getXPos() < 105 && Player.getYPos() > 450 && Player.getYPos() < 490)
 			restartPlayer();
-		if (Player.getXPos() > 295 && Player.getXPos() < 315 && Player.getYPos() > 170 && Player.getYPos() < 210)
+		if (Player.getXPos() > 290 && Player.getXPos() < 315 && Player.getYPos() > 170 && Player.getYPos() < 210)
 			restartPlayer();
 		if (Player.getXPos() > 450 && Player.getXPos() < 490 && Player.getYPos() > 170 && Player.getYPos() < 210)
 			restartPlayer();
 	}
 	// Remove 50 pixels, keep the value, remove 50 pixels, keep the value
+	/**
+	 * Draws the traps.
+	 * @param g
+	 */
+		public void render(Graphics g) {
 
+			g.drawImage(Assets.trap, (int) 480, (int) 580, null);
+			g.drawImage(Assets.trap, (int) 300, (int) 400, null);
+			g.drawImage(Assets.trap, (int) 500, (int) 300, null);
+			g.drawImage(Assets.trap, (int) 600, (int) 600, null);
+			g.drawImage(Assets.trap, (int) 280, (int) 500, null);
+			g.drawImage(Assets.trap, (int) 180, (int) 600, null);
+			g.drawImage(Assets.trap, (int) 600, (int) 500, null);
+			g.drawImage(Assets.trap, (int) 170, (int) 325, null);
+			g.drawImage(Assets.trap, (int) 130, (int) 190, null);
+			g.drawImage(Assets.trap, (int) 690, (int) 200, null);
+			g.drawImage(Assets.trap, (int) 420, (int) 390, null);
+			g.drawImage(Assets.trap, (int) 105, (int) 490, null);
+			g.drawImage(Assets.trap, (int) 315, (int) 220, null);
+			g.drawImage(Assets.trap, (int) 490, (int) 210, null);
+
+		}
 	/**
 	 * Restarts the player from its start position and sets the flags to true
 	 */
@@ -82,28 +103,7 @@ public class Trap {
 		Banana.flagga13 = true;
 
 	}
-/**
- * Draws the traps.
- * @param g
- */
-	public void render(Graphics g) {
 
-		g.drawImage(Assets.trap, (int) 480, (int) 580, null);
-		g.drawImage(Assets.trap, (int) 300, (int) 400, null);
-		g.drawImage(Assets.trap, (int) 500, (int) 300, null);
-		g.drawImage(Assets.trap, (int) 600, (int) 600, null);
-		g.drawImage(Assets.trap, (int) 280, (int) 500, null);
-		g.drawImage(Assets.trap, (int) 180, (int) 600, null);
-		g.drawImage(Assets.trap, (int) 600, (int) 500, null);
-		g.drawImage(Assets.trap, (int) 170, (int) 325, null);
-		g.drawImage(Assets.trap, (int) 130, (int) 190, null);
-		g.drawImage(Assets.trap, (int) 690, (int) 200, null);
-		g.drawImage(Assets.trap, (int) 420, (int) 390, null);
-		g.drawImage(Assets.trap, (int) 105, (int) 490, null);
-		g.drawImage(Assets.trap, (int) 315, (int) 220, null);
-		g.drawImage(Assets.trap, (int) 490, (int) 210, null);
-
-	}
 /**
  * Gets the x -position for the trap 
  * 
