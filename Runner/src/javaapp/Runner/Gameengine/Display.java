@@ -92,7 +92,9 @@ public class Display {
 	}
 
 	public void helper() {
-		System.out.println("How can i help you");
+		
+		JOptionPane.showMessageDialog(null,"  ______GAMEBUTTONS!_____\n Play = P \n Quit = Q\n Interactbutton = E\n HighScore = S\n Move-Up = w\n Move-Down = s\n Move-Left = a\n Move-Right = d\n", "Help message", JOptionPane.INFORMATION_MESSAGE);
+	
 
 	}
 

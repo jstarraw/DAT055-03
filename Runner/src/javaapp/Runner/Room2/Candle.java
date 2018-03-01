@@ -12,11 +12,10 @@ public class Candle {
 	int y;
 	private boolean lit = true;
 
-
 	public Candle(int x, int y) {
 		this.x = x;
 		this.y = y;
-		
+
 	}
 
 	public void tick() {

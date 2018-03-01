@@ -2,7 +2,6 @@ package javaapp.Runner.States;
 
 import java.awt.Graphics;
 
-
 import javaapp.Runner.Gameengine.Gameengine;
 import javaapp.Runner.Gameengine.Player;
 import javaapp.Runner.Room1.RoomState1;

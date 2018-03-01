@@ -20,7 +20,7 @@ public class RoomState3 extends States {
 		light = new StreetLight();
 		door1 = new Doors_Room3(332, 45);
 		door2 = new Doors_Room3(395, 45);
-		number = new TimeTaker( 100, 100);
+		number = new TimeTaker(100, 100);
 		room4 = new RoomState4(game);
 
 		// TODO Auto-generated constructor stub

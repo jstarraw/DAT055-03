@@ -9,9 +9,9 @@ import javaapp.Runner.States.States;
 public class Gameengine implements Runnable {
 
 	private Display display;
-	public int width;
-	public int height;
-	public String title;
+	private int width;
+	private int height;
+	private String title;
 
 	private boolean running = false;
 	private Thread thread;

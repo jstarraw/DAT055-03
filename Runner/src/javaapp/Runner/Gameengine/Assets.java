@@ -10,7 +10,8 @@ public class Assets {
 	private static final int widthJenny = 32, heightJenny = 32;
 
 	public static BufferedImage doorbanner, bomb1, stearin, stearin1, player, player2, player3, player4, room1, banner1,
-			room2, room3, room4, room5, NoFire, Fire, TopBanner, Door, ball1, arrow, brokenarrow, menu, room6,bubble,win,gameover,
+			room2, room3, room4, room5, NoFire, Fire, TopBanner, Door, ball1, arrow, brokenarrow, menu, room6, bubble,
+			win, gameover,
 			// doors for room3
 			door1, door2,
 			// "timer" room 3
@@ -45,14 +46,13 @@ public class Assets {
 		SpriteSheet room_third = new SpriteSheet(ImageLoader.loadImage("/Room3_back.png"));
 		SpriteSheet siffror = new SpriteSheet(ImageLoader.loadImage("/Room3_Timer.png"));
 		SpriteSheet Doors = new SpriteSheet(ImageLoader.loadImage("/Room3_Doors.png"));
-		
-		//Roman's room
-		
+
+		// Roman's room
+
 		SpriteSheet room_fifth = new SpriteSheet(ImageLoader.loadImage("/room5.png"));
 		bubble = ImageLoader.loadImage("/bubble.png");
 		win = ImageLoader.loadImage("/win.png");
 		gameover = ImageLoader.loadImage("/gameover.png");
-		
 
 		TopBanner = ImageLoader.loadImage("/topbanner24.png");
 		Door = ImageLoader.loadImage("/door.png");

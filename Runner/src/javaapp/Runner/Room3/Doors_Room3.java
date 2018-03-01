@@ -6,13 +6,11 @@ import javaapp.Runner.Gameengine.Assets;
 
 public class Doors_Room3 {
 
-
 	private float x, y;
 
 	public Doors_Room3(float x, float y) {
 		this.x = x;
 		this.y = y;
-		
 
 	}
 

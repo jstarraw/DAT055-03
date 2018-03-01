@@ -29,12 +29,12 @@ public class RoomState2 extends States {
 		room3 = new RoomState3(game);
 
 		boll = new Ball(150, 570, 15);
-		boll2 = new Ball( 320, 570, 15);
+		boll2 = new Ball(320, 570, 15);
 		boll3 = new Ball(540, 100, 21);
 
 		for (int a = 1; a < 9; a += 2) {
 			for (int y = 1; y < 4; y++) {
-				candle = new Candle( 90 * a, y * 180);
+				candle = new Candle(90 * a, y * 180);
 				candleList.add(candle);
 			}
 		}
@@ -68,8 +68,7 @@ public class RoomState2 extends States {
 
 			if (doorflag == 12)
 				flagga1 = true;
-			
-			
+
 		}
 
 	}

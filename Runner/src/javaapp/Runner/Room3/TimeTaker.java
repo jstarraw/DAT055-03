@@ -13,10 +13,10 @@ public class TimeTaker {
 
 	private int timer;
 
-	public TimeTaker( float x, float y) {
+	public TimeTaker(float x, float y) {
 		this.x = x;
 		this.y = y;
-		
+
 	}
 
 	/**
