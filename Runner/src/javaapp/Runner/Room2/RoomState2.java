@@ -15,7 +15,7 @@ public class RoomState2 extends States {
 	private List<Candle> candleList = new ArrayList<Candle>();
 	private States room3;
 
-	private Ball boll, boll2, boll3;
+	private Bomb boll, boll2, boll3;
 	private static int doorposY = 53;
 	private static int doorflag = 0;
 	private static boolean flagga1 = false;
@@ -28,9 +28,9 @@ public class RoomState2 extends States {
 		super(game);
 		room3 = new RoomState3(game);
 
-		boll = new Ball(150, 570, 15);
-		boll2 = new Ball(320, 570, 15);
-		boll3 = new Ball(540, 100, 21);
+		boll = new Bomb(150, 570, 15);
+		boll2 = new Bomb(320, 570, 15);
+		boll3 = new Bomb(540, 100, 21);
 
 		for (int a = 1; a < 9; a += 2) {
 			for (int y = 1; y < 4; y++) {

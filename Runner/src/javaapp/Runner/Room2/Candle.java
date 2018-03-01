@@ -6,17 +6,32 @@ import javaapp.Runner.Gameengine.Assets;
 import javaapp.Runner.Gameengine.Gameengine;
 import javaapp.Runner.Gameengine.Player;
 
+/**
+ * @Author Daniel Cebe
+ * @version 2018-03-01
+ * 
+ */
+
 public class Candle {
 
 	private int x;
-	int y;
+	private int y;
 	private boolean lit = true;
+	
+	
+/**
+* @Author Daniel Cebe
+* @version 2018-03-01
+* 
+*/
 
 	public Candle(int x, int y) {
 		this.x = x;
 		this.y = y;
 
 	}
+	
+
 
 	public void tick() {
 
@@ -42,16 +57,32 @@ public class Candle {
 
 		}
 	}
+	
+	/**
+	 * @param lit
+	 * Sets the lit-flag to true for the candles
+	 * 
+	 */
 
 	public void setLit(boolean lit) {
 		this.lit = lit;
 	}
 
+	
+	
+	
 	public boolean getFlag() {
 
 		return !lit;
 	}
 
+/**
+* @param g
+* render picture of the light candles if the flag is true
+* otherwise it renders the picture of the 
+* 
+*/	
+	
 	public void render(Graphics g) {
 
 		if (lit)
