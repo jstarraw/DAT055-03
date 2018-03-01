@@ -1,8 +1,6 @@
 package javaapp.Runner.Room4;
 
 import java.awt.Graphics;
-import java.util.Timer;
-
 import javaapp.Runner.Gameengine.Assets;
 import javaapp.Runner.Gameengine.Player;
 

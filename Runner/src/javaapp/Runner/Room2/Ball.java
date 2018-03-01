@@ -1,27 +1,32 @@
 package javaapp.Runner.Room2;
 
 import java.awt.Graphics;
-
 import javaapp.Runner.Gameengine.Assets;
-import javaapp.Runner.Gameengine.Entity;
-import javaapp.Runner.Gameengine.Gameengine;
 import javaapp.Runner.Gameengine.Player;
+
+/**
+@Author Daniel Cebe
+@version 2018-03-01
+
+ */
 
 public class Ball {
 	private float x;
 	float y;
 	private boolean flagg;
 	private float direction = 1, speed;
-	public Gameengine game;
 
-	public Ball(Gameengine game, float x, float y, float speed) {
+	public Ball(float x, float y, float speed) {
 		this.x = x;
 		this.y = y;
-		this.game = game;
 		this.speed = speed;
 
 	}
 
+/** 
+Metoden tickar 
+
+*/
 	public void tick() {
 		collisionDetect();
 		atBallsDirection();
@@ -39,6 +44,15 @@ public class Ball {
 
 	}
 
+	
+	
+	/**
+	 * Detects if the player have a collision with the ball 
+	 * When a collision occurs with the ball, 
+	 * player starts from a given x and y pos
+	 *
+	 */
+	
 	public void collisionDetect() {
 
 		if (x + 60 > Player.getXPos() && x < Player.getXPos() + 25) {
@@ -52,15 +66,11 @@ public class Ball {
 		}
 	}
 
-	public boolean isFlagg() {
-		return flagg;
-	}
-
-	public void resetBombFlagg() {
-
-		flagg = false;
-
-	}
+	/** 
+	 * Draws a bomb to the room with a given x and y position
+	 * 
+	 * @param g 
+	 */
 
 	public void render(Graphics g) {
 

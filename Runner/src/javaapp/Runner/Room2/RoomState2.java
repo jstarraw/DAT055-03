@@ -7,21 +7,19 @@ import java.util.List;
 import javaapp.Runner.Gameengine.Assets;
 import javaapp.Runner.Gameengine.Gameengine;
 import javaapp.Runner.Gameengine.Player;
-import javaapp.Runner.Room2.RoomState2;
 import javaapp.Runner.Room3.RoomState3;
 import javaapp.Runner.States.States;
-import javaapp.Runner.States.*;
 
 public class RoomState2 extends States {
 	private Candle candle;
 	private List<Candle> candleList = new ArrayList<Candle>();
 	private States room3;
 
-	private static int timer = 200;
 	private Ball boll, boll2, boll3;
 	private static int doorposY = 53;
 	private static int doorflag = 0;
 	private static boolean flagga1 = false;
+	private static int timer = 0;
 
 	private int x;
 	private int y;
@@ -30,13 +28,13 @@ public class RoomState2 extends States {
 		super(game);
 		room3 = new RoomState3(game);
 
-		boll = new Ball(game, 150, 570, 5);
-		boll2 = new Ball(game, 320, 570, 5);
-		boll3 = new Ball(game, 540, 100, 7);
+		boll = new Ball(150, 570, 15);
+		boll2 = new Ball(320, 570, 15);
+		boll3 = new Ball(540, 100, 21);
 
 		for (int a = 1; a < 9; a += 2) {
 			for (int y = 1; y < 4; y++) {
-				candle = new Candle(game, 90 * a, y * 180);
+				candle = new Candle(90 * a, y * 180);
 				candleList.add(candle);
 			}
 		}
@@ -68,34 +66,10 @@ public class RoomState2 extends States {
 				doorflag++;
 			candle.tick();
 
-		}
-		if (doorflag == 11)
-			flagga1 = true;
-
-		if (boll.isFlagg() || boll2.isFlagg() || boll3.isFlagg()) {
-
-			candle.getFlag();
-
-			candle.tick();
-			candle.setLit(true);
-			timer++;
-
-			candle.tick();
-			boll.resetBombFlagg();
-			// candle.setLit(true);
-
-			System.out.println(candle.getFlag());
+			if (doorflag == 12)
+				flagga1 = true;
 
 		}
-
-		// System.out.println(Player.getXPos()+ "player");
-		// System.out.println(Player.getYPos()+ "player");
-		// System.out.println(boll.getX()+"boll" );
-		/*
-				
-					
-			
-		*/
 
 	}
 

@@ -1,10 +1,7 @@
 package javaapp.Runner.Room4;
 
 import java.awt.Graphics;
-import java.lang.Thread.State;
-
 import javaapp.Runner.Gameengine.Assets;
-import javaapp.Runner.Gameengine.Gameengine;
 import javaapp.Runner.Gameengine.Player;
 
 /**
@@ -15,7 +12,6 @@ import javaapp.Runner.Gameengine.Player;
 public class Trap {
 
 	private float posX, posY;
-	private Gameengine game;
 
 	/**
 	 * This methods restarts the player from the rooms beginning 

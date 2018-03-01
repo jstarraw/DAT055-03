@@ -1,14 +1,10 @@
 package javaapp.Runner.States;
 
 import java.awt.Graphics;
-import java.util.Timer;
-import java.util.TimerTask;
 
 import javaapp.Runner.Gameengine.Gameengine;
 import javaapp.Runner.Gameengine.Player;
-import javaapp.Runner.Gameengine.Room;
 import javaapp.Runner.Room1.RoomState1;
-import javaapp.Runner.Room3.RoomState3;
 
 public class Gamestate extends States {
 	private Player player;
