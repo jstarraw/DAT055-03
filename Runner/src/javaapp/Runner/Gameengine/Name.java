@@ -9,6 +9,14 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
+/**
+ * @Author Rickard Gyllensten, Jenny Karlsson, Roman Melnik, Daniel Cebe,
+ *         Nurhusein Abdulkader
+ * @version 2018-03-01
+ * 
+ */
+
+
 public class Name extends JFrame {
 
 	private JPanel jpanel = new JPanel();
@@ -17,6 +25,25 @@ public class Name extends JFrame {
 	private JButton jbutton = new JButton("Enter");
 	private static String input;
 
+	/** 
+	 * 
+	 * Constructor for the class Name
+	 * 
+	 */
+	
+	public Name() {
+		
+		playerName();
+	}
+	
+
+	/**
+	 * 
+	 * Creates a poppup window when the game starts
+	 * This poppup window is created to enter the player name 
+	 * 
+	 */
+	
 	public void playerName() {
 		setTitle("Playername");
 		setVisible(true);
@@ -29,6 +56,7 @@ public class Name extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				input = jtextfield.getText();
 				jlabel.setText(input);
+				
 			}
 		});
 
@@ -47,6 +75,11 @@ public class Name extends JFrame {
 		add(jpanel);
 
 	}
+	
+	/**
+	 * This method returns the player name from the input 
+	 * @return input
+	 */
 
 	public String getName() {
 		return input;

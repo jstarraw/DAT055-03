@@ -5,6 +5,12 @@ import java.awt.image.BufferedImage;
 public class SpriteSheet {
 
 	private BufferedImage sheet;
+	
+	/**
+	 * 
+	 * Constructor of the class SpriteSheet
+	 * @param sheet
+	 */
 
 	public SpriteSheet(BufferedImage sheet) {
 		this.sheet = sheet;

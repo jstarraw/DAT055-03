@@ -12,14 +12,36 @@ import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 import javax.swing.KeyStroke;
 
+/**
+ * @Author Rickard Gyllensten, Jenny Karlsson, Roman Melnik, Daniel Cebe,
+ *         Nurhusein Abdulkader
+ * @version 2018-03-01
+ * 
+ */
+
+
+
 public class Menubar {
 	private JFrame frame;
 
+	/**
+	 * Constructor of the class Menubar
+	 *  initializes the object
+	 * @param frame
+	 */
+	
 	public Menubar(JFrame frame) {
 		this.frame = frame;
 		createMenu();
 	}
 
+	/**
+	 * This method creates the menu on the menubar 
+	 * three different options, scoretable, help and quit
+	 * 
+	 * 
+	 */
+	
 	public void createMenu() {
 
 		final int SHORTCUT_MASK = Toolkit.getDefaultToolkit().getMenuShortcutKeyMask();
@@ -64,6 +86,13 @@ public class Menubar {
 		frame.pack();
 
 	}
+	
+	
+	/**
+	 * The help information that is created when a player need information about the gamebuttons
+	 * can be viewed from the menubar or by holding the button ctrl+h
+	 * 
+	 */
 
 	public void helper() {
 
@@ -80,6 +109,8 @@ public class Menubar {
 		System.exit(0);
 	}
 
+	
+	
 	public void scoreTable() {
 
 		int s = -10;

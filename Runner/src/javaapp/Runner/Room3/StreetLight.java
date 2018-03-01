@@ -1,15 +1,16 @@
 package javaapp.Runner.Room3;
+
 import java.awt.Graphics;
 import javaapp.Runner.Gameengine.Assets;
 import javaapp.Runner.Gameengine.Player;
+
 /**
  * 
  * @author nurabd
- * @version 
+ * @version 2018-03-01
  *
  */
 public class StreetLight {
-
 
 	private static int timer = 50;
 	private boolean way1to2 = false;
@@ -20,13 +21,10 @@ public class StreetLight {
 	private boolean way6to7 = false;
 	private boolean way4to6 = false;
 	private boolean way5to6 = false;
-	
 
-
-	
 	/**
-	 *  will draw if the player is settled in a platform 
-	 *   which is connected to two or more ways.
+	 * will draw if the player is settled in a platform which is connected to two or
+	 * more ways.
 	 */
 	public void tick() {
 		timer++;
@@ -35,13 +33,15 @@ public class StreetLight {
 		helpMetods();
 		turnOnAll();
 		TurnoffAll();
-		
-	
+
 	}
-/**
- * 
- * @param g is a graphic object which will draw the wanted object that will be drawn.
- */
+
+	/**
+	 * 
+	 * @param g
+	 *            is a graphic object which will draw the wanted object that will be
+	 *            drawn.
+	 */
 	public void render(Graphics g) {
 
 		// upp horiszontellt ----- vänster
@@ -103,171 +103,165 @@ public class StreetLight {
 			g.drawImage(Assets.streetlight, (int) 410, (int) 380, null);
 
 		}
-		//
-		//
+
 		if (way4to6) {
 			g.drawImage(Assets.streetlight, (int) 410, (int) 480 + 8, null);
 			g.drawImage(Assets.streetlight, (int) 410, (int) 530 + 3, null);
 
 		}
-		
-		
 
 	}
-	
-	 public void platforms() {
-		 
-		 boolean platform1 = Player.getYPos() < 290 && Player.getYPos() > 200 && Player.getXPos() > 10
-					&& Player.getXPos() < 100 && timer > 50;
-			 boolean platform2 = Player.getYPos() < 290 && Player.getYPos() > 200 && Player.getXPos() > 370
-					&& Player.getXPos() < 450 && timer > 50;
-		 boolean platform3 = Player.getYPos() < 290 && Player.getYPos() > 200 && Player.getXPos() > 680
-					&& Player.getXPos() < 780 && timer > 50;
-			 boolean platform4 = Player.getYPos() < 620 && Player.getYPos() > 573 && Player.getXPos() > 704
-					&& Player.getXPos() < 770 && timer > 50;
-			 boolean platform5 = Player.getYPos() < 456 && Player.getYPos() > 411 && Player.getXPos() > 383
-					&& Player.getXPos() < 443 && timer > 50;
-	 boolean platform6 = Player.getYPos() < 618 && Player.getYPos() > 580 && Player.getXPos() > 20
-					&& Player.getXPos() < 80 && timer > 50;
- boolean platform7 = Player.getYPos() < 620 && Player.getYPos() > 576 && Player.getXPos() > 380
-					&& Player.getXPos() < 446 && timer > 50;
-		
 
-		 if (platform1) {
+	public void platforms() {
 
-				way1to2 = !way1to2;
-				way1to5 = !way1to5;
-				timer = 0;
-			}
+		boolean platform1 = Player.getYPos() < 290 && Player.getYPos() > 200 && Player.getXPos() > 10
+				&& Player.getXPos() < 100 && timer > 50;
+		boolean platform2 = Player.getYPos() < 290 && Player.getYPos() > 200 && Player.getXPos() > 370
+				&& Player.getXPos() < 450 && timer > 50;
+		boolean platform3 = Player.getYPos() < 290 && Player.getYPos() > 200 && Player.getXPos() > 680
+				&& Player.getXPos() < 780 && timer > 50;
+		boolean platform4 = Player.getYPos() < 620 && Player.getYPos() > 573 && Player.getXPos() > 704
+				&& Player.getXPos() < 770 && timer > 50;
+		boolean platform5 = Player.getYPos() < 456 && Player.getYPos() > 411 && Player.getXPos() > 383
+				&& Player.getXPos() < 443 && timer > 50;
+		boolean platform6 = Player.getYPos() < 618 && Player.getYPos() > 580 && Player.getXPos() > 20
+				&& Player.getXPos() < 80 && timer > 50;
+		boolean platform7 = Player.getYPos() < 620 && Player.getYPos() > 576 && Player.getXPos() > 380
+				&& Player.getXPos() < 446 && timer > 50;
 
-			if (platform2) {
+		if (platform1) {
 
-				way1to2 = !way1to2;
-				way2to3 = !way2to3;
-				way2to4 = !way2to4;
-				timer = 0;
-			}
-
-			if (platform3) {
-
-				way2to3 = !way2to3;
-				way3to7 = !way3to7;
-				
-				timer = 0;
-			}
-
-			if (platform4) { //7
-
-				way3to7 = !way3to7;
-				way6to7 = !way6to7;
-
-				timer = 0;
-			}
-
-			if (platform5) {  // 4
-
-				way2to4 = !way2to4; 
-
-				way4to6 = !way4to6;
-				
-
-				timer = 0;
-			}
-
-			if (platform6) { // 5
-
-				way1to5 = !way1to5;
-				way5to6 = !way5to6;
-				timer = 0;
-			}
-
-			if (platform7) { // 6
-
-				way6to7 = !way6to7;
-				way4to6 = !way4to6;
-				way5to6 = !way5to6;
-				timer = 0;
-			}
-			
-			
-			if(timer > 600) {
-				way4to6 = true;
-			}
-			if(timer > 1800) {
-				way1to2 = true;
-			}
-			if(timer > 2200) {
-				way4to6 = true;
-			}
-			if(timer > 2500) {
-				way2to3 = true;
-			}
-			if(timer > 2700) {
-				way4to6 = true;
-			}
-			if(timer > 3000) {
-				way5to6 = true;
-			}
-			
-		 
-	 }
-	
-public void helpMetods() {
-		 if(timer > 600) {
-				way4to6 = true;
-			}
-		if(timer > 1800) {
-				way1to2 = true;
-			}
-		if(timer > 2200) {
-				way4to6 = true;
-			}
-		if(timer > 2500) {
-				way2to3 = true;
-			}
-		if(timer > 2700) {
-				way4to6 = true;
-			}
-		if(timer > 3000) {
-				way5to6 = true;
-			} 
-	 }
-	 
-public void turnOnAll() {
-	boolean giveupplatforms = Player.getYPos() < 130 && Player.getXPos() > 650 && Player.getXPos() < 770 && timer > 50;
-			if(giveupplatforms) {
-			 
-				 way1to2 = true;
-				 way1to5 = true;
-				 way2to3 = true;
-				 way2to4 = true;
-				 way3to7 = true;
-				 way6to7 = true;
-				 way4to6 = true;
-		     	 way5to6 = true;
-			
+			way1to2 = !way1to2;
+			way1to5 = !way1to5;
+			timer = 0;
 		}
-			
 
-		 
-	 }
+		if (platform2) {
 
-public void TurnoffAll() {
-	 boolean resetplattform =  Player.getYPos() < 130 && Player.getXPos() > 10 && Player.getXPos() < 100 && timer > 50;;
-	if(resetplattform) {
-		
-		
-		way1to2 = false;
-		 way1to5 = false;
-		 way2to3 = false;
-		 way2to4 = false;
-		 way3to7 = false;
-		 way6to7 = false;
-		 way4to6 = false;
-		 way5to6 = false;
-}
-}
-public boolean allFlags() {
-		return  way1to2&&way1to5 && way2to3 && way2to4&& way3to7&& way6to7;//flgga7;
+			way1to2 = !way1to2;
+			way2to3 = !way2to3;
+			way2to4 = !way2to4;
+			timer = 0;
+		}
+
+		if (platform3) {
+
+			way2to3 = !way2to3;
+			way3to7 = !way3to7;
+
+			timer = 0;
+		}
+
+		if (platform4) { // 7
+
+			way3to7 = !way3to7;
+			way6to7 = !way6to7;
+
+			timer = 0;
+		}
+
+		if (platform5) { // 4
+
+			way2to4 = !way2to4;
+
+			way4to6 = !way4to6;
+
+			timer = 0;
+		}
+
+		if (platform6) { // 5
+
+			way1to5 = !way1to5;
+			way5to6 = !way5to6;
+			timer = 0;
+		}
+
+		if (platform7) { // 6
+
+			way6to7 = !way6to7;
+			way4to6 = !way4to6;
+			way5to6 = !way5to6;
+			timer = 0;
+		}
+
+		if (timer > 600) {
+			way4to6 = true;
+		}
+		if (timer > 1800) {
+			way1to2 = true;
+		}
+		if (timer > 2200) {
+			way4to6 = true;
+		}
+		if (timer > 2500) {
+			way2to3 = true;
+		}
+		if (timer > 2700) {
+			way4to6 = true;
+		}
+		if (timer > 3000) {
+			way5to6 = true;
+		}
+
+	}
+
+	public void helpMetods() {
+		if (timer > 600) {
+			way4to6 = true;
+		}
+		if (timer > 1800) {
+			way1to2 = true;
+		}
+		if (timer > 2200) {
+			way4to6 = true;
+		}
+		if (timer > 2500) {
+			way2to3 = true;
+		}
+		if (timer > 2700) {
+			way4to6 = true;
+		}
+		if (timer > 3000) {
+			way5to6 = true;
+		}
+	}
+
+	public void turnOnAll() {
+		boolean giveupplatforms = Player.getYPos() < 130 && Player.getXPos() > 650 && Player.getXPos() < 770
+				&& timer > 50;
+		if (giveupplatforms) {
+
+			way1to2 = true;
+			way1to5 = true;
+			way2to3 = true;
+			way2to4 = true;
+			way3to7 = true;
+			way6to7 = true;
+			way4to6 = true;
+			way5to6 = true;
+
+		}
+
+	}
+
+	public void TurnoffAll() {
+		boolean resetplattform = Player.getYPos() < 130 && Player.getXPos() > 10 && Player.getXPos() < 100
+				&& timer > 50;
+		;
+		if (resetplattform) {
+
+			way1to2 = false;
+			way1to5 = false;
+			way2to3 = false;
+			way2to4 = false;
+			way3to7 = false;
+			way6to7 = false;
+			way4to6 = false;
+			way5to6 = false;
+		}
+	}
+
+	public boolean allFlags() {
+		return way1to2 && way1to5 && way2to3 && way2to4 && way3to7 && way6to7;// flgga7;
 	}
 }

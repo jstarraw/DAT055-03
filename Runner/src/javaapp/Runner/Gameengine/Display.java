@@ -9,7 +9,6 @@ public class Display {
 
 	private JFrame frame;
 	private Canvas canvas;
-	private Menubar menubar;
 	private String title;
 	private int width, height;
 
@@ -18,7 +17,7 @@ public class Display {
 		this.width = width;
 		this.height = height;
 		createDisplay();
-		menubar = new Menubar(frame);
+		new Menubar(frame);
 
 	}
 
