@@ -6,7 +6,6 @@ import javaapp.Runner.Gameengine.Player;
 /**
  * 
  * @author nurabd 
- * @verision 2018-03-01
  *
  */
 
@@ -83,9 +82,9 @@ public void setX(float x) {
  * 
  * @return if  the the player is in the position of door the -> will get the position of the door.
  */
-public boolean getDoorposition() {
+public boolean isDoorposition() {
 	
-	return Player.getYPos() < 141 && Player.getXPos() < 407 && Player.getXPos() < 385;
+	return Player.getYPos() < 130 && Player.getXPos() > 300 && Player.getXPos() < 400;
 }
 	
 		}

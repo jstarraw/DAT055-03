@@ -38,7 +38,7 @@ public class RoomState3 extends States{
 	if(light.allFlags()) {
 		  door2.tickLeftdoor();
 		  door1.tickRightdoor();}	
-	if(door1.getDoorposition() && door2.getDoorposition() ) {
+	if(door1.isDoorposition() && door2.isDoorposition() && light.allFlags()) {
 		setRoomState(room4);
 		Player.setYPos(700);
 		

@@ -5,25 +5,28 @@ import java.awt.Graphics;
 import javaapp.Runner.Gameengine.Gameengine;
 import javaapp.Runner.Gameengine.Player;
 import javaapp.Runner.Room1.RoomState1;
+import javaapp.Runner.Room3.RoomState3;
 
 public class Gamestate extends States {
 	private Player player;
-	private States roomstate1;
-	int secondpassed = 0;
+	private States roomstate3;
+	private static boolean timeflag = true;
+	private static int secondpassed = 0;
 
 	public Gamestate(Gameengine game) {
 		super(game);
 		player = new Player(game, 150, 600);
-		roomstate1 = new RoomState1(game);
+		roomstate3 = new RoomState3(game);
 
-		setRoomState(roomstate1);
+		setRoomState(roomstate3);
 	}
 
 	@Override
 	public void tick() {
 		// Timer time = new Timer();
-
-		secondpassed++;
+		if(timeflag)
+			secondpassed++;
+		
 		player.tick();
 		getRoomState().tick();
 		if (secondpassed % 60 == 0)
@@ -40,5 +43,15 @@ public class Gamestate extends States {
 		player.render(g);
 
 	}// test
+	
+	public static int getTime()
+	{
+		
+		return secondpassed;
+	}
+	public static void setStopTime() {
+		timeflag = false;
+	}
+	
 
 }

@@ -32,41 +32,53 @@ public class Banana {
 	public static boolean flagga12 = true;
 	public static boolean flagga13 = true;
 
+
+	/**
+	 * 
+	 * @return x-position of the banana
+	 */
+
 /**
  * 
- * @return x-position of the banana
+ * @return Returns the x-position of the banana
  */
 	public float getxPos() {
 		return xPos;
 	}
-/**
- * 
- * @param xPos
- */
+
+	/**
+	 * 
+	 * @param xPos
+	 */
 	public void setxPos(float xPos) {
 		this.xPos = xPos;
 	}
-/**
- * 
- * @return y-postion for banana
- */
+
+
+	/**
+	 * 
+	 * @return y-postion for banana
+	 */
+
 	public float getyPos() {
 		return yPos;
 	}
-/**
- * 
- * @param yPos
- */
+
+	/**
+	 * 
+	 * @param yPos
+	 */
 	public void setyPos(float yPos) {
 		this.yPos = yPos;
 	}
 
-/**
- * Removes the candies if the player is within specific boundery
- * @param
- * 
- * 
- */
+	/**
+	 * Removes the candies if the player is within specific boundery
+	 * 
+	 * @param
+	 * 
+	 * 
+	 */
 	public void tick() {
 		time++;
 
@@ -114,7 +126,8 @@ public class Banana {
 	/**
 	 * 
 	 * This method draws candy if the flags are set to true
-	 * @param g 
+	 * 
+	 * @param g
 	 */
 	public void render(Graphics g) {
 

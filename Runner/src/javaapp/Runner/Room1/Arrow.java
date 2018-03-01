@@ -7,8 +7,7 @@ import javaapp.Runner.Gameengine.Player;
 
 public class Arrow {
 
-	private boolean brokenflag = false, dead = false, semidead = false;
-
+	private boolean brokenflag = false, dead = false;
 	Random rand = new Random();
 	private int x = rand.nextInt(700) + 10;
 	private int y = rand.nextInt(3000) + 700;
@@ -17,14 +16,19 @@ public class Arrow {
 	public Arrow() {
 
 	}
-
+	/**
+	 * updates parameters for the arrow.
+	 */
 	public void tick() {
 
 		arrowCalc();
 		arrowHit();
 
 	}
-
+	/**
+	 * Renders the arrow. dead or alive
+	 * @param g
+	 */
 	public void render(Graphics g) {
 		if (!brokenflag)
 			g.drawImage(Assets.arrow, (int) x, (int) y, null);
@@ -32,34 +36,38 @@ public class Arrow {
 			g.drawImage(Assets.brokenarrow, (int) x, (int) y, null);
 
 	}
-
+	/**
+	 *  Checks if arrow is alive. Updates arrow parameters.
+	 */
 	public void arrowCalc() {
 
-		if (!dead) {
-			if (y < 120)
+		if (!dead){
+			if (y < 120) {
 				brokenflag = true;
-
-			if (brokenflag) {
+			}
+			if (brokenflag){
 				x++;
 				y++;
 
 				if (y > rand.nextInt(70) + 160) {
-
 					dead = true;
 				}
-			} else
+			}
+			else {
 				y -= 6;
-		} else {
+			}
+		}
+		else {
 			timer++;
 			if (timer > 40) {
 				resetArrow();
-
 			}
-
 		}
 
 	}
-
+	/**
+	 * Collisioncheck and if that is the case it moves the player and resets arrow
+	 */
 	public void arrowHit() {
 
 		if (!brokenflag) {
@@ -71,9 +79,10 @@ public class Arrow {
 		}
 
 	}
-
+/**
+ * resets arrow and flags. The arrow gets a new position
+ */
 	public void resetArrow() {
-
 		y = rand.nextInt(10000) + 700;
 		x = rand.nextInt(700) + 10;
 		dead = false;

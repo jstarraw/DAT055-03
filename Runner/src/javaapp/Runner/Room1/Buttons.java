@@ -12,18 +12,26 @@ public class Buttons {
 	private static int timer = 200, timer2 = 0;
 	private static int i;
 
+	/**
+	 * Updates parameters on buttons. 
+	 */
 	public void tick() {
 
 		pushButton();
 
 	}
-
+/**
+ * 	Renders buttons.
+ * @param g
+ */
 	public void render(Graphics g) {
-
 		renderButton(g);
-
 	}
-
+/**
+ * checks of we have set the right flags to enter next part of the game.
+ * @return
+ * 		returns true if we set the right flags. Otherwise false.
+ */
 	public boolean checkFlags() {
 
 		if (flagga2 && flagga5 && flagga6 && flagga7) {
@@ -34,7 +42,9 @@ public class Buttons {
 
 		return false;
 	}
-
+/**
+ *  checks the y cordinate if we are close to button. In that case calls atButton()
+ */
 	public void pushButton() {
 		if (Player.getYPos() < 130) {
 			timer++;
@@ -42,7 +52,13 @@ public class Buttons {
 		}
 
 	}
-
+	/**
+	 * Check if player is at button
+	 * 
+	 *
+	 * @param x
+	 * 	x is the players x cordinate.
+	 */
 	public void atButton(float x) {
 		if (timer > 15) {
 			if (x > 20 && x < 90) {
@@ -81,7 +97,10 @@ public class Buttons {
 		}
 
 	}
-
+/**
+ *  renders the button and fire
+ * @param g Graphics
+ */
 	public void renderButton(Graphics g) {
 		if (flagga1)
 			renderFire(g, 60);

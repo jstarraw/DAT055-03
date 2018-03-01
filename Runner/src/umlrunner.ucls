@@ -127,8 +127,8 @@
       <operations public="false" package="false" protected="false" private="false" static="false"/>    
     </display>  
   </class>  
-  <class id="15" language="java" name="javaapp.Runner.Room2.Ball" project="Runner" 
-    file="/Runner/src/javaapp/Runner/Room2/Ball.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="15" language="java" name="javaapp.Runner.Room2.Bomb" project="Runner" 
+    file="/Runner/src/javaapp/Runner/Room2/Bomb.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1370" y="586"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -340,111 +340,109 @@
     <end type="TARGET" refId="3"/>  
   </generalization>  
   <association id="67">    
-    <bendpoint x="1200" y="1189"/>    
-    <end type="SOURCE" refId="7" navigable="false">      
-      <attribute id="68" name="roomstate1"/>      
-      <multiplicity id="69" minimum="0" maximum="1">        
-        <position height="20" width="31" x="1016" y="1176"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="3" navigable="true"/>    
-    <display labels="false" multiplicity="true"/>  
-  </association>  
-  <association id="70">    
     <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="71" name="player"/>      
-      <multiplicity id="72" minimum="0" maximum="1"/>    
+      <attribute id="68" name="player"/>      
+      <multiplicity id="69" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="21" navigable="true"/>    
     <display labels="false" multiplicity="true"/>  
   </association>  
-  <association id="73">    
+  <association id="70">    
     <bendpoint x="1201" y="621"/>    
     <bendpoint x="1287" y="616"/>    
     <end type="SOURCE" refId="13" navigable="false">      
-      <attribute id="74" name="boll3"/>      
-      <multiplicity id="75" minimum="0" maximum="1"/>    
+      <attribute id="71" name="boll3"/>      
+      <multiplicity id="72" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="15" navigable="true"/>    
     <display labels="false" multiplicity="true"/>  
   </association>  
-  <association id="76">    
+  <association id="73">    
     <end type="SOURCE" refId="16" navigable="false">      
-      <attribute id="77" name="buttons"/>      
-      <multiplicity id="78" minimum="0" maximum="1"/>    
+      <attribute id="74" name="buttons"/>      
+      <multiplicity id="75" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="17" navigable="true"/>    
     <display labels="false" multiplicity="true"/>  
   </association>  
-  <association id="79">    
+  <association id="76">    
     <end type="SOURCE" refId="4" navigable="false">      
-      <attribute id="80" name="menuState"/>      
-      <multiplicity id="81" minimum="0" maximum="1"/>    
+      <attribute id="77" name="menuState"/>      
+      <multiplicity id="78" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="2" navigable="true"/>    
     <display labels="false" multiplicity="true"/>  
   </association>  
-  <association id="82">    
+  <association id="79">    
     <end type="SOURCE" refId="24" navigable="false">      
-      <attribute id="83" name="keyAdmin"/>      
-      <multiplicity id="84" minimum="0" maximum="1"/>    
+      <attribute id="80" name="keyAdmin"/>      
+      <multiplicity id="81" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="22" navigable="true"/>    
     <display labels="false" multiplicity="true"/>  
   </association>  
-  <association id="85">    
+  <association id="82">    
     <end type="SOURCE" refId="11" navigable="false">      
-      <attribute id="86" name="light"/>      
-      <multiplicity id="87" minimum="0" maximum="1"/>    
+      <attribute id="83" name="light"/>      
+      <multiplicity id="84" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="10" navigable="true"/>    
     <display labels="false" multiplicity="true"/>  
   </association>  
-  <generalization id="88">    
+  <generalization id="85">    
     <bendpoint x="674" y="1088"/>    
     <end type="SOURCE" refId="1"/>    
     <end type="TARGET" refId="3"/>  
   </generalization>  
-  <association id="89">    
+  <association id="86">    
     <end type="SOURCE" refId="13" navigable="false">      
-      <attribute id="90" name="candle"/>      
-      <multiplicity id="91" minimum="0" maximum="1"/>    
+      <attribute id="87" name="candle"/>      
+      <multiplicity id="88" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="14" navigable="true"/>    
     <display labels="false" multiplicity="true"/>  
   </association>  
-  <generalization id="92">    
+  <generalization id="89">    
     <bendpoint x="793" y="1248"/>    
     <end type="SOURCE" refId="5"/>    
     <end type="TARGET" refId="3"/>  
   </generalization>  
-  <association id="93">    
+  <association id="90">    
     <bendpoint x="1076" y="678"/>    
     <end type="SOURCE" refId="13" navigable="false">      
-      <attribute id="94" name="candleList"/>      
-      <multiplicity id="95" minimum="0" maximum="2147483647"/>    
+      <attribute id="91" name="candleList"/>      
+      <multiplicity id="92" minimum="0" maximum="2147483647"/>    
     </end>    
     <end type="TARGET" refId="14" navigable="true"/>    
     <display labels="false" multiplicity="true"/>  
   </association>  
-  <association id="96">    
+  <association id="93">    
     <end type="SOURCE" refId="11" navigable="false">      
-      <attribute id="97" name="number"/>      
-      <multiplicity id="98" minimum="0" maximum="1"/>    
+      <attribute id="94" name="number"/>      
+      <multiplicity id="95" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="9" navigable="true"/>    
     <display labels="false" multiplicity="true"/>  
   </association>  
-  <association id="99">    
+  <association id="96">    
     <end type="SOURCE" refId="16" navigable="false">      
-      <attribute id="100" name="ArrowList"/>      
-      <multiplicity id="101" minimum="0" maximum="2147483647"/>    
+      <attribute id="97" name="ArrowList"/>      
+      <multiplicity id="98" minimum="0" maximum="2147483647"/>    
     </end>    
     <end type="TARGET" refId="18" navigable="true"/>    
     <display labels="false" multiplicity="true"/>  
   </association>  
-  <association id="102">    
+  <association id="99">    
     <end type="SOURCE" refId="21" navigable="false">      
+      <attribute id="100" name="game"/>      
+      <multiplicity id="101" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="24" navigable="true"/>    
+    <display labels="false" multiplicity="true"/>  
+  </association>  
+  <association id="102">    
+    <bendpoint x="456" y="318"/>    
+    <end type="SOURCE" refId="3" navigable="false">      
       <attribute id="103" name="game"/>      
       <multiplicity id="104" minimum="0" maximum="1"/>    
     </end>    
@@ -452,51 +450,42 @@
     <display labels="false" multiplicity="true"/>  
   </association>  
   <association id="105">    
-    <bendpoint x="456" y="318"/>    
-    <end type="SOURCE" refId="3" navigable="false">      
-      <attribute id="106" name="game"/>      
-      <multiplicity id="107" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="24" navigable="true"/>    
-    <display labels="false" multiplicity="true"/>  
-  </association>  
-  <association id="108">    
     <bendpoint x="1190" y="594"/>    
     <end type="SOURCE" refId="13" navigable="false">      
-      <attribute id="109" name="boll"/>      
-      <multiplicity id="110" minimum="0" maximum="1"/>    
+      <attribute id="106" name="boll"/>      
+      <multiplicity id="107" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="15" navigable="true"/>    
     <display labels="false" multiplicity="true"/>  
   </association>  
-  <generalization id="111">    
+  <generalization id="108">    
     <bendpoint x="420" y="1090"/>    
     <end type="SOURCE" refId="4"/>    
     <end type="TARGET" refId="3"/>  
   </generalization>  
-  <association id="112">    
+  <association id="109">    
     <end type="SOURCE" refId="7" navigable="false">      
-      <attribute id="113" name="banana"/>      
-      <multiplicity id="114" minimum="0" maximum="1"/>    
+      <attribute id="110" name="banana"/>      
+      <multiplicity id="111" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="8" navigable="true"/>    
     <display labels="false" multiplicity="true"/>  
   </association>  
-  <generalization id="115">    
+  <generalization id="112">    
     <bendpoint x="892" y="802"/>    
     <end type="SOURCE" refId="16"/>    
     <end type="TARGET" refId="3"/>  
   </generalization>  
-  <association id="116">    
+  <association id="113">    
     <bendpoint x="642" y="1098"/>    
     <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="117" name="roomstate1"/>      
-      <multiplicity id="118" minimum="0" maximum="1"/>    
+      <attribute id="114" name="roomstate1"/>      
+      <multiplicity id="115" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="3" navigable="true"/>    
     <display labels="false" multiplicity="true"/>  
   </association>  
-  <generalization id="119">    
+  <generalization id="116">    
     <bendpoint x="650" y="1256"/>    
     <end type="SOURCE" refId="2"/>    
     <end type="TARGET" refId="3"/>  

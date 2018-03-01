@@ -5,12 +5,13 @@ import java.awt.Graphics;
 import javaapp.Runner.Gameengine.Assets;
 import javaapp.Runner.Gameengine.Gameengine;
 import javaapp.Runner.Gameengine.Player;
+import javaapp.Runner.Room5.RoomState5;
 import javaapp.Runner.States.States;
 
 /**
  * 
  * @author jenny
- *@version 2017-02-27
+ * @version 2017-02-27
  */
 
 public class RoomState4 extends States {
@@ -19,20 +20,29 @@ public class RoomState4 extends States {
 	private static int doorposY = 53;
 	private Banana banana;
 	private Trap trap;
+	
+	/**
+	 * 
+	 * The constructor of the class RoomState4 which creates Room4
+	 * @param game
+	 */
 
 	public RoomState4(Gameengine game) {
 		super(game);
 		banana = new Banana();
 		trap = new Trap();
+		roomstate5 = new RoomState5(game);
 
 	}
-/**
- * Ticks the banana and trap classes. 
- * Takes care of the event happens with the room when in it
- *@param 
- */
+
+	/**
+	 * Ticks the banana and trap classes. Takes care of the event happens with the
+	 * room when in it
+	 * 
+	 * @param
+	 */
 	public void tick() {
-		
+
 		banana.tick();
 		trap.tick();
 
@@ -47,10 +57,12 @@ public class RoomState4 extends States {
 			}
 		}
 	}
-/**
- * Draws the room and door and sets the banana and traps.
- * @param g 
- */
+
+	/**
+	 * Draws the room and door and sets the banana and traps.
+	 * 
+	 * @param g
+	 */
 	public void render(Graphics g) {
 
 		g.drawImage(Assets.room5, (int) 0, (int) 0, null);
@@ -60,11 +72,11 @@ public class RoomState4 extends States {
 		// player.render(g);
 	}
 
-
-/**
- * Sets the next room, calling next roomstate and sets the player
- * @param 
- */
+	/**
+	 * Sets the next room, calling next roomstate and sets the player on given positions
+	 * 
+	 * @param
+	 */
 	public void setNextRoom() {
 
 		setRoomState(roomstate5);

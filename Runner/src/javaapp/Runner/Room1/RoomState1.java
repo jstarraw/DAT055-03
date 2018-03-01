@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javaapp.Runner.Gameengine.Assets;
+import javaapp.Runner.Gameengine.Display;
 import javaapp.Runner.Gameengine.Gameengine;
 import javaapp.Runner.Gameengine.Player;
 import javaapp.Runner.Room2.RoomState2;
@@ -19,20 +20,23 @@ public class RoomState1 extends States {
 	private List<Arrow> ArrowList = new ArrayList<Arrow>();
 
 	private static int doorposY = 53;
-
+	/*
+	 * Constructor for Roomstate. 
+	 * 
+	 */
 	public RoomState1(Gameengine game) {
 		super(game);
 		roomstate2 = new RoomState2(game);
 		buttons = new Buttons();
-		int yTemp = 800;
 		for (int x = 70; x < 800; x += 70) {
 			Arrow arrow = new Arrow();
 			ArrowList.add(arrow);
-			yTemp += 500;
 		}
 		// TODO Auto-generated constructor stub
 	}
-
+	/**
+	 *  Updates parameters for everything in the room, arrow, buttons,
+	 */
 	public void tick() {
 		for (Arrow arrow : ArrowList) {
 			arrow.tick();
@@ -49,25 +53,29 @@ public class RoomState1 extends States {
 			}
 		}
 	}
-
+	/**
+	 * renders everything in the room.
+	 */
 	@Override
 	public void render(Graphics g) {
 		g.drawImage(Assets.room2, (int) 0, (int) 0, null);
 		g.drawImage(Assets.Door, (int) 350, (int) doorposY, null);
 		g.drawImage(Assets.TopBanner, (int) 337, (int) 0, null);
 		buttons.render(g);
-
 		for (Arrow arr : ArrowList) {
 			arr.render(g);
 		}
 
 	}
-
+	/**
+	 * Changes the roomstate to the next room
+	 */
 	public void setNextRoom() {
 
-		setRoomState(roomstate2);
+		
 		Player.setYPos(650);
 		Player.setXPos(300);
+		setRoomState(roomstate2);
 
 	}
 

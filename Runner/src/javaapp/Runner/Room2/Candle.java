@@ -6,23 +6,50 @@ import javaapp.Runner.Gameengine.Assets;
 import javaapp.Runner.Gameengine.Gameengine;
 import javaapp.Runner.Gameengine.Player;
 
+/**
+ * @Author Daniel Cebe
+ * @version 2018-03-01
+ * 
+ */
+
 public class Candle {
 
 	private int x;
-	int y;
+	private int y;
 	private boolean lit = true;
+	
+	
 
+	/**
+	 * 
+	 * The constructor of the class candle
+	 * @param x, y 
+	 */
+	
 	public Candle(int x, int y) {
 		this.x = x;
 		this.y = y;
 
 	}
+	
+	/**
+	 * Updates the parameters for the candles
+	 * 
+	 */
 
 	public void tick() {
 
 		collisionDetect();
 
 	}
+	
+	
+	/**
+	 * Detects if the player have a collision with the candle 
+	 * When a collision occurs, close the candle light
+	 * 
+	 *
+	 */
 
 	public void collisionDetect() {
 
@@ -34,16 +61,42 @@ public class Candle {
 
 		}
 	}
+	
+	/**
+	 * 
+	 * Sets the lit-flag to true for the candles
+	 * @param lit
+	 * 
+	 * 
+	 */
 
 	public void setLit(boolean lit) {
 		this.lit = lit;
 	}
 
+	
+	/**
+	 * 
+	 *Get the flag for the candles
+	 *@Return the inverse lit-flag which is true and becomes false.   
+	 * 
+	 *
+	 */
+	
 	public boolean getFlag() {
 
 		return !lit;
 	}
 
+	
+	
+	/**
+ 	* 
+ 	* otherwise it renders the picture of the candle with closed light. 
+ 	* Draws picture of the light candles if the flag is true
+ 	* @param g 
+ 	*
+ 	*/	
 	public void render(Graphics g) {
 
 		if (lit)

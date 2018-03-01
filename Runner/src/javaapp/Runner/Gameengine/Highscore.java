@@ -11,28 +11,24 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextArea;
 
 public class Highscore {
-	private static JFrame jframe,jframe2;
+	private static JFrame jframe, jframe2;
 	private static JTextArea l1;
-	
+
 	public static void getHighscore() throws IOException {
-	 Socket s = new Socket("127.0.0.1", 9146);
-     BufferedReader input =
-         new BufferedReader(new InputStreamReader(s.getInputStream()));
-     String answer = input.readLine();
-   
-    
-        	
-     l1 = new JTextArea();
+		Socket s = new Socket("127.0.0.1", 9146);
+		BufferedReader input = new BufferedReader(new InputStreamReader(s.getInputStream()));
+		String answer = input.readLine();
+
+		l1 = new JTextArea();
 		jframe = new JFrame();
 		jframe.setVisible(true);
 		jframe.setSize(50, 300);
 		jframe.add(l1);
-		String replace = answer.replaceAll(",","\n");
+		String replace = answer.replaceAll(",", "\n");
 		l1.setText(replace);
 		l1.setEditable(false);
-		
-		jframe.pack();
-		
-		
 
-}}
+		jframe.pack();
+
+	}
+}
