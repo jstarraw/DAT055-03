@@ -20,6 +20,12 @@ public class RoomState4 extends States {
 	private static int doorposY = 53;
 	private Banana banana;
 	private Trap trap;
+	
+	/**
+	 * 
+	 * The constructor of the class RoomState4 which creates Room4
+	 * @param game
+	 */
 
 	public RoomState4(Gameengine game) {
 		super(game);
@@ -67,7 +73,7 @@ public class RoomState4 extends States {
 	}
 
 	/**
-	 * Sets the next room, calling next roomstate and sets the player
+	 * Sets the next room, calling next roomstate and sets the player on given positions
 	 * 
 	 * @param
 	 */
