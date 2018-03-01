@@ -17,16 +17,24 @@ import javaapp.Runner.States.States;
 public class RoomState5 extends States {
 
 	private static boolean flag1, flag2, flag3;
+	
+	/**
+	 * 
+	 * The constructor for the room5 
+	 * @param game
+	 * 
+	 */
 
 	public RoomState5(Gameengine game) {
 		super(game);
 	}
 
 	
-	/*
+	/**
 	 * Takes input from the keyboard and sets boolean flags that lead to other events in the game.  
 	 *@param  
 	 */
+	
 	public void tick() {
 		if (Player.getXPos() > 10 && Player.getXPos() < 200 && Player.getYPos() > 286 && Player.getYPos() < 520) {
 			flag1 = true;
@@ -43,9 +51,10 @@ public class RoomState5 extends States {
 		}
 	}
 
-	/*
+	/**
 	 * Renders the room and the speech bubbles that may show up
 	*@param g
+	*
 	 */
 	
 	public void render(Graphics g) {

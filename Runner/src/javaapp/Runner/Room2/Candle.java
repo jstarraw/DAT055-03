@@ -76,13 +76,14 @@ public class Candle {
 		return !lit;
 	}
 
+	
+	
 /**
 * @param g
 * render picture of the light candles if the flag is true
-* otherwise it renders the picture of the 
+* otherwise it renders the picture of the candle with closed light.  
 * 
 */	
-	
 	public void render(Graphics g) {
 
 		if (lit)

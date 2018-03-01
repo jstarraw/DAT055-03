@@ -19,10 +19,8 @@ public class RoomState2 extends States {
 	private static int doorposY = 53;
 	private static int doorflag = 0;
 	private static boolean flagga1 = false;
-	private static int timer = 0;
 
-	private int x;
-	private int y;
+
 
 	public RoomState2(Gameengine game) {
 		super(game);
@@ -87,7 +85,16 @@ public class RoomState2 extends States {
 			candle.render(g);
 
 	}
+	
+	
+	
 
+/**
+* Sets the next room, calling next roomstate and sets the player on given positions
+* 
+* @param
+* 
+*/
 	public void setNextRoom() {
 
 		setRoomState(room3);
