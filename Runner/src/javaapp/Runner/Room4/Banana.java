@@ -34,7 +34,7 @@ public class Banana {
 
 /**
  * 
- * @return x-position of the banana
+ * @return Returns the x-position of the banana
  */
 	public float getxPos() {
 		return xPos;
@@ -48,7 +48,7 @@ public class Banana {
 	}
 /**
  * 
- * @return y-postion for banana
+ * @return Returns y-postion of banana
  */
 	public float getyPos() {
 		return yPos;

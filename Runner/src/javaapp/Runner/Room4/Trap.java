@@ -105,7 +105,7 @@ public class Trap {
 	}
 
 /**
- * Gets the x -position for the trap 
+ * @return the x position of the player
  * 
  */
 	public float getPosX() {
@@ -121,13 +121,13 @@ public class Trap {
 	
 /**
  * 
- * @return the y position for the trap
+ * @return Returns the y position of the trap
  */
 	public float getPosY() {
 		return posY;
 	}
 /**
- * Sets the y-position for the trap
+ * Sets the y-position of the trap
  * @param posY 
  */
 	public void setPosY(float posY) {
