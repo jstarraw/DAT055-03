@@ -108,17 +108,15 @@ public class Trap {
 
 	}
 
-<<<<<<< HEAD
+
 	/**
 	 * Gets the x -position for the trap
+	 * @return the x position of the player
 	 * 
 	 */
-=======
-/**
- * @return the x position of the player
- * 
- */
->>>>>>> bab6e5e9af60b4e4189f09c9fea73dc4bc4e930b
+
+
+
 	public float getPosX() {
 		return posX;
 	}
@@ -131,23 +129,8 @@ public class Trap {
 	public void setPosX(float posX) {
 		this.posX = posX;
 	}
-<<<<<<< HEAD
 
-	/**
-	 * 
-	 * @return the y position for the trap
-	 */
-	public float getPosY() {
-		return posY;
-	}
 
-	/**
-	 * Sets the y-position for the trap
-	 * 
-	 * @param posY
-	 */
-=======
-	
 /**
  * 
  * @return Returns the y position of the trap
@@ -159,7 +142,6 @@ public class Trap {
  * Sets the y-position of the trap
  * @param posY 
  */
->>>>>>> bab6e5e9af60b4e4189f09c9fea73dc4bc4e930b
 	public void setPosY(float posY) {
 		this.posY = posY;
 	}

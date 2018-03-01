@@ -32,17 +32,16 @@ public class Banana {
 	public static boolean flagga12 = true;
 	public static boolean flagga13 = true;
 
-<<<<<<< HEAD
+
 	/**
 	 * 
 	 * @return x-position of the banana
 	 */
-=======
+
 /**
  * 
  * @return Returns the x-position of the banana
  */
->>>>>>> bab6e5e9af60b4e4189f09c9fea73dc4bc4e930b
 	public float getxPos() {
 		return xPos;
 	}
@@ -54,18 +53,13 @@ public class Banana {
 	public void setxPos(float xPos) {
 		this.xPos = xPos;
 	}
-<<<<<<< HEAD
+
 
 	/**
 	 * 
 	 * @return y-postion for banana
 	 */
-=======
-/**
- * 
- * @return Returns y-postion of banana
- */
->>>>>>> bab6e5e9af60b4e4189f09c9fea73dc4bc4e930b
+
 	public float getyPos() {
 		return yPos;
 	}
