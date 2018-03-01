@@ -1,7 +1,8 @@
 package javaapp.Runner.Room3;
 		
 import java.awt.Graphics;		
-import javaapp.Runner.Gameengine.Assets;	
+import javaapp.Runner.Gameengine.Assets;
+import javaapp.Runner.Gameengine.Player;	
 
 public class Doors_Room3 {
 private float x ;
@@ -58,5 +59,10 @@ public void setX(float x) {
 	
 				this.x = x;
 			}
+
+public boolean getDoorposition() {
+	
+	return Player.getYPos() < 141 && Player.getXPos() < 407 && Player.getXPos() < 385;
+}
 	
 		}

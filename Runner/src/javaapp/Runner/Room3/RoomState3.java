@@ -33,14 +33,15 @@ public class RoomState3 extends States{
 	
 	public void tick() {
 		
-		 
-	if( Player.getYPos() < 141 && Player.getXPos() < 407 && Player.getXPos() < 385)
-		setRoomState(room4);
+	light.tick();
+	number.tick();
+	if(light.allFlags()) {
+		  door2.tickLeftdoor();
+		  door1.tickRightdoor();}	
+	if(door1.getDoorposition() && door2.getDoorposition() ) setRoomState(room4);
 		
-		light.tick();
-		number.tick();
-		door2.tickLeftdoor();
-		door1.tickRightdoor();
+		
+		
 
 		
 	}

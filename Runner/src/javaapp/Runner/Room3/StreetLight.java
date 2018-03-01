@@ -9,14 +9,14 @@ public class StreetLight {
 
 	public static int timer = 100;
 
-	public boolean flagga1 = false;
-	public boolean flagga2 = false;
-	public boolean flagga3 = false;
-	public boolean flagga4 = false;
+	public boolean way1to2 = false;
+	public boolean way1to5 = false;
+	public boolean way2to3 = false;
+	public boolean way2to4 = false;
 	public boolean flagga5 = false;
-	public boolean flagga6 = false;
-	public boolean flagga7 = false;
-	public boolean flagga8 = false;
+	public boolean way6to7 = false;
+	public boolean way4to6 = false;
+	public boolean way5to6 = false;
 	public boolean flagga9 = false;
 
 	public StreetLight() {
@@ -43,22 +43,22 @@ public class StreetLight {
 
 		if (platform1) {
 
-			flagga1 = !flagga1;
-			flagga2 = !flagga2;
+			way1to2 = !way1to2;
+			way1to5 = !way1to5;
 			timer = 0;
 		}
 
 		if (platform2) {
 
-			flagga1 = !flagga1;
-			flagga3 = !flagga3;
-			flagga4 = !flagga4;
+			way1to2 = !way1to2;
+			way2to3 = !way2to3;
+			way2to4 = !way2to4;
 			timer = 0;
 		}
 
 		if (platform3) {
 
-			flagga3 = !flagga3;
+			way2to3 = !way2to3;
 			flagga5 = !flagga5;
 			flagga9 = !flagga9;
 			timer = 0;
@@ -67,16 +67,16 @@ public class StreetLight {
 		if (platform4) {
 
 			flagga5 = !flagga5;
-			flagga6 = !flagga6;
+			way6to7 = !way6to7;
 
 			timer = 0;
 		}
 
 		if (platform5) {
 
-			flagga4 = !flagga4;
+			way2to4 = !way2to4;
 
-			flagga7 = !flagga7;
+			way4to6 = !way4to6;
 			flagga9 = !flagga9;
 
 			timer = 0;
@@ -84,16 +84,16 @@ public class StreetLight {
 
 		if (platform6) {
 
-			flagga2 = !flagga2;
-			flagga8 = !flagga8;
+			way1to5 = !way1to5;
+			way5to6 = !way5to6;
 			timer = 0;
 		}
 
 		if (platform7) {
 
-			flagga6 = !flagga6;
-			flagga7 = !flagga7;
-			flagga8 = !flagga8;
+			way6to7 = !way6to7;
+			way4to6 = !way4to6;
+			way5to6 = !way5to6;
 			timer = 0;
 		}
 
@@ -102,7 +102,7 @@ public class StreetLight {
 	public void render(Graphics g) {
 
 		// upp horiszontellt ----- vänster
-		if (flagga1) {
+		if (way1to2) {
 			g.drawImage(Assets.streetlight, (int) 120, (int) 275 - 2, null);
 			g.drawImage(Assets.streetlight, (int) 170, (int) 275 - 2, null);
 			g.drawImage(Assets.streetlight, (int) 220, (int) 275 - 2, null);
@@ -111,7 +111,7 @@ public class StreetLight {
 
 		}
 		// upp horiszontellt ----- höger
-		if (flagga3) {
+		if (way2to3) {
 			g.drawImage(Assets.streetlight, (int) 490, (int) 272, null);
 			g.drawImage(Assets.streetlight, (int) 540, (int) 272, null);
 			g.drawImage(Assets.streetlight, (int) 590, (int) 272, null);
@@ -119,7 +119,7 @@ public class StreetLight {
 		}
 		//
 		// // ner horisontelt ---- vänster
-		if (flagga8) {
+		if (way5to6) {
 			g.drawImage(Assets.streetlight, (int) 120, (int) 600, null);
 			g.drawImage(Assets.streetlight, (int) 170, (int) 600, null);
 			g.drawImage(Assets.streetlight, (int) 220, (int) 598, null);
@@ -127,7 +127,7 @@ public class StreetLight {
 			g.drawImage(Assets.streetlight, (int) 320, (int) 598, null);
 		}
 		// ner horisontelt ---- höger
-		if (flagga6) {
+		if (way6to7) {
 			g.drawImage(Assets.streetlight, (int) 490, (int) 598, null);
 			g.drawImage(Assets.streetlight, (int) 540, (int) 598, null);
 			g.drawImage(Assets.streetlight, (int) 320 + 270, (int) 598, null);
@@ -136,7 +136,7 @@ public class StreetLight {
 		}
 
 		// // vänster
-		if (flagga2) {
+		if (way1to5) {
 			g.drawImage(Assets.streetlight, (int) 40, (int) 320 + 10, null);
 			g.drawImage(Assets.streetlight, (int) 40, (int) 370 + 10, null);
 			g.drawImage(Assets.streetlight, (int) 40, (int) 420 + 10, null);
@@ -155,18 +155,24 @@ public class StreetLight {
 		}
 		//
 		// mitten
-		if (flagga4) {
+		if (way2to4) {
 			g.drawImage(Assets.streetlight, (int) 410, (int) 335, null);
 			g.drawImage(Assets.streetlight, (int) 410, (int) 380, null);
 
 		}
 		//
 		//
-		if (flagga7) {
+		if (way4to6) {
 			g.drawImage(Assets.streetlight, (int) 410, (int) 480 + 8, null);
 			g.drawImage(Assets.streetlight, (int) 410, (int) 530 + 3, null);
 
 		}
+		
+		
 
+	}
+	
+	public boolean allFlags() {
+		return  way1to2&&way1to5 && way2to3 && way2to4&& flagga5&& way6to7;//flgga7;
 	}
 }

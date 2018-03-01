@@ -98,12 +98,12 @@ public class Assets {
 		siffra2 = siffror.crop(2* Nurwidth, 0, 2 * Nurwidth, 2 * Nurheight); 
 		siffra3 = siffror.crop(4 * Nurwidth, 0, 2 *Nurwidth, 2 * Nurheight); 
 		siffra4 = siffror.crop(6 * Nurwidth, 0, 2 * Nurwidth, 2 * Nurheight); 
-		siffra5 = siffror.crop(0, 2 * Nurheight, 2 * Nurwidth - 18, 2 * Nurheight);
-		siffra6 = siffror.crop(2 * Nurwidth - 18, 2 * Nurheight - 36, 2 * Nurwidth - 18, 2 *Nurheight - 36); 
-		siffra7 = siffror.crop(4 * Nurwidth - 18, 2 * Nurheight - 36, 2 *  Nurwidth - 18, 2 * Nurheight - 36); 
-		siffra8 = siffror.crop(6 * Nurwidth - 18, 2 *Nurheight - 36, 2 * Nurwidth - 18, 2 * Nurheight - 36); 
-		siffra9 = siffror.crop(0, 4 * Nurheight - 36, 2 * Nurwidth - 18, 2 * Nurheight - 36); 
-		siffra0 = siffror.crop(0, 6 * Nurheight - 36, 2 * Nurwidth - 18, 2 * Nurheight - 36);
+		siffra5 = siffror.crop(0, 2 * Nurheight, 2 * Nurwidth , 2 * Nurheight);
+		siffra6 = siffror.crop(2 * Nurwidth , 2 * Nurheight , 2 * Nurwidth , 2 *Nurheight ); 
+		siffra7 = siffror.crop(4 * Nurwidth , 2 * Nurheight , 2 *  Nurwidth , 2 * Nurheight ); 
+		siffra8 = siffror.crop(6 * Nurwidth , 2 *Nurheight , 2 * Nurwidth , 2 * Nurheight ); 
+		siffra9 = siffror.crop(0, 4 * Nurheight , 2 * Nurwidth, 2 * Nurheight); 
+		siffra0 = siffror.crop(0, 6 * Nurheight, 2 * Nurwidth , 2 * Nurheight );
 		  
 		door1 = Doors.crop(4 * Nurwidth, 0, Nurwidth * 2, Nurheight * 4); 
 		door2 = Doors.crop( 6*Nurwidth, 0, Nurwidth * 2, Nurheight * 4);
