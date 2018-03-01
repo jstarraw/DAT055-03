@@ -93,11 +93,7 @@ public class Gameengine implements Runnable {
 				delta--;
 			}
 
-			if (timer >= 1000000000) {
-				System.out.println("Ticks and Frames: " + ticks);
-				ticks = 0;
-				timer = 0;
-			}
+			
 		}
 
 		stop();

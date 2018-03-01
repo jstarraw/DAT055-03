@@ -28,17 +28,14 @@ public class Assets {
 	public static BufferedImage[] FireArray;
 
 	public static void init() {
+		
+		//SpriteSheets
 		SpriteSheet sheet = new SpriteSheet(ImageLoader.loadImage("/sheet.png"));
-		SpriteSheet room_one = new SpriteSheet(ImageLoader.loadImage("/Room_Ric.png"));
-		SpriteSheet room_second = new SpriteSheet(ImageLoader.loadImage("/roomdani.png"));
 		SpriteSheet fire = new SpriteSheet(ImageLoader.loadImage("/FireSheet.png"));
-
+		SpriteSheet jennysheet = new SpriteSheet(ImageLoader.loadImage("/jennysheet.png"));
 		SpriteSheet ljus = new SpriteSheet(ImageLoader.loadImage("/sheet2.png"));
 
 		// jenny
-		SpriteSheet jennysheet = new SpriteSheet(ImageLoader.loadImage("/jennysheet.png"));
-		SpriteSheet room_fourth = new SpriteSheet(ImageLoader.loadImage("/Room_Foo2.png"));
-
 		banana = jennysheet.crop(widthJenny * 3, 0, widthJenny, heightJenny);
 		trap = jennysheet.crop(widthJenny * 2, 0, widthJenny, heightJenny);
 		icecream = jennysheet.crop(widthJenny, heightJenny, widthJenny, heightJenny);
@@ -46,29 +43,32 @@ public class Assets {
 		chocolate = jennysheet.crop(0, heightJenny, widthJenny, heightJenny);
 		candyKane = jennysheet.crop(0, 0, widthJenny, heightJenny);
 
+		//Rooms
+		room2 = ImageLoader.loadImage("/Room_Ric.png");
+		room3 = ImageLoader.loadImage("/roomdani.png");
+		room4 = ImageLoader.loadImage("/Room3_back.png");
+		room5 = ImageLoader.loadImage("/Room_Foo2.png");
+		room6 = ImageLoader.loadImage("/room5.png");
+		
 		// will work as time taker in room 3
-		SpriteSheet room_third = new SpriteSheet(ImageLoader.loadImage("/Room3_back.png"));
 		SpriteSheet siffror = new SpriteSheet(ImageLoader.loadImage("/Room3_Timer.png"));
 		SpriteSheet Doors = new SpriteSheet(ImageLoader.loadImage("/Room3_Doors.png"));
 
 		// Roman's room
 
-		SpriteSheet room_fifth = new SpriteSheet(ImageLoader.loadImage("/room5.png"));
 		bubble = ImageLoader.loadImage("/bubble.png");
 		win = ImageLoader.loadImage("/win.png");
 		gameover = ImageLoader.loadImage("/gameover.png");
 
 		TopBanner = ImageLoader.loadImage("/topbanner24.png");
 		Door = ImageLoader.loadImage("/door.png");
+		
+		//Player
 		player = sheet.crop(0, 0, 52, height);
 		player2 = sheet.crop(52, 0, 52, height);
 		player3 = sheet.crop(2 * 53, 0, width, height);
 		player4 = sheet.crop(152, 0, 47, height);
-		room2 = room_one.crop(0, 0, 822, 668);
-		room3 = room_second.crop(0, 0, 822, 668);
-		room4 = room_third.crop(0, 0, 822, 668);
-		room5 = room_fourth.crop(0, 0, 822, 668);
-		room6 = room_fifth.crop(0, 0, 822, 668);
+		
 
 		NoFire = ImageLoader.loadImage("/NoFire.png");
 		banner1 = ImageLoader.loadImage("/banner.png");
@@ -81,6 +81,7 @@ public class Assets {
 		stearin = ljus.crop(4 * 50, 0, 52 - 15, height - 10);
 		stearin1 = ljus.crop(5 * 50, 0, 52 + 5, height + 15);
 
+		//Animated fire
 		FireArray = new BufferedImage[5];
 		FireArray[0] = fire.crop(0, 0, 19, 82);
 		FireArray[1] = fire.crop(19, 0, 19, 82);
