@@ -5,13 +5,12 @@ import java.awt.Graphics;
 import javaapp.Runner.Gameengine.Assets;
 import javaapp.Runner.Gameengine.Gameengine;
 import javaapp.Runner.Gameengine.Player;
-import javaapp.Runner.Room5.RoomState5;
 import javaapp.Runner.States.States;
 
 /**
  * 
  * @author jenny
- *
+ *@version 2017-02-27
  */
 
 public class RoomState4 extends States {
@@ -23,16 +22,17 @@ public class RoomState4 extends States {
 
 	public RoomState4(Gameengine game) {
 		super(game);
-		// roomstate1 = new RoomState1(game);
-		roomstate5 = new RoomState5(game);
-		// player = new Player(game, 500, 500);
 		banana = new Banana();
 		trap = new Trap();
 
 	}
-
+/**
+ * Ticks the banana and trap classes. 
+ * Takes care of the event happens with the room when in it
+ *@param 
+ */
 	public void tick() {
-		// player.tick();
+		
 		banana.tick();
 		trap.tick();
 
@@ -47,7 +47,10 @@ public class RoomState4 extends States {
 			}
 		}
 	}
-
+/**
+ * Draws the room and door and sets the banana and traps.
+ * @param g 
+ */
 	public void render(Graphics g) {
 
 		g.drawImage(Assets.room5, (int) 0, (int) 0, null);
@@ -57,10 +60,11 @@ public class RoomState4 extends States {
 		// player.render(g);
 	}
 
-	public void pickUp() {
 
-	}
-
+/**
+ * Sets the next room, calling next roomstate and sets the player
+ * @param 
+ */
 	public void setNextRoom() {
 
 		setRoomState(roomstate5);

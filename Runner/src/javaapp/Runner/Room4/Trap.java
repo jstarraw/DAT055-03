@@ -7,12 +7,16 @@ import javaapp.Runner.Gameengine.Player;
 /**
  * 
  * @author jenny
- *
+ *@version 2018-02-27
  */
 public class Trap {
 
 	private float posX, posY;
 
+	/**
+	 * This methods restarts the player from the rooms beginning 
+	 * when selected bounderies are hit. 
+	 */
 	public void tick() {
 
 		if (Player.getXPos() > 430 && Player.getXPos() < 480 && Player.getYPos() > 530 && Player.getYPos() < 580)
@@ -46,6 +50,9 @@ public class Trap {
 	}
 	// Remove 50 pixels, keep the value, remove 50 pixels, keep the value
 
+	/**
+	 * Restarts the player from its start position and sets the flags to true
+	 */
 	public void restartPlayer() {
 		setPlayer();
 		setBananaFlags();
@@ -55,7 +62,9 @@ public class Trap {
 		Player.setXPos(650);
 		Player.setYPos(300);
 	}
-
+/**
+ * Sets all the banana flags to true
+ */
 	public void setBananaFlags() {
 
 		Banana.flagga1 = true;
@@ -73,7 +82,10 @@ public class Trap {
 		Banana.flagga13 = true;
 
 	}
-
+/**
+ * Draws the traps.
+ * @param g
+ */
 	public void render(Graphics g) {
 
 		g.drawImage(Assets.trap, (int) 480, (int) 580, null);
@@ -92,19 +104,32 @@ public class Trap {
 		g.drawImage(Assets.trap, (int) 490, (int) 210, null);
 
 	}
-
+/**
+ * Gets the x -position for the trap 
+ * 
+ */
 	public float getPosX() {
 		return posX;
 	}
-
+/**
+ * Sets the x position for the trap 
+ * @param posX 
+ */
 	public void setPosX(float posX) {
 		this.posX = posX;
 	}
-
+	
+/**
+ * 
+ * @return the y position for the trap
+ */
 	public float getPosY() {
 		return posY;
 	}
-
+/**
+ * Sets the y-position for the trap
+ * @param posY 
+ */
 	public void setPosY(float posY) {
 		this.posY = posY;
 	}
