@@ -6,6 +6,13 @@ import java.awt.image.BufferStrategy;
 import javaapp.Runner.States.MenuState;
 import javaapp.Runner.States.States;
 
+/**
+ * @Author Rickard Gyllensten, Jenny Karlsson, Roman Melnik, Daniel Cebe,
+ *         Nurhusein Abdulkader
+ * @version 2018-03-01
+ * 
+ */
+
 public class Gameengine implements Runnable {
 
 	private Display display;
@@ -14,11 +21,17 @@ public class Gameengine implements Runnable {
 	private String title;
 	private boolean running = false;
 	private Thread thread;
-	private BufferStrategy bs;
+	private BufferStrategy bufferstrat;
 	private Graphics g;
 	private States menuState;
 	private KeyAdmin keyAdmin;
 
+	/**
+	 * Konstruktor för klassen gameengine.
+	 * 
+	 * @param title,
+	 *            width any integer, height any integer
+	 */
 	public Gameengine(String title, int width, int height) {
 		this.width = width;
 		this.height = height;
@@ -26,6 +39,13 @@ public class Gameengine implements Runnable {
 		keyAdmin = new KeyAdmin();
 	}
 
+	
+	/**
+	 * 
+	 * @param Skapar displayen inititerar alla bilder och menustaten sätter menustate till aktuell state.
+	 * 
+	 * 
+	 */
 	private void init() {
 		display = new Display(title, width, height);
 		display.getFrame().addKeyListener(keyAdmin);
@@ -36,6 +56,11 @@ public class Gameengine implements Runnable {
 		States.setState(menuState);
 	}
 
+	/**
+	 * 
+	 * tick uppdaterar parametrar i aktuell state 
+	 * uppdaterar även tangenttryck
+	 */
 	private void tick() {
 		keyAdmin.tick();
 
@@ -44,12 +69,12 @@ public class Gameengine implements Runnable {
 	}
 
 	private void render() {
-		bs = display.getCanvas().getBufferStrategy();
-		if (bs == null) {
+		bufferstrat = display.getCanvas().getBufferStrategy();
+		if (bufferstrat == null) {
 			display.getCanvas().createBufferStrategy(3);
 			return;
 		}
-		g = bs.getDrawGraphics();
+		g = bufferstrat.getDrawGraphics();
 		// Clear Screen
 		g.clearRect(0, 0, width, height);
 		// Draw Here!
@@ -58,7 +83,7 @@ public class Gameengine implements Runnable {
 			States.getState().render(g);
 
 		// End Drawing!
-		bs.show();
+		bufferstrat.show();
 		g.dispose();
 	}
 
@@ -66,28 +91,23 @@ public class Gameengine implements Runnable {
 
 		init();
 
-		int fps = 60;
-		double timePerTick = 1000000000 / fps;
+		int framePerSec = 60;
+		double timePerTick = 1000000000 / framePerSec;
 		double delta = 0;
 		long now;
 		long lastTime = System.nanoTime();
-		long timer = 0;
-		int ticks = 0;
 
 		while (running) {
 			now = System.nanoTime();
 			delta += (now - lastTime) / timePerTick;
-			timer += now - lastTime;
 			lastTime = now;
 
 			if (delta >= 1) {
 				tick();
 				render();
-				ticks++;
+
 				delta--;
 			}
-
-			
 		}
 
 		stop();

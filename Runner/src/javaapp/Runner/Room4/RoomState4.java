@@ -10,7 +10,7 @@ import javaapp.Runner.States.States;
 /**
  * 
  * @author jenny
- *@version 2017-02-27
+ * @version 2017-02-27
  */
 
 public class RoomState4 extends States {
@@ -26,13 +26,15 @@ public class RoomState4 extends States {
 		trap = new Trap();
 
 	}
-/**
- * Ticks the banana and trap classes. 
- * Takes care of the event happens with the room when in it
- *@param 
- */
+
+	/**
+	 * Ticks the banana and trap classes. Takes care of the event happens with the
+	 * room when in it
+	 * 
+	 * @param
+	 */
 	public void tick() {
-		
+
 		banana.tick();
 		trap.tick();
 
@@ -47,10 +49,12 @@ public class RoomState4 extends States {
 			}
 		}
 	}
-/**
- * Draws the room and door and sets the banana and traps.
- * @param g 
- */
+
+	/**
+	 * Draws the room and door and sets the banana and traps.
+	 * 
+	 * @param g
+	 */
 	public void render(Graphics g) {
 
 		g.drawImage(Assets.room5, (int) 0, (int) 0, null);
@@ -60,11 +64,11 @@ public class RoomState4 extends States {
 		// player.render(g);
 	}
 
-
-/**
- * Sets the next room, calling next roomstate and sets the player
- * @param 
- */
+	/**
+	 * Sets the next room, calling next roomstate and sets the player
+	 * 
+	 * @param
+	 */
 	public void setNextRoom() {
 
 		setRoomState(roomstate5);

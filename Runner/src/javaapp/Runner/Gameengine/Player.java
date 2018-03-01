@@ -2,7 +2,7 @@ package javaapp.Runner.Gameengine;
 
 import java.awt.Graphics;
 
-public class Player  {
+public class Player {
 
 	private Gameengine game;
 	private int a;
@@ -11,7 +11,7 @@ public class Player  {
 	public Player(Gameengine game, float x, float y) {
 		this.x = x;
 		this.y = y;
-		//super(x, y);
+		// super(x, y);
 		this.game = game;
 	}
 
@@ -31,7 +31,6 @@ public class Player  {
 		x = temp;
 	}
 
-	
 	public void tick() {
 		if (game.getKeyManager().isUp()) {
 			a = 0;
@@ -55,7 +54,6 @@ public class Player  {
 		}
 
 	}
-
 
 	public void render(Graphics g) {
 		if (a == 0) {

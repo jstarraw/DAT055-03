@@ -7,15 +7,15 @@ import javaapp.Runner.Gameengine.Player;
 /**
  * 
  * @author jenny
- *@version 2018-02-27
+ * @version 2018-02-27
  */
 public class Trap {
 
 	private float posX, posY;
 
 	/**
-	 * This methods restarts the player from the rooms beginning 
-	 * when selected bounderies are hit. 
+	 * This methods restarts the player from the rooms beginning when selected
+	 * bounderies are hit.
 	 */
 	public void tick() {
 
@@ -48,29 +48,32 @@ public class Trap {
 		if (Player.getXPos() > 450 && Player.getXPos() < 490 && Player.getYPos() > 170 && Player.getYPos() < 210)
 			restartPlayer();
 	}
+
 	// Remove 50 pixels, keep the value, remove 50 pixels, keep the value
 	/**
 	 * Draws the traps.
+	 * 
 	 * @param g
 	 */
-		public void render(Graphics g) {
+	public void render(Graphics g) {
 
-			g.drawImage(Assets.trap, (int) 480, (int) 580, null);
-			g.drawImage(Assets.trap, (int) 300, (int) 400, null);
-			g.drawImage(Assets.trap, (int) 500, (int) 300, null);
-			g.drawImage(Assets.trap, (int) 600, (int) 600, null);
-			g.drawImage(Assets.trap, (int) 280, (int) 500, null);
-			g.drawImage(Assets.trap, (int) 180, (int) 600, null);
-			g.drawImage(Assets.trap, (int) 600, (int) 500, null);
-			g.drawImage(Assets.trap, (int) 170, (int) 325, null);
-			g.drawImage(Assets.trap, (int) 130, (int) 190, null);
-			g.drawImage(Assets.trap, (int) 690, (int) 200, null);
-			g.drawImage(Assets.trap, (int) 420, (int) 390, null);
-			g.drawImage(Assets.trap, (int) 105, (int) 490, null);
-			g.drawImage(Assets.trap, (int) 315, (int) 220, null);
-			g.drawImage(Assets.trap, (int) 490, (int) 210, null);
+		g.drawImage(Assets.trap, (int) 480, (int) 580, null);
+		g.drawImage(Assets.trap, (int) 300, (int) 400, null);
+		g.drawImage(Assets.trap, (int) 500, (int) 300, null);
+		g.drawImage(Assets.trap, (int) 600, (int) 600, null);
+		g.drawImage(Assets.trap, (int) 280, (int) 500, null);
+		g.drawImage(Assets.trap, (int) 180, (int) 600, null);
+		g.drawImage(Assets.trap, (int) 600, (int) 500, null);
+		g.drawImage(Assets.trap, (int) 170, (int) 325, null);
+		g.drawImage(Assets.trap, (int) 130, (int) 190, null);
+		g.drawImage(Assets.trap, (int) 690, (int) 200, null);
+		g.drawImage(Assets.trap, (int) 420, (int) 390, null);
+		g.drawImage(Assets.trap, (int) 105, (int) 490, null);
+		g.drawImage(Assets.trap, (int) 315, (int) 220, null);
+		g.drawImage(Assets.trap, (int) 490, (int) 210, null);
 
-		}
+	}
+
 	/**
 	 * Restarts the player from its start position and sets the flags to true
 	 */
@@ -83,9 +86,10 @@ public class Trap {
 		Player.setXPos(650);
 		Player.setYPos(300);
 	}
-/**
- * Sets all the banana flags to true
- */
+
+	/**
+	 * Sets all the banana flags to true
+	 */
 	public void setBananaFlags() {
 
 		Banana.flagga1 = true;
@@ -104,32 +108,36 @@ public class Trap {
 
 	}
 
-/**
- * Gets the x -position for the trap 
- * 
- */
+	/**
+	 * Gets the x -position for the trap
+	 * 
+	 */
 	public float getPosX() {
 		return posX;
 	}
-/**
- * Sets the x position for the trap 
- * @param posX 
- */
+
+	/**
+	 * Sets the x position for the trap
+	 * 
+	 * @param posX
+	 */
 	public void setPosX(float posX) {
 		this.posX = posX;
 	}
-	
-/**
- * 
- * @return the y position for the trap
- */
+
+	/**
+	 * 
+	 * @return the y position for the trap
+	 */
 	public float getPosY() {
 		return posY;
 	}
-/**
- * Sets the y-position for the trap
- * @param posY 
- */
+
+	/**
+	 * Sets the y-position for the trap
+	 * 
+	 * @param posY
+	 */
 	public void setPosY(float posY) {
 		this.posY = posY;
 	}

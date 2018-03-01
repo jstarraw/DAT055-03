@@ -5,9 +5,9 @@ import javaapp.Runner.Gameengine.Assets;
 import javaapp.Runner.Gameengine.Player;
 
 /**
-@Author Daniel Cebe
-@version 2018-03-01
-
+ * @Author Daniel Cebe
+ * @version 2018-03-01
+ * 
  */
 
 public class Ball {
@@ -23,10 +23,10 @@ public class Ball {
 
 	}
 
-/** 
-Metoden tickar 
-
-*/
+	/**
+	 * Metoden tickar
+	 * 
+	 */
 	public void tick() {
 		collisionDetect();
 		atBallsDirection();
@@ -44,15 +44,12 @@ Metoden tickar
 
 	}
 
-	
-	
 	/**
-	 * Detects if the player have a collision with the ball 
-	 * When a collision occurs with the ball, 
-	 * player starts from a given x and y pos
+	 * Detects if the player have a collision with the ball When a collision occurs
+	 * with the ball, player starts from a given x and y pos
 	 *
 	 */
-	
+
 	public void collisionDetect() {
 
 		if (x + 60 > Player.getXPos() && x < Player.getXPos() + 25) {
@@ -66,10 +63,10 @@ Metoden tickar
 		}
 	}
 
-	/** 
+	/**
 	 * Draws a bomb to the room with a given x and y position
 	 * 
-	 * @param g 
+	 * @param g
 	 */
 
 	public void render(Graphics g) {

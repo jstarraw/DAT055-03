@@ -11,12 +11,12 @@ public class MenuState extends States {
 
 	private States gameState;
 	private States highscore;
-	private int localtimer=10000;
+	private int localtimer = 10000;
 
 	public MenuState(Gameengine game) {
 		super(game);
 		gameState = new Gamestate(game);
-		//highscore = new Highscore(game);
+		// highscore = new Highscore(game);
 	}
 
 	@Override
@@ -32,11 +32,11 @@ public class MenuState extends States {
 			System.exit(0);
 
 		}
-		
-		if (game.getKeyManager().isHighscore() && localtimer >10000) {
+
+		if (game.getKeyManager().isHighscore() && localtimer > 10000) {
 			try {
 				Highscore.getHighscore();
-				localtimer=0;
+				localtimer = 0;
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
