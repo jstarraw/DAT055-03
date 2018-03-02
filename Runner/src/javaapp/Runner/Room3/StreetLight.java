@@ -40,7 +40,8 @@ public class StreetLight {
 	 * 
 	 * @param g
 	 *            is a graphic object which will draw the wanted object that will be
-	 *            drawn.
+	 *            drawn. the boolean will indicate which item is going to be drawn , 
+	 *            it takes order from tick
 	 */
 	public void render(Graphics g) {
 
@@ -112,6 +113,12 @@ public class StreetLight {
 
 	}
 
+	
+	/**
+	 * the platform are the place where the player is turning on the lamps
+	 * the boolean indicate if the player is that place there there is plattforms ,
+	 * if yes the ways will be drawn
+	 */
 	public void platforms() {
 
 		boolean platform1 = Player.getYPos() < 290 && Player.getYPos() > 200 && Player.getXPos() > 10
@@ -184,26 +191,15 @@ public class StreetLight {
 			timer = 0;
 		}
 
-		if (timer > 600) {
-			way4to6 = true;
-		}
-		if (timer > 1800) {
-			way1to2 = true;
-		}
-		if (timer > 2200) {
-			way4to6 = true;
-		}
-		if (timer > 2500) {
-			way2to3 = true;
-		}
-		if (timer > 2700) {
-			way4to6 = true;
-		}
-		if (timer > 3000) {
-			way5to6 = true;
-		}
+		
 
 	}
+	
+	
+	/**
+	 * since the room3 is little bit difficult some ways will be drawn 
+	 * every one minutes as help 
+	 */
 
 	public void helpMetods() {
 		if (timer > 600) {
@@ -225,6 +221,10 @@ public class StreetLight {
 			way5to6 = true;
 		}
 	}
+	
+	/**
+	 * if its difficult to solve there will be a button that will turn on all the ways/lights, 
+	 */
 
 	public void turnOnAll() {
 		boolean giveupplatforms = Player.getYPos() < 130 && Player.getXPos() > 650 && Player.getXPos() < 770
@@ -243,7 +243,9 @@ public class StreetLight {
 		}
 
 	}
-
+/**
+ * if you want to restart/reset the ways in room3
+ */
 	public void TurnoffAll() {
 		boolean resetplattform = Player.getYPos() < 130 && Player.getXPos() > 10 && Player.getXPos() < 100
 				&& timer > 50;
@@ -260,8 +262,11 @@ public class StreetLight {
 			way5to6 = false;
 		}
 	}
-
+/**
+ * this method is been used in gamestate3 and will helps if the game is done or not
+ * @return all flags
+ */
 	public boolean allFlags() {
-		return way1to2 && way1to5 && way2to3 && way2to4 && way3to7 && way6to7;// flgga7;
+		return way1to2 && way1to5 && way2to3 && way2to4 && way3to7 && way6to7&&way5to6;
 	}
 }

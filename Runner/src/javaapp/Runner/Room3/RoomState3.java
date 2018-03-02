@@ -1,6 +1,9 @@
 package javaapp.Runner.Room3;
 
-
+/**
+ *  @author nurabd
+ * @Version 2018-03-01
+ */
 
 import java.awt.Graphics;
 
@@ -26,11 +29,15 @@ public class RoomState3 extends States{
 		light = new StreetLight();
 		door1 = new Doors_Room3( 332);
 		door2 = new Doors_Room3(395);
-		number = new TimeTaker(100,100);
+		number = new TimeTaker();
 		room4 = new RoomState4(game);
 	}
 
-	
+	/**
+	 * Tick method will tick the components of room3
+	 * it here the Gamestate3 i build 
+	 * tick method override states
+	 */
 	public void tick() {
 		
 	light.tick();
@@ -47,7 +54,12 @@ public class RoomState3 extends States{
 
 		
 	}
-
+/**
+ * render method will render the components of room3
+	 * it here the Gamestate3 is build 
+	 * render method override states 
+ * 
+ */
 	@Override
 	public void render(Graphics g) {
 		
