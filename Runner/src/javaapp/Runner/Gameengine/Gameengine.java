@@ -100,20 +100,20 @@ public class Gameengine implements Runnable {
 
 		int framePerSec = 60;
 		double timePerTick = 1000000000 / framePerSec;
-		double delta = 0;
+		double diff = 0;
 		long now;
 		long lastTime = System.nanoTime();
 
 		while (running) {
 			now = System.nanoTime();
-			delta += (now - lastTime) / timePerTick;
+			diff += (now - lastTime) / timePerTick;
 			lastTime = now;
 
-			if (delta >= 1) {
+			if (diff >= 1) {
 				tick();
 				render();
 
-				delta--;
+				diff--;
 			}
 		}
 
