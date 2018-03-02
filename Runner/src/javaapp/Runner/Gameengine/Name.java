@@ -81,7 +81,7 @@ public class Name extends JFrame {
 	 * @return input
 	 */
 
-	public static String getPlayerId() {
+	public String getName() {
 		return input;
 	}
 
