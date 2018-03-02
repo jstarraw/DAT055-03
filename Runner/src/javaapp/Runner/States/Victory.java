@@ -1,62 +1,77 @@
 package javaapp.Runner.States;
 
 import java.awt.Graphics;
+import java.io.IOException;
+import java.net.UnknownHostException;
 
 import javaapp.Runner.Gameengine.Assets;
 import javaapp.Runner.Gameengine.Gameengine;
-
-/**
- * @Author Rickard Gyllensten, Jenny Karlsson, Roman Melnik, Daniel Cebe,
- *         Nurhusein Abdulkader
- * @version 2018-03-01
- * 
- */
-
+import javaapp.Runner.Gameengine.Highscore;
+import javaapp.Runner.Gameengine.Name;
 
 public class Victory extends States {
-	
-	private MenuState menustate;
-	
-	
-	/**
-	 * 
-	 * The constructor of the Victory class
-	 * @param game
-	 */
+	private static int timer =0;
+	private static StringBuilder value;
 	
 	public Victory(Gameengine game) {
 		super(game);
 	}
 
-	/**
-	 * Updates the parameters every second
-	 * 
-	 */
+	
 	
 	@Override
 	public void tick() {
-		if(game.getKeyManager().isEsc()) {
-			menustate = new MenuState(game);
-
-			setRoomState(menustate);
-			
-		}
+		// TODO Auto-generated method stub
+		
 	}
-
-	
 	/**
-	 * 
-	 * Draws the victory image 
-	 * Draws the time that has passed since the game started until the end
+	 * renders last screen
 	 */
 	@Override
 	public void render(Graphics g) {
 		g.drawImage(Assets.room7, (int) 0, (int) 0, null);
-		
 		g.drawString("Your time: " + String.valueOf(Gamestate.getTime()/60),  320,300);
+
+		if(timer == 0 ) 
+			sendtoHighscore();
+	
+
+			timer++;
+			
+			
+		
 		Gamestate.setStopTime();
 	}
-	
+	/**
+	 * Adds time and name together.
+	 * @return returns name and time as a string
+	 */
+	public static String nameAndTime() {
+		return null;
+		/*value.append(Name.getPlayerId());
+		value.append(" ");
+		value.append(Gamestate.getTime()/60);
+		value.append("s,");
+		return value.toString();*/
+	}
+	/*
+	 * Calls on sendtoserver.
+	 */
+	public void sendtoHighscore() {
+	/*	
+		try {
+			Highscore.sendtoserver();
+		} catch (UnknownHostException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		*/
+	}
+		
 	
 	
 
