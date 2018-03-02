@@ -27,7 +27,7 @@ public class Gameengine implements Runnable {
 	private KeyAdmin keyAdmin;
 
 	/**
-	 * Konstruktor för klassen gameengine.
+	 * Konstruktor fï¿½r klassen gameengine.
 	 * 
 	 * @param title,
 	 *            width any integer, height any integer
@@ -42,7 +42,7 @@ public class Gameengine implements Runnable {
 	
 	/**
 	 * 
-	 * @param Skapar displayen inititerar alla bilder och menustaten sätter menustate till aktuell state.
+	 * @param Skapar displayen inititerar alla bilder och menustaten sï¿½tter menustate till aktuell state.
 	 * 
 	 * 
 	 */
@@ -59,7 +59,7 @@ public class Gameengine implements Runnable {
 	/**
 	 * 
 	 * tick uppdaterar parametrar i aktuell state 
-	 * uppdaterar även tangenttryck
+	 * uppdaterar ï¿½ven tangenttryck
 	 */
 	private void tick() {
 		keyAdmin.tick();
