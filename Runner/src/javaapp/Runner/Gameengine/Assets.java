@@ -2,6 +2,14 @@ package javaapp.Runner.Gameengine;
 
 import java.awt.image.BufferedImage;
 
+/**
+ * @Author Rickard Gyllensten, Jenny Karlsson, Roman Melnik, Daniel Cebe,
+ *         Nurhusein Abdulkader
+ * @version 2018-03-01
+ * 
+ */
+
+
 public class Assets {
 
 	private static final int width = 50;
@@ -12,9 +20,8 @@ public class Assets {
 
 	private static final int widthJenny = 32, heightJenny = 32;
 
-	public static BufferedImage doorbanner, bomb1, stearin, stearin1, player, player2, player3,
-			player4, room1, banner1,room2, room3, room4, room5, NoFire, Fire,
-			TopBanner, Door, ball1, arrow, brokenarrow, menu, room6, bubble,
+	public static BufferedImage doorbanner, bomb1, stearin, stearin1, player, player2, player3, player4, room1, banner1,
+			room2, room3, room4, room5, NoFire, Fire, TopBanner, Door, ball1, arrow, brokenarrow, menu, room6, bubble,
 			win, gameover, room7,
 			// doors for room3
 			door1, door2,
@@ -27,6 +34,15 @@ public class Assets {
 
 	public static BufferedImage[] FireArray;
 
+	
+	/**
+	 * 
+	 * Brings pictures from the class Imageloader
+	 * Calls the class SpriteSheet to crop different pictures in a spritesheet
+	 * Saves and crops images
+	 * 
+	 */
+	
 	public static void init() {
 
 		// SpriteSheets
@@ -92,24 +108,19 @@ public class Assets {
 
 		// comment
 
-
-		
-		
-
 		siffra1 = siffror.crop(0, 0, 2 * Nurwidth, 2 * Nurheight);
 		siffra2 = siffror.crop(2 * Nurwidth, 0, 2 * Nurwidth, 2 * Nurheight);
 		siffra3 = siffror.crop(4 * Nurwidth, 0, 2 * Nurwidth, 2 * Nurheight);
 		siffra4 = siffror.crop(6 * Nurwidth, 0, 2 * Nurwidth, 2 * Nurheight);
-		siffra5 = siffror.crop(0, 2 * Nurheight, 2 * Nurwidth , 2 * Nurheight);
-		siffra6 = siffror.crop(2 * Nurwidth, 2 * Nurheight, 2 * Nurwidth, 2 * Nurheight );
-		siffra7 = siffror.crop(4 * Nurwidth , 2 * Nurheight , 2 * Nurwidth , 2 * Nurheight);
-		siffra8 = siffror.crop(6 * Nurwidth , 2 * Nurheight , 2 * Nurwidth , 2 * Nurheight );
-		siffra9 = siffror.crop(0, 4 * Nurheight, 2 * Nurwidth , 2 * Nurheight);
-		siffra0 = siffror.crop(0, 6 * Nurheight , 2 * Nurwidth , 2 * Nurheight );
+		siffra5 = siffror.crop(0, 2 * Nurheight, 2 * Nurwidth, 2 * Nurheight);
+		siffra6 = siffror.crop(2 * Nurwidth, 2 * Nurheight, 2 * Nurwidth, 2 * Nurheight);
+		siffra7 = siffror.crop(4 * Nurwidth, 2 * Nurheight, 2 * Nurwidth, 2 * Nurheight);
+		siffra8 = siffror.crop(6 * Nurwidth, 2 * Nurheight, 2 * Nurwidth, 2 * Nurheight);
+		siffra9 = siffror.crop(0, 4 * Nurheight, 2 * Nurwidth, 2 * Nurheight);
+		siffra0 = siffror.crop(0, 6 * Nurheight, 2 * Nurwidth, 2 * Nurheight);
 
 		door1 = Doors.crop(4 * Nurwidth, 0, Nurwidth * 2, Nurheight * 4);
 		door2 = Doors.crop(6 * Nurwidth, 0, Nurwidth * 2, Nurheight * 4);
-
 
 		streetlight = Doors.crop(Nurwidth, Nurheight, Nurwidth, Nurheight);
 	}

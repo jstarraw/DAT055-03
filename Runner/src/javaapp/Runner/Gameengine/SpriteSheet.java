@@ -2,6 +2,14 @@ package javaapp.Runner.Gameengine;
 
 import java.awt.image.BufferedImage;
 
+/**
+ * @Author Rickard Gyllensten, Jenny Karlsson, Roman Melnik, Daniel Cebe,
+ *         Nurhusein Abdulkader
+ * @version 2018-03-01
+ * 
+ */
+
+
 public class SpriteSheet {
 
 	private BufferedImage sheet;

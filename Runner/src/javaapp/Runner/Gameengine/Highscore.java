@@ -10,9 +10,23 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextArea;
 
+/**
+ * @Author Rickard Gyllensten, Jenny Karlsson, Roman Melnik, Daniel Cebe,
+ *         Nurhusein Abdulkader
+ * @version 2018-03-01
+ * 
+ */
+
+
 public class Highscore {
 	private static JFrame jframe, jframe2;
 	private static JTextArea l1;
+	
+	/**
+	 * 
+	 * 
+	 * @throws IOException
+	 */
 
 	public static void getHighscore() throws IOException {
 		Socket s = new Socket("127.0.0.1", 9146);

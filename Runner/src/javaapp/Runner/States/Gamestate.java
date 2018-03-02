@@ -7,12 +7,27 @@ import javaapp.Runner.Gameengine.Player;
 import javaapp.Runner.Room1.RoomState1;
 
 
+/**
+ * @Author Rickard Gyllensten, Jenny Karlsson, Roman Melnik, Daniel Cebe,
+ *         Nurhusein Abdulkader
+ * @version 2018-03-01
+ * 
+ */
+
 public class Gamestate extends States {
 	private Player player;
 	private States roomstate1;
 	private static boolean timeflag = true;
 	private static int secondpassed = 0;
 
+	
+	/**
+	 *
+	 * Constructor of the GameState class.
+	 * initiates the player, and the sets the first RoomState
+	 * @param game
+	 */
+	
 	public Gamestate(Gameengine game) {
 		super(game);
 		player = new Player(game, 150, 600);
@@ -21,6 +36,11 @@ public class Gamestate extends States {
 		setRoomState(roomstate1);
 	}
 
+	/**
+	 * 
+	 * Updates the parameters 
+	 * 
+	 */
 	@Override
 	public void tick() {
 		// Timer time = new Timer();
@@ -33,8 +53,8 @@ public class Gamestate extends States {
 			System.out.println(secondpassed / 60);
 	}
 
-	/*
-	 * Renderar rummet och sedan spelaren.
+	/**
+	 * Render the room then the player
 	 * 
 	 */
 	@Override
@@ -44,11 +64,24 @@ public class Gamestate extends States {
 
 	}// test
 	
+	
+	/**
+	 * 
+	 * Returns the time that is passed
+	 * @return secondpassed
+	 * 
+	 */
 	public static int getTime()
 	{
 		
 		return secondpassed;
 	}
+	
+	
+	/**
+	 * 
+	 * Stops the time
+	 */
 	public static void setStopTime() {
 		timeflag = false;
 	}
