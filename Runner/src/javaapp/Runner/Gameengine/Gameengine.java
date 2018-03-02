@@ -27,7 +27,7 @@ public class Gameengine implements Runnable {
 	private KeyAdmin keyAdmin;
 
 	/**
-	 * Konstruktor för klassen gameengine.
+	 * Constructor for the class Gameengine
 	 * 
 	 * @param title,
 	 *            width any integer, height any integer
@@ -39,11 +39,11 @@ public class Gameengine implements Runnable {
 		keyAdmin = new KeyAdmin();
 	}
 
-	
 	/**
 	 * 
-	 * @param Skapar displayen inititerar alla bilder och menustaten sätter menustate till aktuell state.
-	 * 
+	 * Creates the display and initiates all images menustate sets menustate to
+	 * actual state
+	 *
 	 * 
 	 */
 	private void init() {
@@ -57,9 +57,8 @@ public class Gameengine implements Runnable {
 	}
 
 	/**
+	 * Tick updates parameters in the actual state Updates key-inputs
 	 * 
-	 * tick uppdaterar parametrar i aktuell state 
-	 * uppdaterar även tangenttryck
 	 */
 	private void tick() {
 		keyAdmin.tick();
@@ -68,6 +67,12 @@ public class Gameengine implements Runnable {
 			States.getState().tick();
 	}
 
+	/**
+	 * 
+	 * Renders actual state
+	 * 
+	 */
+
 	private void render() {
 		bufferstrat = display.getCanvas().getBufferStrategy();
 		if (bufferstrat == null) {
@@ -75,18 +80,20 @@ public class Gameengine implements Runnable {
 			return;
 		}
 		g = bufferstrat.getDrawGraphics();
-		// Clear Screen
+
 		g.clearRect(0, 0, width, height);
-		// Draw Here!
 
 		if (States.getState() != null)
 			States.getState().render(g);
 
-		// End Drawing!
 		bufferstrat.show();
 		g.dispose();
 	}
 
+	/**
+	 * 
+	 * The gameloop, ticks 60 times per second and calls on tick and render
+	 */
 	public void run() {
 
 		init();
@@ -114,9 +121,20 @@ public class Gameengine implements Runnable {
 
 	}
 
+	/**
+	 * 
+	 * 
+	 * @return KeyAdmin
+	 */
+
 	public KeyAdmin getKeyManager() {
 		return keyAdmin;
 	}
+
+	/**
+	 * 
+	 * When the game starts, the thread starts
+	 */
 
 	public synchronized void start() {
 		if (running)
@@ -125,6 +143,11 @@ public class Gameengine implements Runnable {
 		thread = new Thread(this);
 		thread.start();
 	}
+
+	/**
+	 * 
+	 * When the game ends the thread ends.
+	 */
 
 	public synchronized void stop() {
 		if (!running)

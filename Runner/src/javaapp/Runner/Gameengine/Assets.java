@@ -2,6 +2,14 @@ package javaapp.Runner.Gameengine;
 
 import java.awt.image.BufferedImage;
 
+/**
+ * @Author Rickard Gyllensten, Jenny Karlsson, Roman Melnik, Daniel Cebe,
+ *         Nurhusein Abdulkader
+ * @version 2018-03-01
+ * 
+ */
+
+
 public class Assets {
 
 	private static final int width = 50;
@@ -26,6 +34,15 @@ public class Assets {
 
 	public static BufferedImage[] FireArray;
 
+	
+	/**
+	 * 
+	 * Brings pictures from the class Imageloader
+	 * Calls the class SpriteSheet to crop different pictures in a spritesheet
+	 * Saves and crops images
+	 * 
+	 */
+	
 	public static void init() {
 
 		// SpriteSheets
