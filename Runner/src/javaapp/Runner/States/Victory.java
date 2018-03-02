@@ -7,14 +7,21 @@ import javaapp.Runner.Gameengine.Gameengine;
 
 public class Victory extends States {
 	
+	private MenuState menustate;
+	
+	
 	public Victory(Gameengine game) {
 		super(game);
 	}
 
 	@Override
 	public void tick() {
-		// TODO Auto-generated method stub
-		
+		if(game.getKeyManager().isEsc()) {
+			menustate = new MenuState(game);
+
+			setRoomState(menustate);
+
+		}
 	}
 
 	@Override
