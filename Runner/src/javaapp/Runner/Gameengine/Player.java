@@ -76,7 +76,7 @@ public class Player {
 	
 	/**
 	 * 
-	 * Updates the pressed buttons 
+	 * Updates the pressed buttons and player position
 	 */
 	
 	public void tick() {
