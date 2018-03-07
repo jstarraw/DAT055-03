@@ -10,25 +10,13 @@ import javaapp.Runner.Gameengine.Assets;
  *
  */
 public class TimeTaker {
-	private float x, y;
 
 	private boolean flagga0, flagga1, flagga2, flagga3, flagga4, flagga5, flagga6, flagga7, flagga8, flagga9, flagga10,
-			flagga11, flagga12, flagga13, flagga14, flagga15;
+					flagga11, flagga12, flagga13, flagga14, flagga15;
 	private int posX = 150;
-	private int timer;
-
-	/**
-	 * 
-	 * @param x
-	 *            says where the x value will be drawn
-	 * @param y
-	 *            says where the Y value will be drawn
-	 */
-	public TimeTaker(float x, float y) {
-		this.x = x;
-		this.y = y;
-
-	}
+	private int timerSec;
+	private int timerMin;
+	
 
 	/**
 	 * since the tick method in gameengine is ticking 60 time per second the render
@@ -37,97 +25,17 @@ public class TimeTaker {
 
 	public void tick() {
 
-		timer++;
-
-		int a = 60;
-		if (timer > 0 && timer < a)
-			flagga0 = true;
-		else
-			flagga0 = false;
-
-		if (timer > a && timer < a * 2)
-			flagga1 = true;
-		else
-			flagga1 = false;
-
-		if (timer > a * 2 && timer < a * 3)
-			flagga2 = true;
-		else
-			flagga2 = false;
-
-		if (timer > a * 3 && timer < a * 4)
-			flagga3 = true;
-		else
-			flagga3 = false;
-
-		if (timer > a * 4 && timer < a * 5)
-			flagga4 = true;
-		else
-			flagga4 = false;
-
-		if (timer > a * 5 && timer < a * 6)
-			flagga5 = true;
-
-		else
-			flagga5 = false;
-
-		if (timer > a * 6 && timer < a * 7)
-			flagga6 = true;
-		else
-			flagga6 = false;
-
-		if (timer > a * 7 && timer < a * 8)
-			flagga7 = true;
-		else
-			flagga7 = false;
-
-		if (timer > a * 8 && timer < a * 9)
-			flagga8 = true;
-		else
-			flagga8 = false;
-
-		if (timer > a * 9 && timer < a * 10)
-			flagga9 = true;
-		else
-			flagga9 = false;
-
-		if (timer > a * 10 && timer < a * 11)
-			flagga10 = true;
-		else
-			flagga10 = false;
-
-		if (timer > a * 11 && timer < a * 12)
-			flagga11 = true;
-		else
-			flagga11 = false;
-
-		if (timer > a * 12 && timer < a * 13)
-			flagga12 = true;
-		else
-			flagga12 = false;
-
-		if (timer > a * 13 && timer < a * 14)
-			flagga13 = true;
-		else
-			flagga13 = false;
-
-		if (timer > a * 14 && timer < a * 15)
-			flagga14 = true;
-		else
-			flagga14 = false;
-
-		if (timer > a * 15 && timer < a * 16)
-			flagga15 = true;
-		else
-			flagga15 = false;
-
-		if (timer > 1000)
-			timer = 0;
+		timerSec++;
+		timerMin++;
+		timerSec();
+		timermin();
+		
+		
 
 	}
 
 	/**
-	 * if the flags are true the flowing will draws
+	 * if the flags are true the flowing assets  will draws
 	 * 
 	 * @param g
 	 *            put the graphic object to draw
@@ -157,30 +65,130 @@ public class TimeTaker {
 		if (flagga9)
 			g.drawImage(Assets.siffra9, (int) posX, (int) 75, null);
 		if (flagga10) {
-			g.drawImage(Assets.siffra1, (int) posX, (int) 75, null);
-			g.drawImage(Assets.siffra0, (int) posX + 50, (int) 75, null);
+		
+			g.drawImage(Assets.siffra0, (int) posX, (int) 75, null);
 		}
 		if (flagga11) {
-			g.drawImage(Assets.siffra1, (int) posX + 50, (int) 75, null);
-			g.drawImage(Assets.siffra1, (int) posX, (int) 75, null);
+			g.drawImage(Assets.siffra1, (int) posX - 50, (int) 75, null);
+			
 		}
 		if (flagga12) {
-			g.drawImage(Assets.siffra1, (int) posX, (int) 75, null);
-			g.drawImage(Assets.siffra2, (int) posX + 50, (int) 75, null);
+		
+			g.drawImage(Assets.siffra2, (int) posX - 50, (int) 75, null);
 		}
 		if (flagga13) {
-			g.drawImage(Assets.siffra1, (int) posX, (int) 75, null);
-			g.drawImage(Assets.siffra3, (int) posX + 50, (int) 75, null);
+		
+			g.drawImage(Assets.siffra3, (int) posX - 50, (int) 75, null);
 		}
 		if (flagga14) {
-			g.drawImage(Assets.siffra1, (int) posX, (int) 75, null);
-			g.drawImage(Assets.siffra4, (int) posX + 50, (int) 75, null);
+			g.drawImage(Assets.siffra4, (int) posX - 50, (int) 75, null);
 		}
 		if (flagga15) {
-			g.drawImage(Assets.siffra1, (int) posX, (int) 75, null);
-			g.drawImage(Assets.siffra5, (int) posX + 50, (int) 75, null);
+			g.drawImage(Assets.siffra5, (int) posX - 50, (int) 75, null);
 		}
 
 	}
+	
+	/**
+	 * the timer will tick every second and will indicate which flag is going 
+	 * to be ticking if true or false
+	 */
+	
+ public void timerSec() {
+	int a = 60;
+	if (timerSec > 0 && timerSec < a)
+		flagga0 = true;
+	else
+		flagga0 = false;
+
+	if (timerSec > a && timerSec < a * 2)
+		flagga1 = true;
+	else
+		flagga1 = false;
+
+	if (timerSec > a * 2 && timerSec < a * 3)
+		flagga2 = true;
+	else
+		flagga2 = false;
+
+	if (timerSec > a * 3 && timerSec < a * 4)
+		flagga3 = true;
+	else
+		flagga3 = false;
+
+	if (timerSec > a * 4 && timerSec < a * 5)
+		flagga4 = true;
+	else
+		flagga4 = false;
+
+	if (timerSec > a * 5 && timerSec < a * 6)
+		flagga5 = true;
+
+	else
+		flagga5 = false;
+
+	if (timerSec > a * 6 && timerSec < a * 7)
+		flagga6 = true;
+	else
+		flagga6 = false;
+
+	if (timerSec > a * 7 && timerSec < a * 8)
+		flagga7 = true;
+	else
+		flagga7 = false;
+
+	if (timerSec > a * 8 && timerSec < a * 9)
+		flagga8 = true;
+	else
+		flagga8 = false;
+
+	if (timerSec > a * 9 && timerSec < a * 10)
+		flagga9 = true;
+	else
+		flagga9 = false;
+
+	if (timerSec > a * 10 && timerSec < a * 20)
+		flagga10 = true;
+	else
+		flagga10 = false;
+	
+	if (timerSec > 600)
+		timerSec = 0;
+}
+ 
+ /**
+	 * the timer will tick every Minute and will indicate which flag is going 
+	 * to be ticking ,if true or false
+	 */
+ 
+ public void timermin() {
+	 int a = 60;
+		
+		if (timerMin > a * 10 && timerSec < a * 20)
+			flagga11 = true;
+		else
+			flagga11 = false;
+
+		if (timerMin > a * 20 && timerSec < a * 30)
+			flagga12 = true;
+		else
+			flagga12 = false;
+
+		if (timerMin > a * 30 && timerSec < a * 40)
+			flagga13 = true;
+		else
+			flagga13 = false;
+
+		if (timerMin > a * 40 && timerSec < a * 50)
+			flagga14 = true;
+		else
+			flagga14 = false;
+
+		if (timerMin > a * 50 && timerSec < a * 60)
+			flagga15 = true;
+		else
+			flagga15 = false;
+
+ }
 
 }
