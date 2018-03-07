@@ -262,6 +262,6 @@ public class StreetLight {
 	}
 
 	public boolean allFlags() {
-		return way1to2 && way1to5 && way2to3 && way2to4 && way3to7 && way6to7&&way5to6;// flgga7;
+		return way1to2 && way1to5 && way2to3 && way2to4 && way3to7 && way6to7 && way5to6;// flgga7;
 	}
 }
