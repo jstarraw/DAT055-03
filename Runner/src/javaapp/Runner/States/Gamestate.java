@@ -5,6 +5,7 @@ import java.awt.Graphics;
 import javaapp.Runner.Gameengine.Gameengine;
 import javaapp.Runner.Gameengine.Player;
 import javaapp.Runner.Room1.RoomState1;
+import javaapp.Runner.Room3.RoomState3;
 
 
 /**
@@ -31,7 +32,7 @@ public class Gamestate extends States {
 	public Gamestate(Gameengine game) {
 		super(game);
 		player = new Player(game, 150, 600);
-		roomstate1 = new RoomState1(game);
+		roomstate1 = new RoomState3(game);
 
 		setRoomState(roomstate1);
 	}

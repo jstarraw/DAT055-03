@@ -40,17 +40,16 @@ public class RoomState2 extends States {
 		createCandles();
 	}
 	
+	
 	/**
 	 * Updates the parameters for the Roomstate2, which refers to this room
 	 * 
 	 */
 
-
 	public void tick() {
 
 		setNextRoom();
 		candleTick();
-
 
 	}
 	
