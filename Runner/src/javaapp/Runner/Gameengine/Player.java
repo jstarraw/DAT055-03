@@ -3,8 +3,8 @@ package javaapp.Runner.Gameengine;
 import java.awt.Graphics;
 
 /**
- * @Author Rickard Gyllensten, Jenny Karlsson, Roman Melnik, Daniel Cebe,
- *         Nurhusein Abdulkader
+ * This class creates and handles the player, everything from positions to speed.
+ * @Author Rickard Gyllensten
  * @version 2018-03-01
  * 
  */

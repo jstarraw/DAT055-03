@@ -5,6 +5,13 @@ import java.awt.Graphics;
 import javaapp.Runner.Gameengine.Assets;
 import javaapp.Runner.Gameengine.Player;
 
+/**
+ * This class handles the buttons and the torches in the game
+ * @Author Rickard Gyllensten
+ * @version 2018-03-01
+ * 
+ */
+
 public class Buttons {
 
 	private static boolean flagga1 = false, flagga2 = false, flagga3 = false, flagga4 = false, flagga5 = false,
@@ -22,6 +29,7 @@ public class Buttons {
 	}
 /**
  * 	Renders buttons.
+ * The graphics object g
  * @param g
  */
 	public void render(Graphics g) {
@@ -99,6 +107,7 @@ public class Buttons {
 	}
 /**
  *  renders the button and fire
+ *  graphics object g,
  * @param g Graphics
  */
 	public void renderButton(Graphics g) {

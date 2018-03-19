@@ -14,6 +14,15 @@ import javax.swing.JTextArea;
 
 import javaapp.Runner.States.Victory;
 
+/**
+ * This class displays the highscore from the server
+ * @Author Rickard Gyllensten
+ * @version 2018-03-01
+ * 
+ */
+
+
+
 public class Highscore {
 	private static JFrame jframe, jframe2;
 	private static JTextArea l1;

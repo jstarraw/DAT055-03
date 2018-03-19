@@ -10,8 +10,9 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 /**
- * @Author Rickard Gyllensten, Jenny Karlsson, Roman Melnik, Daniel Cebe,
- *         Nurhusein Abdulkader
+ * This class handles the input of a name when the game starts
+ * @Author Jenny Karlsson
+ *        
  * @version 2018-03-01
  * 
  */
@@ -27,7 +28,7 @@ public class Name extends JFrame {
 
 	/** 
 	 * 
-	 * Constructor for the class Name
+	 * Constructor for the class Name that creates the name field
 	 * 
 	 */
 	

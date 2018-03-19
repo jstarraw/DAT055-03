@@ -12,7 +12,7 @@ import javaapp.Runner.States.States;
 
 
 /**
- * 
+ * This class handles RoomState2 which is the second "play room" in the game
  * @Author Daniel Cebe
  * @version 2018-03-01
  * 
@@ -29,7 +29,8 @@ public class RoomState2 extends States {
 	private static boolean flagga1 = false;
 
 	/**
-	 * The constructor of the Roomstate class 
+	 * The constructor of the Roomstate2 class, that initiates candles, bombpositions/speed and prepares the next room 
+	 * The gameengine object game
 	 * @param game
 	 */
 
@@ -116,7 +117,7 @@ public class RoomState2 extends States {
 	 * Draws my room, door, doorbanner
 	 * Calls all three bombs from the bomb class and draws the bombs 
 	 * Draw all candles 
-	 * 
+	 * graphics object g
 	 * @param g
 	 */
 	
@@ -140,7 +141,6 @@ public class RoomState2 extends States {
 	/**
 	 * Sets the next room, calling next roomstate and sets the player on given positions
 	 * 
-	 * @param
 	 * 
 	 */
 	public void setNextRoom() {

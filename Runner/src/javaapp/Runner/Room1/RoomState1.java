@@ -12,6 +12,13 @@ import javaapp.Runner.Gameengine.Player;
 import javaapp.Runner.Room2.RoomState2;
 import javaapp.Runner.States.States;
 
+/**
+ * This class handles the RoomState1 which is the first "play room" in the game. 
+ * @Author Rickard Gyllensten
+ * @version 2018-03-01
+ * 
+ */
+
 public class RoomState1 extends States {
 
 	private States roomstate2;

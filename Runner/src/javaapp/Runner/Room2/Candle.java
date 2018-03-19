@@ -7,6 +7,7 @@ import javaapp.Runner.Gameengine.Gameengine;
 import javaapp.Runner.Gameengine.Player;
 
 /**
+ * This class handles the candles that is used in RoomState2
  * @Author Daniel Cebe
  * @version 2018-03-01
  * 
@@ -23,6 +24,7 @@ public class Candle {
 	/**
 	 * 
 	 * The constructor of the class candle
+	 * position x and position y
 	 * @param x, y 
 	 */
 	
@@ -65,6 +67,7 @@ public class Candle {
 	/**
 	 * 
 	 * Sets the lit-flag to true for the candles
+	 * the variable for the flag lit
 	 * @param lit
 	 * 
 	 * 
@@ -94,6 +97,7 @@ public class Candle {
  	* 
  	* otherwise it renders the picture of the candle with closed light. 
  	* Draws picture of the light candles if the flag is true
+ 	* graphics object g,
  	* @param g 
  	*
  	*/	

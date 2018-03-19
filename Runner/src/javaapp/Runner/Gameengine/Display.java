@@ -6,8 +6,10 @@ import java.awt.Dimension;
 import javax.swing.JFrame;
 
 /**
- * @Author Rickard Gyllensten, Jenny Karlsson, Roman Melnik, Daniel Cebe,
- *         Nurhusein Abdulkader
+ * This class handles the display and makes it visible to the screen
+ * 
+ * @Author Daniel Cebe
+ *       
  * @version 2018-03-01
  * 
  */

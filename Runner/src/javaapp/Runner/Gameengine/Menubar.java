@@ -13,8 +13,8 @@ import javax.swing.JOptionPane;
 import javax.swing.KeyStroke;
 
 /**
- * @Author Rickard Gyllensten, Jenny Karlsson, Roman Melnik, Daniel Cebe,
- *         Nurhusein Abdulkader
+ * This class handles the menubar window that works like a navigator to get help or to quit.
+ * @Author Daniel Cebe
  * @version 2018-03-01
  * 
  */
@@ -37,7 +37,7 @@ public class Menubar {
 
 	/**
 	 * This method creates the menu on the menubar 
-	 * three different options, scoretable, help and quit
+	 * two different options, help and quit
 	 * 
 	 * 
 	 */
@@ -52,15 +52,7 @@ public class Menubar {
 		JMenu fileMenu = new JMenu("GameSettings");
 		menubar.add(fileMenu);
 
-		JMenuItem openScore = new JMenuItem("Scoretable");
-		// openItem.addActionListener(this);
-		fileMenu.add(openScore);
-		openScore.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_S, SHORTCUT_MASK));
-		openScore.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				scoreTable();
-			}
-		});
+		
 
 		JMenuItem h = new JMenuItem("Help");
 		h.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_H, SHORTCUT_MASK));
@@ -111,11 +103,7 @@ public class Menubar {
 
 	
 	
-	public void scoreTable() {
 
-		int s = -10;
 
-		System.out.println("The value of s is: " + -s);
-
-	}
+	
 }

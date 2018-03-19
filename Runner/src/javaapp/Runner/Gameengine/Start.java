@@ -1,8 +1,8 @@
 package javaapp.Runner.Gameengine;
 
 /**
- * @Author Rickard Gyllensten, Jenny Karlsson, Roman Melnik, Daniel Cebe,
- *         Nurhusein Abdulkader
+ * This class is the main program that starts the gameenigne and makes it ready to play the game
+ * @Author Roman Melnik
  * @version 2018-03-01
  * 
  */

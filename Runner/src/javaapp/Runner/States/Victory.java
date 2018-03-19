@@ -9,9 +9,23 @@ import javaapp.Runner.Gameengine.Gameengine;
 import javaapp.Runner.Gameengine.Highscore;
 import javaapp.Runner.Gameengine.Name;
 
+/**
+ * This class handles the victory screen which can be viewed in the last stage of the game
+ * @Author Nurhusein Abdulkader
+ * @version 2018-03-01
+ * 
+ */
+
 public class Victory extends States {
 	private static int timer =0;
 	private static StringBuilder value;
+	
+	/**
+	 * 
+	 * Constructor for the class Victory 
+	 * The gameengine object, game,
+	 * @param game
+	 */
 	
 	public Victory(Gameengine game) {
 		super(game);

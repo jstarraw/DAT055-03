@@ -5,8 +5,9 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 
 /**
- * @Author Rickard Gyllensten, Jenny Karlsson, Roman Melnik, Daniel Cebe,
- *         Nurhusein Abdulkader
+ * This class reads an image from the pathfolder
+ * 
+ * @Author Nurhusein Abdulkader
  * @version 2018-03-01
  * 
  */
@@ -17,6 +18,7 @@ public class ImageLoader {
 	 * 
 	 *Reads the image from path  
 	 * @param path, path to image
+	 * Returns the image and thats all
 	 * @return Images  
 	 */
 

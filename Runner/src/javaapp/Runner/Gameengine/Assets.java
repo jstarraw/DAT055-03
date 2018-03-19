@@ -3,6 +3,8 @@ package javaapp.Runner.Gameengine;
 import java.awt.image.BufferedImage;
 
 /**
+ * This class saves all images used in the game
+ * 
  * @Author Rickard Gyllensten, Jenny Karlsson, Roman Melnik, Daniel Cebe,
  *         Nurhusein Abdulkader
  * @version 2018-03-01

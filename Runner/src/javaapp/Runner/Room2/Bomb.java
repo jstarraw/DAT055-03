@@ -5,6 +5,7 @@ import javaapp.Runner.Gameengine.Assets;
 import javaapp.Runner.Gameengine.Player;
 
 /**
+ * This class creates the bomb for that is initialized in RoomState2
  * @Author Daniel Cebe
  * @version 2018-03-01
  * 
@@ -80,7 +81,7 @@ public class Bomb {
 
 	/**
 	 * Draws a bomb to the room with a given x and y position
-	 * 
+	 * graphics object g
 	 * @param g
 	 */
 

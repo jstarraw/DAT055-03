@@ -4,8 +4,8 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 /**
- * @Author Rickard Gyllensten, Jenny Karlsson, Roman Melnik, Daniel Cebe,
- *         Nurhusein Abdulkader
+ * This class handles the keymanagements, like inputs from the keyboard.
+ * @Author Rickard Gyllensten
  * @version 2018-03-01
  * 
  */
@@ -116,6 +116,7 @@ public class KeyAdmin implements KeyListener {
 	}
 
 	/**
+	 * Returns the interact key, E
 	 * @return the interact
 	 */
 	public boolean isInteract() {

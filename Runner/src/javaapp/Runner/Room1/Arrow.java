@@ -5,6 +5,15 @@ import java.util.Random;
 import javaapp.Runner.Gameengine.Assets;
 import javaapp.Runner.Gameengine.Player;
 
+/**
+ * This class creates and handles each arrow
+ * @Author Rickard Gyllensten
+ * @version 2018-03-01
+ * 
+ */
+
+
+
 public class Arrow {
 
 	private boolean brokenflag = false, dead = false;

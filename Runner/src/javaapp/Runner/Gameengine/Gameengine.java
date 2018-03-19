@@ -7,8 +7,8 @@ import javaapp.Runner.States.MenuState;
 import javaapp.Runner.States.States;
 
 /**
- * @Author Rickard Gyllensten, Jenny Karlsson, Roman Melnik, Daniel Cebe,
- *         Nurhusein Abdulkader
+ * This class is the core of the game. It handles the gameloop and takes care of the start and stop time of the game.
+ * @Author Rickard Gyllensten
  * @version 2018-03-01
  * 
  */
@@ -123,7 +123,7 @@ public class Gameengine implements Runnable {
 
 	/**
 	 * 
-	 * 
+	 * Returns the pressed key
 	 * @return KeyAdmin
 	 */
 
