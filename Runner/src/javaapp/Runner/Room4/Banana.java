@@ -8,7 +8,7 @@ import javaapp.Runner.Gameengine.Player;
  * 
  * @author jenny
  * @version 2018-03-19
- * Holds the methods for the bananas
+ * This class holds the methods for the bananas
  */
 
 public class Banana {

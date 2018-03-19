@@ -12,7 +12,7 @@ import javaapp.Runner.States.States;
  * 
  * @author jenny
  * @version 2017-03-19
- * Handles the state for room four
+ * This class handles the state for room 4
  */
 
 public class RoomState4 extends States {
