@@ -4,8 +4,8 @@ import java.awt.Graphics;
 import javaapp.Runner.Gameengine.Assets;
 
 /**
- * tidtagning som kommer att ritas i form av 
- * @author nurabd
+ * This class draws pictures in terms of numbers that will be used as timers
+ * @author Nurhusein Abdulkader
  * @Version 2018-03-01
  *
  */
@@ -37,8 +37,7 @@ public class TimeTaker {
 	/**
 	 * if the flags are true the flowing assets  will draws
 	 * 
-	 * @param g
-	 *            put the graphic object to draw
+	 * @param g, put the graphic object to draw
 	 * 
 	 */
 

@@ -9,7 +9,7 @@ import javaapp.Runner.States.States;
 import javaapp.Runner.States.Victory;
 
 /**
- * This class handles Room5 and its game events
+ * This class handles RoomState5 and its game events
  * @author Roman Melnik
  * @version 2018-03-01
  * flag1 is set to true if the player approaches the matematician; it is used to make a speech bubble appear.
@@ -29,7 +29,7 @@ public class RoomState5 extends States {
 	/**
 	 * 
 	 * The constructor for the room5 
-	 * @param game is the Gameengine object
+	 * @param game, is the Gameengine object, game
 	 *
 	 */
 
@@ -43,7 +43,7 @@ public class RoomState5 extends States {
 	
 	/**
 	 * Takes input from the keyboard and sets boolean flags that lead to other events in the game.  
-	 *@param  
+	 * 
 	 */
 	
 	public void tick() {
@@ -68,7 +68,7 @@ public class RoomState5 extends States {
 
 	/**
 	 * Renders the room and the speech bubbles that may show up
-	*@param g
+	*@param g, graphics object g
 	*room6 is the image for the room
 	*bubble is the matematician's speech bubble with details about the problem
 	*win is the speech bubble that appears when the player chooses the right door

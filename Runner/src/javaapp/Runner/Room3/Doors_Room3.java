@@ -8,7 +8,7 @@ import javaapp.Runner.Gameengine.Player;
  * This class will draw the doors in room3 and 
  *	also allow the door to open after winning the game
  * 
- * @author nurabd
+ * @author Nurhusein Abdulkader
  * @version 2018-03-01
  * 
  */
@@ -18,7 +18,7 @@ public class Doors_Room3 {
 
 	/**
 	 * 
-	 * @param x is the position where the door will be able to be drawn
+	 * @param x, is the position where the door will be able to be drawn
 	 *            
 	 */
 	public Doors_Room3(float x) {
@@ -46,11 +46,10 @@ public class Doors_Room3 {
 	}
 
 	/**
-	 *   send a graphic to be able to draw the figure in the canvas the
-	 *            image is bringd from the asset class, x is the position that the
-	 *            door will be drawn in
-	 * 
-	 * @param g   send a graphic object
+	 * send a graphic to be able to draw the figure in the canvas the
+	 * image is bringd from the asset class, x is the position that the
+	 * door will be drawn in
+	 * @param g, send a graphic object
 	 *          
 	 */
 
@@ -61,10 +60,10 @@ public class Doors_Room3 {
 
 	/**
 	 * 
-	 * @param g
-	 *            send a graphic to be able to draw the figure in the canvas the
-	 *            image is bringd from the asset class, x is the position that the
-	 *            door will be drawn in
+	 * @param g, send a graphic object
+	 * to be able to draw the figure in the canvas the
+	 * image is bringd from the asset class, x is the position that the
+	 * door will be drawn in
 	 */
 	public void renderDoorRight(Graphics g) {
 		g.drawImage(Assets.door2, (int) x, (int) 45, null);
@@ -72,7 +71,8 @@ public class Doors_Room3 {
 
 	/**
 	 * 
-	 * @return return the value x.
+	 * return the value x
+	 * @return x
 	 */
 	public float getX() {
 
@@ -80,9 +80,9 @@ public class Doors_Room3 {
 	}
 
 	/**
-	 * 
+	 *  sets a new value in x
 	 * @param x
-	 *            sets a new value in x.
+	 *          
 	 */
 	public void setX(float x) {
 
@@ -91,7 +91,8 @@ public class Doors_Room3 {
 
 	/**
 	 * 
-	 * @return if the the player is in the position of door the -> will get the
+	 * @return, 
+	 * if the the player is in the position of door the -> will get the
 	 *         position of the door.
 	 */
 	public boolean isDoorposition() {

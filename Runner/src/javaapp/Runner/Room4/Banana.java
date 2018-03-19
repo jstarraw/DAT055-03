@@ -5,10 +5,10 @@ import javaapp.Runner.Gameengine.Assets;
 import javaapp.Runner.Gameengine.Player;
 
 /**
- * 
- * @author jenny
- * @version 2018-03-19
  * This class holds the methods for the bananas
+ * @author Jenny Karlsson
+ * @version 2018-03-02
+ * 
  */
 
 public class Banana {
@@ -34,7 +34,7 @@ public class Banana {
 
 /**
  * 
- * @return Returns the x-position of the banana
+ * @return, Returns the x-position of the banana
  */
 	public float getxPos() {
 		return xPos;
@@ -51,7 +51,7 @@ public class Banana {
 
 	/**
 	 * 
-	 * @return Returns the y-position for banana
+	 * @return ypos, Returns the y-positi for banana
 	 */
 
 	public float getyPos() {
