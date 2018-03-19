@@ -9,9 +9,13 @@ import javaapp.Runner.States.States;
 import javaapp.Runner.States.Victory;
 
 /**
- * 
+ * This class handles Room5 and its game events
  * @author Roman Melnik
  * @version 2018-03-01
+ * flag1 is set to true if the player approaches the matematician; it is used to make a speech bubble appear.
+ * flag2 is set to true if the player opens the right door.
+ * flag3 is set to true if the player opens the wrong door.
+ * victory is used when a player opens the right door, thus completing the game.
  */
 
 
@@ -25,8 +29,8 @@ public class RoomState5 extends States {
 	/**
 	 * 
 	 * The constructor for the room5 
-	 * @param game
-	 * 
+	 * @param game is the Gameengine object
+	 *
 	 */
 
 
@@ -65,8 +69,11 @@ public class RoomState5 extends States {
 	/**
 	 * Renders the room and the speech bubbles that may show up
 	*@param g
-	*
-	 */
+	*room6 is the image for the room
+	*bubble is the matematician's speech bubble with details about the problem
+	*win is the speech bubble that appears when the player chooses the right door
+	*gameover is the speech bubble that appears when the player chooses the wrong door 
+	*/
 	
 	public void render(Graphics g) {
 		g.drawImage(Assets.room6, (int) 0, (int) 0, null);

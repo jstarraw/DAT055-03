@@ -7,8 +7,8 @@ import javaapp.Runner.Gameengine.Player;
 /**
  * 
  * @author jenny
- * @version 2018-02-27
- *
+ * @version 2018-03-19
+ * This class holds the methods for the bananas
  */
 
 public class Banana {
@@ -32,12 +32,6 @@ public class Banana {
 	public static boolean flagga12 = true;
 	public static boolean flagga13 = true;
 
-
-	/**
-	 * 
-	 * @return x-position of the banana
-	 */
-
 /**
  * 
  * @return Returns the x-position of the banana
@@ -48,7 +42,7 @@ public class Banana {
 
 	/**
 	 * 
-	 * @param xPos
+	 * @param xPos, sets the x position
 	 */
 	public void setxPos(float xPos) {
 		this.xPos = xPos;
@@ -57,7 +51,7 @@ public class Banana {
 
 	/**
 	 * 
-	 * @return y-postion for banana
+	 * @return Returns the y-position for banana
 	 */
 
 	public float getyPos() {
@@ -66,17 +60,14 @@ public class Banana {
 
 	/**
 	 * 
-	 * @param yPos
+	 * @param yPos, sets the y-position 
 	 */
 	public void setyPos(float yPos) {
 		this.yPos = yPos;
 	}
 
 	/**
-	 * Removes the candies if the player is within specific boundery
-	 * 
-	 * @param
-	 * 
+	 * Removes the candies if the player is within specific boundary 
 	 * 
 	 */
 	public void tick() {

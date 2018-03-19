@@ -7,7 +7,8 @@ import javaapp.Runner.Gameengine.Player;
 /**
  * 
  * @author jenny
- * @version 2018-02-27
+ * @version 2018-03-29
+ * This class handles the trap in room 4
  */
 public class Trap {
 
