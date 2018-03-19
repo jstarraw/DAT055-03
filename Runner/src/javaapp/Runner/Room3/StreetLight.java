@@ -6,6 +6,8 @@ import javaapp.Runner.Gameengine.Player;
 
 /**
  * 
+ *This class draws the street light that
+ *will be drawn up in roomstate4
  * @author nurabd
  * @version 2018-03-01
  *
@@ -38,9 +40,9 @@ public class StreetLight {
 
 	/**
 	 * 
-	 * @param g
-	 *            is a graphic object which will draw the wanted object that will be
-	 *            drawn. the boolean will indicate which item is going to be drawn , 
+	 * @param g is a graphic object which will draw the wanted object that will be drawn
+	 * 
+	 *         the boolean will indicate which item is going to be drawn , 
 	 *            it takes order from tick
 	 */
 	public void render(Graphics g) {
@@ -268,8 +270,7 @@ public class StreetLight {
  */
 	public boolean allFlags() {
 
-
-		return way1to2 && way1to5 && way2to3 && way2to4 && way3to7 && way6to7 && way5to6;
+		return way1to2 && way1to5 && way2to3 && way2to4 && way3to7 && way6to7&&way5to6;
 
 	}
 }

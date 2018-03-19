@@ -4,7 +4,7 @@ import java.awt.Graphics;
 import javaapp.Runner.Gameengine.Assets;
 
 /**
- * 
+ * tidtagning som kommer att ritas i form av 
  * @author nurabd
  * @Version 2018-03-01
  *

@@ -1,8 +1,14 @@
 package javaapp.Runner.Room3;
 
 /**
+ * 
+This class starts the room3 itself, it brings together all the associated elemetries
+ that are part of rooom4. ie street lights and time taker.
+ 
  *  @author nurabd
  * @Version 2018-03-01
+ *  
+ * 
  */
 
 import java.awt.Graphics;
@@ -23,7 +29,10 @@ public class RoomState3 extends States{
 	private States room4;
 	
 	
-	
+	/**
+	 * 
+	 * @param game the gameengine class 
+	 */
 	public RoomState3(Gameengine game) {
 		super(game);
 		light = new StreetLight();
@@ -35,7 +44,7 @@ public class RoomState3 extends States{
 
 	/**
 	 * Tick method will tick the components of room3
-	 * it here the Gamestate3 i build 
+	 * its here the Gamestate3 i build 
 	 * tick method override states
 	 */
 	public void tick() {

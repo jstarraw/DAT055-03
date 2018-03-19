@@ -5,9 +5,12 @@ import javaapp.Runner.Gameengine.Assets;
 import javaapp.Runner.Gameengine.Player;
 
 /**
+ * This class will draw the doors in room3 and 
+ *	also allow the door to open after winning the game
  * 
  * @author nurabd
  * @version 2018-03-01
+ * 
  */
 
 public class Doors_Room3 {
@@ -15,8 +18,8 @@ public class Doors_Room3 {
 
 	/**
 	 * 
-	 * @param x
-	 *            is the position the door will be able to be drawn
+	 * @param x is the position where the door will be able to be drawn
+	 *            
 	 */
 	public Doors_Room3(float x) {
 		this.x = x;
@@ -43,11 +46,12 @@ public class Doors_Room3 {
 	}
 
 	/**
-	 * 
-	 * @param g
-	 *            send a graphic to be able to draw the figure in the canvas the
+	 *   send a graphic to be able to draw the figure in the canvas the
 	 *            image is bringd from the asset class, x is the position that the
 	 *            door will be drawn in
+	 * 
+	 * @param g   send a graphic object
+	 *          
 	 */
 
 	public void renderDoorleft(Graphics g) {
