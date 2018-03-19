@@ -27,6 +27,7 @@ public class Menubar {
 	/**
 	 * Constructor of the class Menubar
 	 *  initializes the object
+	 *  takes the frame from the display, frame parameter
 	 * @param frame
 	 */
 	

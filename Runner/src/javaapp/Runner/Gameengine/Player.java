@@ -20,9 +20,9 @@ public class Player {
 	 * Constructor for the Player class
 	 * takes three parameters, the gameengine object, any float x, any float y.
 	 * 
-	 * @param game
-	 * @param x
-	 * @param y
+	 * @param game, the gameenigne object, game
+	 * @param x, x position for the player
+	 * @param y , y position for the player
 	 */
 
 	public Player(Gameengine game, float x, float y) {
@@ -55,6 +55,7 @@ public class Player {
 	
 	/** 
 	 * Takes a parameter and sets the player's y-position
+	 * new position for y, parameter temp
 	 * @param temp
 	 */
 
@@ -66,6 +67,7 @@ public class Player {
 	/**
 	 * 
 	 * Takes a parameter and sets the player's X-position
+	 * new position x, parameter temp
 	 * @param temp
 	 */
 
@@ -108,7 +110,7 @@ public class Player {
 	 * 
 	 * Draws the player in four different angles
 	 * Draws the banner so that the area is limited for the player
-	 * 
+	 * graphics object g
 	 * @param g
 	 */
 
