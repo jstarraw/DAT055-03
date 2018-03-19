@@ -10,9 +10,9 @@ import javaapp.Runner.States.States;
 
 /**
  * 
+ * 
  * @author jenny
- * @version 2017-03-19
- * This class handles the state for room 4
+ * @version 2017-02-27
  */
 
 public class RoomState4 extends States {
