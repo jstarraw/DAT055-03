@@ -29,7 +29,8 @@ public class RoomState5 extends States {
 	/**
 	 * 
 	 * The constructor for the room5 
-	 * @param game
+	 * @param game is the Gameengine object
+	 * 
 	 * 
 	 */
 
