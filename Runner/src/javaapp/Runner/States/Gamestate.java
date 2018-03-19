@@ -9,8 +9,8 @@ import javaapp.Runner.Room3.RoomState3;
 
 
 /**
- * @Author Rickard Gyllensten, Jenny Karlsson, Roman Melnik, Daniel Cebe,
- *         Nurhusein Abdulkader
+ * This class handles the gamestate of the game
+ * @Author Rickard Gyllensten
  * @version 2018-03-01
  * 
  */
@@ -26,6 +26,7 @@ public class Gamestate extends States {
 	 *
 	 * Constructor of the GameState class.
 	 * initiates the player, and the sets the first RoomState
+	 * The gameengine object, game
 	 * @param game
 	 */
 	

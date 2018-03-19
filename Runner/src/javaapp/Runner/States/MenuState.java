@@ -8,8 +8,8 @@ import javaapp.Runner.Gameengine.Gameengine;
 import javaapp.Runner.Gameengine.Highscore;
 
 /**
- * @Author Rickard Gyllensten, Jenny Karlsson, Roman Melnik, Daniel Cebe,
- *         Nurhusein Abdulkader
+ * This class handles the menustate of the game
+ * @Author Roman Melnik
  * @version 2018-03-01
  * 
  */
@@ -25,7 +25,7 @@ public class MenuState extends States {
 	 * 
 	 * Constructor of the MenuState class.
 	 * initiates new GameState
-	 * 
+	 * The gameenigne object, game
 	 * @param game
 	 */
 	public MenuState(Gameengine game) {
@@ -70,6 +70,7 @@ public class MenuState extends States {
 	/**
 	 * 
 	 * Draws the menu 
+	 * graphics object g
 	 *@param g
 	 */
 	

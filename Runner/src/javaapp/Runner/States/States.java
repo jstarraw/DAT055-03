@@ -5,8 +5,8 @@ import java.awt.Graphics;
 import javaapp.Runner.Gameengine.Gameengine;
 
 /**
- * @Author Rickard Gyllensten, Jenny Karlsson, Roman Melnik, Daniel Cebe,
- *         Nurhusein Abdulkader
+ * This class handles the states of the game, where we currently are
+ * @Author Nurhusein Abdulkader
  * @version 2018-03-01
  * 
  */
@@ -19,6 +19,7 @@ public abstract class States {
 	/**
 	 * 
 	 * The constructor of States
+	 * The gameenigne object, game
 	 * @param game
 	 */
 
@@ -32,7 +33,7 @@ public abstract class States {
 
 	/**
 	 * Sets the current state
-	 * 
+	 * The actual/current state object, state
 	 * @param state
 	 */
 
@@ -52,6 +53,7 @@ public abstract class States {
 	/**
 	 * 
 	 * Sets the RoomStates for all rooms
+	 * The state for the current room, parameter room
 	 * @param rooms
 	 */
 
