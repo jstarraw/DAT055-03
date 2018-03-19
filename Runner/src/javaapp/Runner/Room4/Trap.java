@@ -7,7 +7,7 @@ import javaapp.Runner.Gameengine.Player;
 /**
  * 
  * @author jenny
- * @version 2018-02-27
+ * @version 2018-03-29
  */
 public class Trap {
 
