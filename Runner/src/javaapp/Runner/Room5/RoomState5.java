@@ -9,7 +9,7 @@ import javaapp.Runner.States.States;
 import javaapp.Runner.States.Victory;
 
 /**
- * 
+ * This class handles Room5 and its game events
  * @author Roman Melnik
  * @version 2018-03-01
  */
@@ -63,7 +63,7 @@ public class RoomState5 extends States {
 	}
 
 	/**
-	 * Renders the room and the speech bubbles that may show up
+	 * Renders the room and the speach bubbles that may show up
 	*@param g
 	*
 	 */
